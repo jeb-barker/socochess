@@ -1,0 +1,120 @@
+node:internal/modules/cjs/loader:944
+  throw err;
+  ^
+
+Error: Cannot find module 'express'
+Require stack:
+- /site/public/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:941:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:774:27)
+    at Module.require (node:internal/modules/cjs/loader:1013:19)
+    at require (node:internal/modules/cjs/helpers:93:18)
+    at Object.<anonymous> (/site/public/index.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1109:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/site/public/index.js' ]
+}
+node:internal/modules/cjs/loader:944
+  throw err;
+  ^
+
+Error: Cannot find module 'express'
+Require stack:
+- /site/public/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:941:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:774:27)
+    at Module.require (node:internal/modules/cjs/loader:1013:19)
+    at require (node:internal/modules/cjs/helpers:93:18)
+    at Object.<anonymous> (/site/public/index.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1109:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/site/public/index.js' ]
+}
+node:internal/modules/cjs/loader:944
+  throw err;
+  ^
+
+Error: Cannot find module 'express'
+Require stack:
+- /site/public/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:941:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:774:27)
+    at Module.require (node:internal/modules/cjs/loader:1013:19)
+    at require (node:internal/modules/cjs/helpers:93:18)
+    at Object.<anonymous> (/site/public/index.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1109:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/site/public/index.js' ]
+}
+node:internal/modules/cjs/loader:944
+  throw err;
+  ^
+
+Error: Cannot find module 'express'
+Require stack:
+- /site/public/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:941:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:774:27)
+    at Module.require (node:internal/modules/cjs/loader:1013:19)
+    at require (node:internal/modules/cjs/helpers:93:18)
+    at Object.<anonymous> (/site/public/index.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1109:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/site/public/index.js' ]
+}
+node:internal/modules/cjs/loader:944
+  throw err;
+  ^
+
+Error: Cannot find module 'express'
+Require stack:
+- /site/public/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:941:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:774:27)
+    at Module.require (node:internal/modules/cjs/loader:1013:19)
+    at require (node:internal/modules/cjs/helpers:93:18)
+    at Object.<anonymous> (/site/public/index.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1109:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/site/public/index.js' ]
+}
+node:internal/modules/cjs/loader:944
+  throw err;
+  ^
+
+Error: Cannot find module 'express'
+Require stack:
+- /site/public/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:941:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:774:27)
+    at Module.require (node:internal/modules/cjs/loader:1013:19)
+    at require (node:internal/modules/cjs/helpers:93:18)
+    at Object.<anonymous> (/site/public/index.js:1:15)
+    at Module._compile (node:internal/modules/cjs/loader:1109:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/site/public/index.js' ]
+}

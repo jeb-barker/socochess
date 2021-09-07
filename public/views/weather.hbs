@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Weather Forecast
+        </title>
+    </head>
+    <body>
+        {{#unless error}}
+        <h1>
+            Weather Forecast for {{origin.properties.relativeLocation.properties.city}}, {{origin.properties.relativeLocation.properties.state}}
+        </h1>
+        <h4>
+            From {{properties.periods.[0].name}} into {{properties.periods.[13].name}}.
+        </h4>
+        <table border="1" cellpadding="15">
+        <tr>
+            <td><b>Time</b></td>
+            <td><b>Temp</b></td>
+            <td><b>Wind</b></td>
+            <td><b>Weather</b></td>
+        </tr>
+        {{#each properties.periods}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.temperature}}<span>&#176;</span> {{this.temperatureUnit}}</td>
+            <td>{{this.windDirection}} @ {{this.windSpeed}}</td>
+            <td><img src="{{this.icon}}"><br>{{this.shortForecast}}<img></td>
+        </tr>
+        {{/each}}
+        </table>
+        {{/unless}}
+        {{#if error}}
+        <p>Oooooopsie there was a problem (maybe you forgot coordinates)! {{detail}}. <br>Try refreshing the page, or if the problem persists, contact me :))</p>
+        {{/if}}
+        <br>
+        <div>
+        <form action="/weather" method="GET">
+        <label for="lat">Latitude:</label>
+        <br>
+        <input type="text" id="lat" name="lat">
+        <br>
+        <label for="long">Longitude:</label>
+        <br>
+        <input type="text" id="long" name="long">
+        <br>
+        <button>Submit</button>
+    </div>
+    <hr>
+    <p>cool/useful links (use query: detail=true to get hourly weather): </p>
+    <a href="/weather?lat=38.9586&long=-77.357">Reston Basic Weather</a><br>
+    <a href="/weather?lat=38.9586&long=-77.357&detail=true">Reston Hourly Weather</a>
+    <br>
+    <br>
+    <a href="/weather?lat=38.8184&long=-77.1689">TJ Basic Weather</a><br>
+    <a href="/weather?lat=38.8184&long=-77.1689&detail=true">TJ Hourly Weather</a>
+    <br>
+    <br>
+    <a href="/weather?lat=38.8184&long=-77.1689">TJ Basic Weather</a><br>
+    <a href="/weather?lat=38.8184&long=-77.1689&detail=true">TJ Hourly Weather</a>
+    <br>
+    <br>
+    <a href="/weather?lat=47.6687&long=-122.2903">Seattle Basic Weather</a><br>
+    <a href="/weather?lat=47.6687&long=-122.2903&detail=true">Seattle Hourly Weather</a>
+    <br>
+    <br>
+    <a href="/">main page</a>
+    </body>
+</html>

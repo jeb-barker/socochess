@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href={{CSSLink}} >
+        <title>
+            Dog Cat Fish
+        </title>
+    </head>
+    <body>
+        {{#if main}}
+        <h1>
+            Links To Fun Animals Below:
+        </h1>
+        <ul>
+            {{#each animals}}
+            <li>
+                <a href={{this.linkA}}>{{this.name}}</a>
+            </li>    
+            {{/each}}
+        </ul>
+        <h1>
+            Ok Fine...Here's the Real Links.
+        </h1>
+        <ul>
+            {{#each animals}}
+            <li>
+                <a href={{this.linkB}}>{{this.name}}</a>
+            </li>    
+            {{/each}}
+        </ul>
+        <a href = "/">main page</a>
+        {{/if}}
+        <p>
+            <br>Today's date is {{month}}/{{day}}/{{year}}.
+        </p>
+        
+    </body>
+</html>

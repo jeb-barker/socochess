@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href={{CSSLink}} >
+        <title>
+            Web Main Page
+        </title>
+    </head>
+    <body>
+        <h1>
+            Links To Labs Below:
+        </h1>
+        <ul>
+            {{#each labs}}
+            <br>
+            <li>
+                <a href={{this.link}}>{{this.title}}</a>
+            </li>    
+            {{/each}}
+        </ul>
+        <p>
+            <br>Today's date is {{month}}/{{day}}/{{year}}.
+        </p>
+    </body>
+</html>

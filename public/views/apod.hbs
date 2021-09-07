@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Astronomy Picture of the Day
+        </title>
+    </head>
+    <body>
+        <h1>
+            {{title}}
+        </h1>
+        <h4>
+            {{#if author}}
+            by {{copyright}} on {{date}}   
+            {{/if}}
+        </h4>
+        <img src={{url}}>
+        <p>
+            {{explanation}}
+        </p>
+        <br>
+        <div>
+        <form action="/apod" method="GET">
+        <label for="date">Date:</label>
+        <br>
+        <input type="date" id="date" name="date">
+        <button>Submit</button>
+    </div>
+    </body>
+</html>

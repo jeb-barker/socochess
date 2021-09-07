@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ION Auth Cookie Clicker
+        </title>
+    </head>
+    <body>
+        {{#if auth}}
+        <h1>
+            Good morning {{name}}!
+        </h1>
+        <br>
+        <h4>
+            Visit number {{vc}}.
+        </h4>
+        <br>
+        <a href="/ionauthcookie">Refresh</a>
+        <br>
+        <a href="ionauthcookie?reset=true">Reset</a>
+        <br>
+        <a href="/ionauthcookie/logout">Logout</a>
+        {{/if}}
+        {{#unless auth}}
+        <h1>
+            Good morning!
+        </h1>
+        <br>
+        <a href={{auth-link}}>Login before you use this site!</a>
+        <br>
+        <a href="/ionauthcookie">Refresh</a>
+        <br>
+        <a href="ionauthcookie?reset=true">Reset</a>
+        {{/unless}}
+        <br>
+        <a href="/">Home</a>
+    </body>
+</html>
