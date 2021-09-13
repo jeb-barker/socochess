@@ -1,4 +1,4 @@
-import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "../styles/css?name=chb"
+import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://jbarkerwebdev.sites.tjhsst.edu/styles/css?name=chb"
     var d
     
     
