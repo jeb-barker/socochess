@@ -511,3 +511,19 @@ Error: Failed to lookup view "index.hbs" in views directory "/site/public/views"
     at /site/node_modules/express/lib/router/index.js:281:22
     at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
     at next (/site/node_modules/express/lib/router/index.js:275:10)
+director-mysql
+_______________________
+Express server started
+116264767626572588517
+user landed at main page
+Error: Failed to lookup view "index.hbs" in views directory "/site/public/views"
+    at Function.render (/site/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
+    at /site/public/index.js:98:9
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
+    at next (/site/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
+    at /site/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
+    at next (/site/node_modules/express/lib/router/index.js:275:10)
