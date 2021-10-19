@@ -1,2 +1,2 @@
 #!/bin/sh
-exec node index.js >> logs.out 2>&1
+exec node index.js --experimental-modules >> logs.out 2>&1

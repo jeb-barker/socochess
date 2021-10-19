@@ -1,6 +1,35 @@
 module.exports.run_setup = function(app){
     var passport = require('passport')
     var mysql = require('mysql');
+    var cookieSession = require('cookie-session')
+    const {AuthorizationCode} = require('simple-oauth2');
+    var GoogleStrategy = require('passport-google-oauth20').Strategy;
+    var GOOGLE_CLIENT_ID     = '221807810876-crak3hle4q6dsti76vb00tf9mir3uj7e.apps.googleusercontent.com';
+    var GOOGLE_CLIENT_SECRET = '44XG9hKl3Ywg8c5mebiJV293';
+    var google_redirect_uri  = 'https://socochess.sites.tjhsst.edu/login_helper';
+    var userProfile = ""
+    
+    app.use(cookieSession({name: "google-cookie", keys: ['googleauthKey', 'secretionauthKey', 'superduperextrasecretcookiegoogleKey'], maxAge: 86400000}))
+    app.use(passport.initialize());
+    app.use(passport.session());
+    
+    passport.serializeUser((user, done) => {
+        done(null, user.id);
+    });
+    passport.deserializeUser((id, done) => {
+        done(null, id)
+    });
+    passport.use(new GoogleStrategy({
+        clientID: GOOGLE_CLIENT_ID,
+        clientSecret: GOOGLE_CLIENT_SECRET,
+        callbackURL: google_redirect_uri
+    },
+    function(accessToken, refreshToken, profile, cb) {
+        //console.log(res.locals.userProfile)
+        return cb(null, profile);
+    }
+    ));
+    
     class Database {
     constructor( config ) {
         this.connection = mysql.createConnection( config );
@@ -39,6 +68,7 @@ module.exports.run_setup = function(app){
         return database.query(getidsql)
     }
 
+    //warnings are due to async keyword.
     app.get('/login_helper', passport.authenticate("google"), async (req,res)=>{
         userProfile = req.user
         let results = await getquerydata("SELECT id FROM chess_players")

@@ -1,15 +1,226 @@
+Listening on port 8080
+Listening on port 8080
+Listening on port 8080
+Listening on port 8080
+Listening on port 8080
+Listening on port 8080
+Listening on port 8080
+Listening on port 8080
+Listening on port 8080
+Listening on port 8080
+Listening on port 8080
+Listening on port 8080
+Listening on port 8080
+Listening on port 8080
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+started client interval
+Listening on port 8080
 user landed at main page
-Error: Failed to lookup view "index.hbs" in views directory "/site/public/views"
-    at Function.render (/site/node_modules/express/lib/application.js:580:17)
-    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
-    at /site/public/index.js:98:9
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at next (/site/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at /site/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
-    at next (/site/node_modules/express/lib/router/index.js:275:10)
+	Got date as: 10/18/2021
+started client interval
+/site/routes/login.js:10
+    app.use(cookieSession({name: "google-cookie", keys: ['googleauthKey', 'secretionauthKey', 'superduperextrasecretcookiegoogleKey'], maxAge: 86400000}))
+        ^
+
+ReferenceError: cookieSession is not defined
+    at Object.module.exports.run_setup (/site/routes/login.js:10:9)
+    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
+    at Object.<anonymous> (/site/public/index.js:28:8)
+    at Module._compile (node:internal/modules/cjs/loader:1109:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
+    at node:internal/main/run_main_module:17:47
+/site/routes/login.js:10
+    app.use(cookieSession({name: "google-cookie", keys: ['googleauthKey', 'secretionauthKey', 'superduperextrasecretcookiegoogleKey'], maxAge: 86400000}))
+        ^
+
+ReferenceError: cookieSession is not defined
+    at Object.module.exports.run_setup (/site/routes/login.js:10:9)
+    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
+    at Object.<anonymous> (/site/public/index.js:28:8)
+    at Module._compile (node:internal/modules/cjs/loader:1109:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
+    at node:internal/main/run_main_module:17:47
+/site/routes/login.js:10
+    app.use(cookieSession({name: "google-cookie", keys: ['googleauthKey', 'secretionauthKey', 'superduperextrasecretcookiegoogleKey'], maxAge: 86400000}))
+        ^
+
+ReferenceError: cookieSession is not defined
+    at Object.module.exports.run_setup (/site/routes/login.js:10:9)
+    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
+    at Object.<anonymous> (/site/public/index.js:28:8)
+    at Module._compile (node:internal/modules/cjs/loader:1109:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
+    at node:internal/main/run_main_module:17:47
+/site/routes/login.js:10
+    app.use(cookieSession({name: "google-cookie", keys: ['googleauthKey', 'secretionauthKey', 'superduperextrasecretcookiegoogleKey'], maxAge: 86400000}))
+        ^
+
+ReferenceError: cookieSession is not defined
+    at Object.module.exports.run_setup (/site/routes/login.js:10:9)
+    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
+    at Object.<anonymous> (/site/public/index.js:28:8)
+    at Module._compile (node:internal/modules/cjs/loader:1109:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
+    at node:internal/main/run_main_module:17:47
+/site/routes/login.js:10
+    app.use(cookieSession({name: "google-cookie", keys: ['googleauthKey', 'secretionauthKey', 'superduperextrasecretcookiegoogleKey'], maxAge: 86400000}))
+        ^
+
+ReferenceError: cookieSession is not defined
+    at Object.module.exports.run_setup (/site/routes/login.js:10:9)
+    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
+    at Object.<anonymous> (/site/public/index.js:28:8)
+    at Module._compile (node:internal/modules/cjs/loader:1109:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
+    at node:internal/main/run_main_module:17:47
+/site/routes/login.js:10
+    app.use(cookieSession({name: "google-cookie", keys: ['googleauthKey', 'secretionauthKey', 'superduperextrasecretcookiegoogleKey'], maxAge: 86400000}))
+        ^
+
+ReferenceError: cookieSession is not defined
+    at Object.module.exports.run_setup (/site/routes/login.js:10:9)
+    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
+    at Object.<anonymous> (/site/public/index.js:28:8)
+    at Module._compile (node:internal/modules/cjs/loader:1109:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
+    at node:internal/main/run_main_module:17:47
+Listening on port 8080
+user landed at main page
+	Got date as: 10/18/2021
+started client interval
+stopping client interval
+user landed at main page
+	Got date as: 10/18/2021
+started client interval
+Listening on port 8080
+user landed at main page
+	Got date as: 10/18/2021
+started client interval
+stopping client interval
+results:  [ RowDataPacket { id: '116264767626572588517' } ]
+116264767626572588517  ---  116264767626572588517
+started client interval
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+started client interval
+user landed at main page
+	Got date as: 10/18/2021
+started client interval
+stopping client interval
+stopping client interval
+stopping client interval
+stopping client interval
+stopping client interval
+stopping client interval
+stopping client interval
+started client interval
+stopping client interval
+stopping client interval
+results:  [ RowDataPacket { id: '116264767626572588517' } ]
+116264767626572588517  ---  111144268931321206696
+INSERT INTO chess_players (id, name, data) VALUES ('111144268931321206696', 'James Barker', '{"personal":{"id":"111144268931321206696","name":"James Barker","email":"1536347@fcpsschools.net"},"chess":{"games_won":0,"games_lost":0,"current_game":"","game_history":[]}}')
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+user landed at main page
+	Got date as: 10/19/2021
+user landed at main page
+	Got date as: 10/19/2021
+started client interval
 node:internal/process/promises:246
           triggerUncaughtException(err, true /* fromPromise */);
           ^
@@ -19,511 +230,27 @@ Error: read ECONNRESET
     --------------------
     at Protocol._enqueue (/site/node_modules/mysql/lib/protocol/Protocol.js:144:48)
     at Connection.query (/site/node_modules/mysql/lib/Connection.js:198:25)
-    at /site/public/index.js:36:29
+    at /site/routes/play.js:10:33
     at new Promise (<anonymous>)
-    at Database.query (/site/public/index.js:35:16)
-    at getquerydata (/site/public/index.js:105:25)
-    at /site/public/index.js:110:29
+    at Database.query (/site/routes/play.js:9:20)
+    at /site/routes/play.js:37:43
     at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
     at next (/site/node_modules/express/lib/router/route.js:137:13)
-    at complete (/site/node_modules/passport/lib/middleware/authenticate.js:268:13) {
+    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5) {
   errno: -104,
   code: 'ECONNRESET',
   syscall: 'read',
   fatal: true
 }
-director-mysql
-_______________________
-Express server started
+Listening on port 8080
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+Listening on port 8080
 user landed at main page
-Error: Failed to lookup view "index.hbs" in views directory "/site/public/views"
-    at Function.render (/site/node_modules/express/lib/application.js:580:17)
-    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
-    at /site/public/index.js:98:9
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at next (/site/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at /site/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
-    at next (/site/node_modules/express/lib/router/index.js:275:10)
-results:  [ RowDataPacket { id: '116264767626572588517' } ]
-116264767626572588517  ---  116264767626572588517
-director-mysql
-/site/routes/login.js:2
-    app.get("/login", passport.authenticate("google", {scope: ["profile", "email"]}));
-                      ^
-
-ReferenceError: passport is not defined
-    at Object.module.exports.run_setup (/site/routes/login.js:2:23)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:2
-    app.get("/login", passport.authenticate("google", {scope: ["profile", "email"]}));
-                      ^
-
-ReferenceError: passport is not defined
-    at Object.module.exports.run_setup (/site/routes/login.js:2:23)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:2
-    app.get("/login", passport.authenticate("google", {scope: ["profile", "email"]}));
-                      ^
-
-ReferenceError: passport is not defined
-    at Object.module.exports.run_setup (/site/routes/login.js:2:23)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:2
-    app.get("/login", passport.authenticate("google", {scope: ["profile", "email"]}));
-                      ^
-
-ReferenceError: passport is not defined
-    at Object.module.exports.run_setup (/site/routes/login.js:2:23)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:2
-    app.get("/login", passport.authenticate("google", {scope: ["profile", "email"]}));
-                      ^
-
-ReferenceError: passport is not defined
-    at Object.module.exports.run_setup (/site/routes/login.js:2:23)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:2
-    app.get("/login", passport.authenticate("google", {scope: ["profile", "email"]}));
-                      ^
-
-ReferenceError: passport is not defined
-    at Object.module.exports.run_setup (/site/routes/login.js:2:23)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-_______________________
-Express server started
-/site/routes/play.js:6
-            let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
-                           ^
-
-ReferenceError: database is not defined
-    at /site/routes/play.js:6:28
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at next (/site/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at /site/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
-    at next (/site/node_modules/express/lib/router/index.js:275:10)
-    at SessionStrategy.strategy.pass (/site/node_modules/passport/lib/middleware/authenticate.js:343:9)
-    at /site/node_modules/passport/lib/strategies/session.js:69:12
-director-mysql
-_______________________
-Express server started
-/site/routes/play.js:6
-            let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
-                           ^
-
-ReferenceError: database is not defined
-    at /site/routes/play.js:6:28
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at next (/site/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at /site/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
-    at next (/site/node_modules/express/lib/router/index.js:275:10)
-    at SessionStrategy.strategy.pass (/site/node_modules/passport/lib/middleware/authenticate.js:343:9)
-    at /site/node_modules/passport/lib/strategies/session.js:69:12
-director-mysql
-_______________________
-Express server started
-116264767626572588517
-user landed at main page
-Error: Failed to lookup view "index.hbs" in views directory "/site/public/views"
-    at Function.render (/site/node_modules/express/lib/application.js:580:17)
-    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
-    at /site/public/index.js:98:9
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at next (/site/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at /site/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
-    at next (/site/node_modules/express/lib/router/index.js:275:10)
-director-mysql
-_______________________
-Express server started
-116264767626572588517
-user landed at main page
-Error: Failed to lookup view "index.hbs" in views directory "/site/public/views"
-    at Function.render (/site/node_modules/express/lib/application.js:580:17)
-    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
-    at /site/public/index.js:98:9
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at next (/site/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at /site/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
-    at next (/site/node_modules/express/lib/router/index.js:275:10)
-/site/routes/play.js:6
-            let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
-                           ^
-
-ReferenceError: database is not defined
-    at /site/routes/play.js:6:28
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at next (/site/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at /site/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
-    at next (/site/node_modules/express/lib/router/index.js:275:10)
-    at SessionStrategy.strategy.pass (/site/node_modules/passport/lib/middleware/authenticate.js:343:9)
-    at /site/node_modules/passport/lib/strategies/session.js:69:12
-director-mysql
-_______________________
-Express server started
-/site/routes/play.js:6
-            let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
-                           ^
-
-ReferenceError: database is not defined
-    at /site/routes/play.js:6:28
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at next (/site/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at /site/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
-    at next (/site/node_modules/express/lib/router/index.js:275:10)
-    at SessionStrategy.strategy.pass (/site/node_modules/passport/lib/middleware/authenticate.js:343:9)
-    at /site/node_modules/passport/lib/strategies/session.js:69:12
-director-mysql
-_______________________
-Express server started
-116264767626572588517
-user landed at main page
-Error: Failed to lookup view "index.hbs" in views directory "/site/public/views"
-    at Function.render (/site/node_modules/express/lib/application.js:580:17)
-    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
-    at /site/public/index.js:98:9
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at next (/site/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at /site/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
-    at next (/site/node_modules/express/lib/router/index.js:275:10)
-/site/routes/play.js:6
-            let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
-                           ^
-
-ReferenceError: database is not defined
-    at /site/routes/play.js:6:28
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at next (/site/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at /site/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
-    at next (/site/node_modules/express/lib/router/index.js:275:10)
-    at SessionStrategy.strategy.pass (/site/node_modules/passport/lib/middleware/authenticate.js:343:9)
-    at /site/node_modules/passport/lib/strategies/session.js:69:12
-director-mysql
-_______________________
-Express server started
-director-mysql
-/site/routes/login.js:5
-        this.connection = mysql.createConnection( config );
-                          ^
-
-ReferenceError: mysql is not defined
-    at new Database (/site/routes/login.js:5:27)
-    at Object.module.exports.run_setup (/site/routes/login.js:27:20)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:5
-        this.connection = mysql.createConnection( config );
-                          ^
-
-ReferenceError: mysql is not defined
-    at new Database (/site/routes/login.js:5:27)
-    at Object.module.exports.run_setup (/site/routes/login.js:27:20)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:5
-        this.connection = mysql.createConnection( config );
-                          ^
-
-ReferenceError: mysql is not defined
-    at new Database (/site/routes/login.js:5:27)
-    at Object.module.exports.run_setup (/site/routes/login.js:27:20)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:5
-        this.connection = mysql.createConnection( config );
-                          ^
-
-ReferenceError: mysql is not defined
-    at new Database (/site/routes/login.js:5:27)
-    at Object.module.exports.run_setup (/site/routes/login.js:27:20)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:5
-        this.connection = mysql.createConnection( config );
-                          ^
-
-ReferenceError: mysql is not defined
-    at new Database (/site/routes/login.js:5:27)
-    at Object.module.exports.run_setup (/site/routes/login.js:27:20)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:5
-        this.connection = mysql.createConnection( config );
-                          ^
-
-ReferenceError: mysql is not defined
-    at new Database (/site/routes/login.js:5:27)
-    at Object.module.exports.run_setup (/site/routes/login.js:27:20)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:5
-        this.connection = mysql.createConnection( config );
-                          ^
-
-ReferenceError: mysql is not defined
-    at new Database (/site/routes/login.js:5:27)
-    at Object.module.exports.run_setup (/site/routes/login.js:27:20)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:5
-        this.connection = mysql.createConnection( config );
-                          ^
-
-ReferenceError: mysql is not defined
-    at new Database (/site/routes/login.js:5:27)
-    at Object.module.exports.run_setup (/site/routes/login.js:27:20)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:5
-        this.connection = mysql.createConnection( config );
-                          ^
-
-ReferenceError: mysql is not defined
-    at new Database (/site/routes/login.js:5:27)
-    at Object.module.exports.run_setup (/site/routes/login.js:27:20)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:5
-        this.connection = mysql.createConnection( config );
-                          ^
-
-ReferenceError: mysql is not defined
-    at new Database (/site/routes/login.js:5:27)
-    at Object.module.exports.run_setup (/site/routes/login.js:27:20)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:5
-        this.connection = mysql.createConnection( config );
-                          ^
-
-ReferenceError: mysql is not defined
-    at new Database (/site/routes/login.js:5:27)
-    at Object.module.exports.run_setup (/site/routes/login.js:27:20)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-/site/routes/login.js:5
-        this.connection = mysql.createConnection( config );
-                          ^
-
-ReferenceError: mysql is not defined
-    at new Database (/site/routes/login.js:5:27)
-    at Object.module.exports.run_setup (/site/routes/login.js:27:20)
-    at Object.module.exports.do_setup (/site/routes/index.js:4:11)
-    at Object.<anonymous> (/site/public/index.js:138:8)
-    at Module._compile (node:internal/modules/cjs/loader:1109:14)
-    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
-    at Module.load (node:internal/modules/cjs/loader:989:32)
-    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
-    at node:internal/main/run_main_module:17:47
-director-mysql
-_______________________
-Express server started
-116264767626572588517
-user landed at main page
-Error: Failed to lookup view "index.hbs" in views directory "/site/public/views"
-    at Function.render (/site/node_modules/express/lib/application.js:580:17)
-    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
-    at /site/public/index.js:98:9
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at next (/site/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at /site/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
-    at next (/site/node_modules/express/lib/router/index.js:275:10)
-116264767626572588517
-user landed at main page
-Error: Failed to lookup view "index.hbs" in views directory "/site/public/views"
-    at Function.render (/site/node_modules/express/lib/application.js:580:17)
-    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
-    at /site/public/index.js:98:9
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at next (/site/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at /site/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
-    at next (/site/node_modules/express/lib/router/index.js:275:10)
-director-mysql
-_______________________
-Express server started
-116264767626572588517
-user landed at main page
-Error: Failed to lookup view "index.hbs" in views directory "/site/public/views"
-    at Function.render (/site/node_modules/express/lib/application.js:580:17)
-    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
-    at /site/public/index.js:98:9
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at next (/site/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at /site/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
-    at next (/site/node_modules/express/lib/router/index.js:275:10)
-director-mysql
-_______________________
-Express server started
-116264767626572588517
-user landed at main page
-Error: Failed to lookup view "index.hbs" in views directory "/site/public/views"
-    at Function.render (/site/node_modules/express/lib/application.js:580:17)
-    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
-    at /site/public/index.js:98:9
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at next (/site/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
-    at /site/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
-    at next (/site/node_modules/express/lib/router/index.js:275:10)
+	Got date as: 10/19/2021
+started client interval

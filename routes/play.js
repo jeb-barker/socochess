@@ -35,7 +35,7 @@ module.exports.run_setup = function(app){
         passport.authenticate("google")
         if (req.user){
             let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
-            res.render('jebchess.hbs', JSON.parse(userData[0].data)) 
+            res.render('index.hbs', JSON.parse(userData[0].data));//, JSON.parse(userData[0].data)) 
         }
         else{
             res.redirect('/login')
