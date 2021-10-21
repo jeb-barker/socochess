@@ -1,6 +1,13 @@
 import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://jbarkerwebdev.sites.tjhsst.edu/styles/css?name=chb"
     var d
     // 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
+    const ws = new WebSocket(`wss://${location.host}/play/`);
+    
+    ws.onmessage = function(message){
+        if(JSON.parse(message).pgn === "OPEN"){
+            //do startup stuff
+        }
+    }
     
     $.get('https://jbarkerwebdev.sites.tjhsst.edu/jebchess/src/get_current_game', function(data, status){
         var chess = ''
