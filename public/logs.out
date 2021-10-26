@@ -1,0 +1,239 @@
+/site/public/index.js:86
+});
+^
+
+SyntaxError: Unexpected token '}'
+    at Object.compileFunction (node:vm:355:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1039:15)
+    at Module._compile (node:internal/modules/cjs/loader:1073:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
+    at node:internal/main/run_main_module:17:47
+/site/public/index.js:86
+});
+^
+
+SyntaxError: Unexpected token '}'
+    at Object.compileFunction (node:vm:355:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1039:15)
+    at Module._compile (node:internal/modules/cjs/loader:1073:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
+    at node:internal/main/run_main_module:17:47
+/site/public/index.js:86
+});
+^
+
+SyntaxError: Unexpected token '}'
+    at Object.compileFunction (node:vm:355:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1039:15)
+    at Module._compile (node:internal/modules/cjs/loader:1073:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
+    at node:internal/main/run_main_module:17:47
+/site/public/index.js:86
+});
+^
+
+SyntaxError: Unexpected token '}'
+    at Object.compileFunction (node:vm:355:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1039:15)
+    at Module._compile (node:internal/modules/cjs/loader:1073:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
+    at node:internal/main/run_main_module:17:47
+/site/public/index.js:86
+});
+^
+
+SyntaxError: Unexpected token '}'
+    at Object.compileFunction (node:vm:355:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1039:15)
+    at Module._compile (node:internal/modules/cjs/loader:1073:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
+    at node:internal/main/run_main_module:17:47
+/site/public/index.js:86
+});
+^
+
+SyntaxError: Unexpected token '}'
+    at Object.compileFunction (node:vm:355:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1039:15)
+    at Module._compile (node:internal/modules/cjs/loader:1073:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
+    at node:internal/main/run_main_module:17:47
+Listening on port 8080
+user landed at main page
+	Got date as: 10/26/2021
+Error: Cannot find module 'hbs'
+Require stack:
+- /site/node_modules/express/lib/view.js
+- /site/node_modules/express/lib/application.js
+- /site/node_modules/express/lib/express.js
+- /site/node_modules/express/index.js
+- /site/public/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:941:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:774:27)
+    at Module.require (node:internal/modules/cjs/loader:1013:19)
+    at require (node:internal/modules/cjs/helpers:93:18)
+    at new View (/site/node_modules/express/lib/view.js:81:14)
+    at Function.render (/site/node_modules/express/lib/application.js:570:12)
+    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
+    at /site/public/index.js:28:9
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
+    at next (/site/node_modules/express/lib/router/route.js:137:13)
+user landed at main page
+	Got date as: 10/26/2021
+Error: Cannot find module 'hbs'
+Require stack:
+- /site/node_modules/express/lib/view.js
+- /site/node_modules/express/lib/application.js
+- /site/node_modules/express/lib/express.js
+- /site/node_modules/express/index.js
+- /site/public/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:941:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:774:27)
+    at Module.require (node:internal/modules/cjs/loader:1013:19)
+    at require (node:internal/modules/cjs/helpers:93:18)
+    at new View (/site/node_modules/express/lib/view.js:81:14)
+    at Function.render (/site/node_modules/express/lib/application.js:570:12)
+    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
+    at /site/public/index.js:28:9
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
+    at next (/site/node_modules/express/lib/router/route.js:137:13)
+user landed at main page
+	Got date as: 10/26/2021
+Error: Cannot find module 'hbs'
+Require stack:
+- /site/node_modules/express/lib/view.js
+- /site/node_modules/express/lib/application.js
+- /site/node_modules/express/lib/express.js
+- /site/node_modules/express/index.js
+- /site/public/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:941:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:774:27)
+    at Module.require (node:internal/modules/cjs/loader:1013:19)
+    at require (node:internal/modules/cjs/helpers:93:18)
+    at new View (/site/node_modules/express/lib/view.js:81:14)
+    at Function.render (/site/node_modules/express/lib/application.js:570:12)
+    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
+    at /site/public/index.js:28:9
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
+    at next (/site/node_modules/express/lib/router/route.js:137:13)
+user landed at main page
+	Got date as: 10/26/2021
+Error: Cannot find module 'hbs'
+Require stack:
+- /site/node_modules/express/lib/view.js
+- /site/node_modules/express/lib/application.js
+- /site/node_modules/express/lib/express.js
+- /site/node_modules/express/index.js
+- /site/public/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:941:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:774:27)
+    at Module.require (node:internal/modules/cjs/loader:1013:19)
+    at require (node:internal/modules/cjs/helpers:93:18)
+    at new View (/site/node_modules/express/lib/view.js:81:14)
+    at Function.render (/site/node_modules/express/lib/application.js:570:12)
+    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
+    at /site/public/index.js:28:9
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
+    at next (/site/node_modules/express/lib/router/route.js:137:13)
+user landed at main page
+	Got date as: 10/26/2021
+Error: Cannot find module 'hbs'
+Require stack:
+- /site/node_modules/express/lib/view.js
+- /site/node_modules/express/lib/application.js
+- /site/node_modules/express/lib/express.js
+- /site/node_modules/express/index.js
+- /site/public/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:941:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:774:27)
+    at Module.require (node:internal/modules/cjs/loader:1013:19)
+    at require (node:internal/modules/cjs/helpers:93:18)
+    at new View (/site/node_modules/express/lib/view.js:81:14)
+    at Function.render (/site/node_modules/express/lib/application.js:570:12)
+    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
+    at /site/public/index.js:28:9
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
+    at next (/site/node_modules/express/lib/router/route.js:137:13)
+results:  [
+  RowDataPacket { id: '111144268931321206696' },
+  RowDataPacket { id: '116264767626572588517' }
+]
+111144268931321206696  ---  111144268931321206696
+node:internal/modules/cjs/loader:941
+  const err = new Error(message);
+              ^
+
+Error: Cannot find module 'hbs'
+Require stack:
+- /site/node_modules/express/lib/view.js
+- /site/node_modules/express/lib/application.js
+- /site/node_modules/express/lib/express.js
+- /site/node_modules/express/index.js
+- /site/public/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:941:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:774:27)
+    at Module.require (node:internal/modules/cjs/loader:1013:19)
+    at require (node:internal/modules/cjs/helpers:93:18)
+    at new View (/site/node_modules/express/lib/view.js:81:14)
+    at Function.render (/site/node_modules/express/lib/application.js:570:12)
+    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
+    at /site/routes/play.js:38:17
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/site/node_modules/express/lib/view.js',
+    '/site/node_modules/express/lib/application.js',
+    '/site/node_modules/express/lib/express.js',
+    '/site/node_modules/express/index.js',
+    '/site/public/index.js'
+  ]
+}
+Listening on port 8080
+Listening on port 8080
+started client interval
+stopping client interval
+/site/public/index.js:80
+    clearInterval(id);
+                  ^
+
+ReferenceError: id is not defined
+    at WebSocket.<anonymous> (/site/public/index.js:80:19)
+    at WebSocket.emit (node:events:377:35)
+    at WebSocket.emitClose (/site/node_modules/ws/lib/websocket.js:247:10)
+    at Socket.socketOnClose (/site/node_modules/ws/lib/websocket.js:1102:15)
+    at Socket.emit (node:events:365:28)
+    at TCP.<anonymous> (node:net:661:12)
+Listening on port 8080
+Listening on port 8080
+started client interval
+stopping client interval
+/site/public/index.js:80
+    clearInterval(id);
+                  ^
+
+ReferenceError: id is not defined
+    at WebSocket.<anonymous> (/site/public/index.js:80:19)
+    at WebSocket.emit (node:events:377:35)
+    at WebSocket.emitClose (/site/node_modules/ws/lib/websocket.js:247:10)
+    at Socket.socketOnClose (/site/node_modules/ws/lib/websocket.js:1102:15)
+    at Socket.emit (node:events:365:28)
+    at TCP.<anonymous> (node:net:661:12)
+Listening on port 8080

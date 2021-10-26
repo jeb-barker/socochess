@@ -1,9 +1,12 @@
 'use strict';
 
+var JEB_CHESS_URL = 'https://jeb-chess.sites.tjhsst.edu/';
+
 var routes = require('../routes');
 const express = require('express');
 const path = require('path');
 const { createServer } = require('http');
+var https = require('https');
 
 const ws = require('ws');
 
@@ -35,15 +38,41 @@ const server = createServer(app);
 const wss = new ws.WebSocket.Server({ server });
 
 wss.on('connection', function (ws) {
+    ws.send(JSON.stringify({pgn: "OPEN"}))
     ws.on('error', (error)=>{
         console.log('error:', error.message);
     })
-  const id = setInterval(function () {
-    ws.send(JSON.stringify(process.memoryUsage()), function () {
-      //
-      //
-    });
-  }, 10);
+    ws.on('message', function (message) {
+        console.log(message);
+        let m = JSON.parse(message.data);
+        let ret = {};
+        let dat = '';
+        if(m.message){
+            if(m.message === "request_move"){
+                let options = {headers:{'User-Agent': 'request'}};
+                https.get(JEB_CHESS_URL + "ai2?pgn=" + m.pgn + "&t=5", options, function(response){
+                    response.on('data', function(chunk){
+                        dat+=chunk;
+                        console.log("DAT= " + dat)
+                    })
+                    response.on('end', function(){
+                        ret = JSON.parse(dat);
+                        console.log("\n-----\n"+ret);
+                    })
+                })
+                ws.send(ret);
+            }
+            else if(m.message === "request_pgn"){
+                //send pgn.
+            }
+        }
+    })
+//     const id = setInterval(function () {
+//     //ws.send(JSON.stringify(process.memoryUsage()), function () {
+//       //
+//       //
+//     //});
+//   }, 1000);
   console.log('started client interval');
 
   ws.on('close', function () {

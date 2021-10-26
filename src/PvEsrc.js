@@ -5,7 +5,68 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://jbarkerw
     
     ws.onmessage = function(message){
         if(JSON.parse(message).pgn === "OPEN"){
-            //do startup stuff
+            var chess = new Chess();
+            
+            function inputHandler(event) 
+            {
+                console.log("event", event)
+                event.chessboard.removeMarkers(undefined, MARKER_TYPE.dot)
+                if (event.type === INPUT_EVENT_TYPE.moveStart) {
+                    const moves = chess.moves({square: event.square, verbose: true});
+                    for (const move of moves) {
+                        event.chessboard.addMarker(move.to, MARKER_TYPE.dot)
+                    }
+                    return moves.length > 0
+                } 
+                else if (event.type === INPUT_EVENT_TYPE.moveDone) 
+                {
+                    var move = {from: event.squareFrom, to: event.squareTo}
+                    var possibleMoves = chess.moves()
+                    if (!(possibleMoves.includes(move))){
+                        move = {from: event.squareFrom, to: event.squareTo, promotion: 'q'}
+                    }
+                    const result = chess.move(move)
+                    if (result) {
+                        event.chessboard.disableMoveInput()
+                        event.chessboard.setPosition(chess.fen())
+                        $.get('https://jbarkerwebdev.sites.tjhsst.edu/jebchess/src/update_current_game?current_fen='+chess.pgn(), function(data, status){})
+                        updateMoveList(chess.history())
+                        possibleMoves = chess.moves({verbose: true})
+                        if (possibleMoves.length > 0) { //the url below should be ai1 for candidate or ai2 for best
+                            $.get('https://jeb-chess.sites.tjhsst.edu/ai2?fen='+chess.fen()+"&t=5", function(data, status){
+                                var dat = data
+                            
+                            //for random moves
+                            // const randomIndex = Math.floor(Math.random() * possibleMoves.length)
+                            // const randomMove = possibleMoves[randomIndex]
+                                setTimeout(() => { // smoother with 500ms delay
+                                    // chess.move({from: randomMove.from, to: randomMove.to})
+                                    chess.move(dat, {sloppy: true})
+                                    event.chessboard.enableMoveInput(inputHandler, COLOR.white)
+                                    event.chessboard.setPosition(chess.fen())
+                                    $.get('https://jbarkerwebdev.sites.tjhsst.edu/jebchess/src/update_current_game?current_fen='+chess.pgn(), function(data, status){})
+                                    updateMoveList(chess.history())
+                                }, 500)
+                            })
+                        }
+                    } 
+                    else 
+                    {
+                        console.warn("invalid move", move)
+                    }
+                    return result
+                }
+            }
+        
+            const board = new Chessboard(document.getElementById("board"), {
+                position: chess.fen(),
+                sprite: {url: "../styles/css?name=staunty"},
+                style: {moveMarker: MARKER_TYPE.square, hoverMarker: undefined, aspectRation:.5},
+                responsive: true,
+                orientation: COLOR.white
+            })
+            board.enableMoveInput(inputHandler, COLOR.white)
+            updateMoveList(chess.history())
         }
     }
     
@@ -128,21 +189,3 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://jbarkerw
     })
     
     //console.log(d)
-    
-    
-    
-
-    
-    
-    jQuery(document).ready(function($) {
-        $(".table-movenumber").click(function() {
-            history = chess.history()
-            console.log("Made it here")
-            let m = $(this).val().split(".")[0]
-            chess.reset()
-            for(var a = 0; a < (+m*2); a++){
-                chess.move(history[a])
-            }
-            updateMoveList(chess.history())
-        });
-    });

@@ -1,0 +1,79 @@
+.board{
+    margin:2vw;
+}
+.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+.nav-inn{
+    float: left;
+}
+.nav-inn-links, .nav-inn{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 7px 14px;
+    text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
+@media (max-width: 800px){
+    .inner{
+        width: 90vw;
+        height: 100vh;
+        align-self: center;
+    }
+    table{
+    width: 90vw;
+    max-height: 45vh;
+    border-collapse: collapse;
+    overflow: auto;
+    margin:2vw;
+    }
+    #moveList{
+    overflow: auto;
+    max-height: 100vw;
+    border: 10px;
+    margin-top:2vw;
+}
+}
+@media (min-width: 800px){
+    .inner{
+        width: 45vw;
+        height: 45vh;
+        float: left;
+        font-family: Trebuchet MS;
+    }
+    table{
+        width: 100%;
+        max-height: 45vw;
+        float: left;
+        border-collapse: collapse;
+        overflow: auto;
+    }
+    #moveList{
+    overflow: auto;
+    max-height: 45vw;
+    border: 10px;
+    margin-top:2vw;
+}
+}
+.table-move{
+    text-align: center;
+    width: 175px;
+}
+.table-movenumber{
+    padding: 7px;
+    width: 13px;
+}
+tr:hover 
+{
+    background-color: #f5f5f5;
+}
+.logout{
+    clear: left;
+}
