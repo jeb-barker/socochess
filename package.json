@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "async": "^3.2.2",
     "cm-chessboard": "^3.15.1",
     "cookie-session": "^1.4.0",
     "express": "^4.17.1",

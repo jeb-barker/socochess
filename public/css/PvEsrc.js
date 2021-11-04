@@ -1,84 +1,78 @@
-import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socochess.sites.tjhsst.edu/src/cm-chessboard/Chessboard.js"
-    var d
+import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socochess.sites.tjhsst.edu/src/cm-chessboard/Chessboard.js";
+    var d;
     // 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    
     const ws = new WebSocket(`wss://${location.host}/play/`);
-    
+    var chess;
+    var board = "";
     ws.onmessage = function(message){
-        if(JSON.parse(message).pgn === "OPEN"){
-            var chess = new Chess();
-            
-            function inputHandler(event) 
-            {
-                console.log("event", event)
-                event.chessboard.removeMarkers(undefined, MARKER_TYPE.dot)
-                if (event.type === INPUT_EVENT_TYPE.moveStart) {
-                    const moves = chess.moves({square: event.square, verbose: true});
-                    for (const move of moves) {
-                        event.chessboard.addMarker(move.to, MARKER_TYPE.dot)
-                    }
-                    return moves.length > 0
-                } 
-                else if (event.type === INPUT_EVENT_TYPE.moveDone) 
-                {
-                    var move = {from: event.squareFrom, to: event.squareTo}
-                    var possibleMoves = chess.moves()
-                    if (!(possibleMoves.includes(move))){
-                        move = {from: event.squareFrom, to: event.squareTo, promotion: 'q'}
-                    }
-                    const result = chess.move(move)
-                    if (result) {
-                        event.chessboard.disableMoveInput()
-                        event.chessboard.setPosition(chess.fen())
-                        $.get('https://jbarkerwebdev.sites.tjhsst.edu/jebchess/src/update_current_game?current_fen='+chess.pgn(), function(data, status){})
-                        updateMoveList(chess.history())
-                        possibleMoves = chess.moves({verbose: true})
-                        if (possibleMoves.length > 0) { //the url below should be ai1 for candidate or ai2 for best
-                            $.get('https://jeb-chess.sites.tjhsst.edu/ai2?fen='+chess.fen()+"&t=5", function(data, status){
-                                var dat = data
-                            
-                            //for random moves
-                            // const randomIndex = Math.floor(Math.random() * possibleMoves.length)
-                            // const randomMove = possibleMoves[randomIndex]
-                                setTimeout(() => { // smoother with 500ms delay
-                                    // chess.move({from: randomMove.from, to: randomMove.to})
-                                    chess.move(dat, {sloppy: true})
-                                    event.chessboard.enableMoveInput(inputHandler, COLOR.white)
-                                    event.chessboard.setPosition(chess.fen())
-                                    $.get('https://jbarkerwebdev.sites.tjhsst.edu/jebchess/src/update_current_game?current_fen='+chess.pgn(), function(data, status){})
-                                    updateMoveList(chess.history())
-                                }, 500)
-                            })
-                        }
-                    } 
-                    else 
-                    {
-                        console.warn("invalid move", move)
-                    }
-                    return result
+        if(JSON.parse(message.data).mess === "OPEN"){
+            chess = new Chess();
+        }
+        function inputHandler(event) 
+        {
+            console.log("event", event);
+            event.chessboard.removeMarkers(undefined, MARKER_TYPE.dot);
+            if (event.type === INPUT_EVENT_TYPE.moveStart) {
+                const moves = chess.moves({square: event.square, verbose: true});
+                for (const move of moves) {
+                    board.addMarker(move.to, MARKER_TYPE.dot);
                 }
+                return moves.length > 0;
+            } 
+            else if (event.type === INPUT_EVENT_TYPE.moveDone) 
+            {
+                var move = {from: event.squareFrom, to: event.squareTo};
+                var possibleMoves = chess.moves();
+                if (!(possibleMoves.includes(move))){
+                    move = {from: event.squareFrom, to: event.squareTo, promotion: 'q'};
+                }
+                const result = chess.move(move);
+                console.log("move: ", move);
+                if (result) {
+                    board.disableMoveInput();
+                    board.setPosition(chess.fen());
+                    updateMoveList(chess.history());
+                    possibleMoves = chess.moves({verbose: true});
+                    if (possibleMoves.length > 0) { //the url below should be ai1 for candidate or ai2 for best
+                        ws.send(JSON.stringify({"message":"request_move", "pgn":chess.pgn()}));
+                        console.log("requested_move: ", chess.history());
+                        // setTimeout(() => { // smoother with 500ms delay
+                        //     // chess.move({from: randomMove.from, to: randomMove.to})
+                        //     chess.move(dat, {sloppy: true})
+                        //     event.chessboard.enableMoveInput(inputHandler, COLOR.white)
+                        //     event.chessboard.setPosition(chess.fen())
+                        //     updateMoveList(chess.history())
+                        // }, 500)
+                    }
+                } 
+                else 
+                {
+                    console.warn("invalid move", move);
+                }
+                return result;
             }
+        }
+        if(board === ""){
+            board = new Chessboard(document.getElementById("board"), {
+                position: chess.fen(),
+                sprite: {url: "/src/images/chessboard-sprite-staunty.svg"},
+                style: {moveMarker: MARKER_TYPE.square, hoverMarker: undefined, aspectRation:0.5},
+                responsive: true,
+                orientation: COLOR.white
+            });
+        }
+        board.enableMoveInput(inputHandler, COLOR.white);
+        updateMoveList(chess.history());
         
-        const board = new Chessboard(document.getElementById("board"), {
-            position: chess.fen(),
-            sprite: {url: "../styles/css?name=staunty"},
-            style: {moveMarker: MARKER_TYPE.square, hoverMarker: undefined, aspectRation:.5},
-            responsive: true,
-            orientation: COLOR.white
-        })
-        board.enableMoveInput(inputHandler, COLOR.white)
-        updateMoveList(chess.history())
+        if(JSON.parse(message.data).move){
+            var mo = JSON.parse(message.data).move;
+            chess.move(mo, {sloppy: true});
+            console.log(mo);
+            board.enableMoveInput(inputHandler, COLOR.white);
+            board.setPosition(chess.fen());
+            updateMoveList(chess.history());
         }
-    }
-    
-    $.get('https://jbarkerwebdev.sites.tjhsst.edu/jebchess/src/get_current_game', function(data, status){
-        var chess = ''
-        if (data !== ""){
-            chess = new Chess()
-            chess.load_pgn(data)
-        }
-        else{
-            chess = new Chess()
-        }
+    };
         
         function updateMoveList(history) {
             // get the reference for the body
@@ -86,8 +80,8 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
 
             // creates a <table> element and a <tbody> element
             var tbl = document.getElementById("table");
-            body.removeChild(body.lastChild)
-            tbl = document.createElement("table")
+            body.removeChild(body.lastChild);
+            tbl = document.createElement("table");
             var tblBody = document.createElement("tbody");
         
             // creating all cells
@@ -100,19 +94,19 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                     // node the contents of the <td>, and put the <td> at
                     // the end of the table row
                     var cell = document.createElement("td");
-                    let tbltext = ""
+                    let tbltext = "";
                     if (j === 0) {
-                        tbltext = "" + (i/2 + 1) + "."
+                        tbltext = "" + (i/2 + 1) + ".";
                     }
                     else{
-                        tbltext += history[i+j-1]
+                        tbltext += history[i+j-1];
                     }
                     var cellText = document.createTextNode(tbltext);
                     if (j !== 0){
-                        cell.className = "table table-move"
+                        cell.className = "table table-move";
                     }
                     else{
-                      cell.className = "table table-movenumber"
+                      cell.className = "table table-movenumber";
                     }
                     cell.appendChild(cellText);
                     row.appendChild(cell);
@@ -129,63 +123,3 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
             // sets the border attribute of tbl to 2;
             tbl.setAttribute("border", "2");
         }
-
-        function inputHandler(event) {
-            console.log("event", event)
-            event.chessboard.removeMarkers(undefined, MARKER_TYPE.dot)
-            if (event.type === INPUT_EVENT_TYPE.moveStart) {
-                const moves = chess.moves({square: event.square, verbose: true});
-                for (const move of moves) {
-                    event.chessboard.addMarker(move.to, MARKER_TYPE.dot)
-                }
-                return moves.length > 0
-            } 
-            else if (event.type === INPUT_EVENT_TYPE.moveDone) {
-                var move = {from: event.squareFrom, to: event.squareTo}
-                var possibleMoves = chess.moves()
-                if (!(possibleMoves.includes(move))){
-                    move = {from: event.squareFrom, to: event.squareTo, promotion: 'q'}
-                }
-                const result = chess.move(move)
-                if (result) {
-                    event.chessboard.disableMoveInput()
-                    event.chessboard.setPosition(chess.fen())
-                    $.get('https://jbarkerwebdev.sites.tjhsst.edu/jebchess/src/update_current_game?current_fen='+chess.pgn(), function(data, status){})
-                    updateMoveList(chess.history())
-                    possibleMoves = chess.moves({verbose: true})
-                    if (possibleMoves.length > 0) { //the url below should be ai1 for candidate or ai2 for best
-                        $.get('https://jeb-chess.sites.tjhsst.edu/ai2?fen='+chess.fen()+"&t=5", function(data, status){
-                            var dat = data
-                        
-                        //for random moves
-                        // const randomIndex = Math.floor(Math.random() * possibleMoves.length)
-                        // const randomMove = possibleMoves[randomIndex]
-                            setTimeout(() => { // smoother with 500ms delay
-                                // chess.move({from: randomMove.from, to: randomMove.to})
-                                chess.move(dat, {sloppy: true})
-                                event.chessboard.enableMoveInput(inputHandler, COLOR.white)
-                                event.chessboard.setPosition(chess.fen())
-                                $.get('https://jbarkerwebdev.sites.tjhsst.edu/jebchess/src/update_current_game?current_fen='+chess.pgn(), function(data, status){})
-                                updateMoveList(chess.history())
-                            }, 500)
-                        })
-                    }
-                } else {
-                    console.warn("invalid move", move)
-                }
-                return result
-            }
-        }
-        
-        const board = new Chessboard(document.getElementById("board"), {
-            position: chess.fen(),
-            sprite: {url: "../styles/css?name=staunty"},
-            style: {moveMarker: MARKER_TYPE.square, hoverMarker: undefined, aspectRation:.5},
-            responsive: true,
-            orientation: COLOR.white
-        })
-        board.enableMoveInput(inputHandler, COLOR.white)
-        updateMoveList(chess.history())
-    })
-    
-    //console.log(d)

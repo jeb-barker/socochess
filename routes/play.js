@@ -32,13 +32,15 @@ module.exports.run_setup = function(app){
         database: process.env.DIRECTOR_DATABASE_NAME
     })
     app.get('/play', async function(req, res){
-        passport.authenticate("google")
-        if (req.user){
-            let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+        //passport.authenticate("google")
+       // if (req.user){
+            let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+116264767626572588517+"\'")
             res.render('index.hbs', JSON.parse(userData[0].data));//, JSON.parse(userData[0].data)) 
-        }
-        else{
-            res.redirect('/login')
-        }
+        //}
+        // else{
+        //     // res.redirect('/login')
+        //     req.user = 111111;
+        //     res.redirect('/play')
+        // }
     })
 }
