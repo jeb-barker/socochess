@@ -8,6 +8,22 @@
     overflow: hidden;
     background-color: #333;
 }
+#title{
+    color: white;
+    font: bold;
+    font-size: 50;
+}
+body{
+    background-color:#556;
+    background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a),
+    linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+    background-size:80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}
 .nav-inn{
     float: left;
 }
@@ -56,11 +72,12 @@ li a:hover {
         overflow: auto;
     }
     #moveList{
-    overflow: auto;
-    max-height: 45vw;
-    border: 10px;
-    margin-top:2vw;
-}
+        overflow: auto;
+        max-height: 45vw;
+        border: 10px;
+        margin-top:2vw;
+        background-color: grey;
+    }
 }
 .table-move{
     text-align: center;

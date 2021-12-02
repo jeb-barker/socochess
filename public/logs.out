@@ -1,118 +1,2501 @@
-/site/routes/play.js:38
-            res.render('index.hbs', JSON.parse(userData[0].data));//, JSON.parse(userData[0].data)) 
-                                                           ^
+Listening on port 8080
+user landed at main page
+	Got date as: 11/18/2021
+/site/node_modules/express/lib/view.js:84
+      throw new Error('Module "' + mod + '" does not provide a view engine.')
+            ^
 
-TypeError: Cannot read property 'data' of undefined
-    at /site/routes/play.js:38:60
+Error: Module "html" does not provide a view engine.
+    at new View (/site/node_modules/express/lib/view.js:84:13)
+    at Function.render (/site/node_modules/express/lib/application.js:570:12)
+    at ServerResponse.render (/site/node_modules/express/lib/response.js:1012:7)
+    at /site/public/index.js:130:13
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
+    at next (/site/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
+    at /site/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/site/node_modules/express/lib/router/index.js:335:12)
+Listening on port 8080
+Listening on port 8080
+Listening on port 8080
+user landed at main page
+	Got date as: 11/18/2021
+results:  [
+  RowDataPacket { id: '111144268931321206696' },
+  RowDataPacket { id: '116264767626572588517' }
+]
+111144268931321206696  ---  111144268931321206696
+user landed at main page
+	Got date as: 11/18/2021
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+stopping client interval
+Listening on port 8080
+user landed at main page
+	Got date as: 11/18/2021
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+stopping client interval
+user landed at main page
+	Got date as: 11/18/2021
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+stopping client interval
+started client interval
+stopping client interval
+Listening on port 8080
+user landed at main page
+	Got date as: 11/18/2021
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+stopping client interval
+started client interval
+stopping client interval
+Listening on port 8080
+user landed at main page
+	Got date as: 11/18/2021
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+user landed at main page
+	Got date as: 11/18/2021
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+stopping client interval
+started client interval
+stopping client interval
+user landed at main page
+	Got date as: 11/18/2021
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+stopping client interval
+started client interval
+Listening on port 8080
+user landed at main page
+	Got date as: 11/18/2021
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+user landed at main page
+	Got date as: 11/18/2021
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+stopping client interval
+started client interval
+stopping client interval
+user landed at main page
+	Got date as: 11/18/2021
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+stopping client interval
+started client interval
+stopping client interval
+user landed at main page
+	Got date as: 11/18/2021
+user landed at main page
+	Got date as: 11/18/2021
+user landed at main page
+	Got date as: 11/18/2021
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 33 22 2c 22 66 65 6e 22 3a 22 72 ... 59 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e3","fen":"rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e3',
+  fen: 'rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1'
+}
+DAT= d7d5
+
+-----
+[object Object]
+stopping client interval
+user landed at main page
+	Got date as: 11/18/2021
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:211:20)
+    --------------------
+    at Protocol._enqueue (/site/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/site/node_modules/mysql/lib/Connection.js:198:25)
+    at /site/public/index.js:24:29
+    at new Promise (<anonymous>)
+    at Database.query (/site/public/index.js:23:16)
+    at /site/public/index.js:124:39
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
+    at next (/site/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/site/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5) {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+Listening on port 8080
+user landed at main page
+	Got date as: 11/18/2021
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 22 ... 71 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4","fen":"rnbqkbnr/pppp1ppp/4p3/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq d3 0 2"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4',
+  fen: 'rnbqkbnr/pppp1ppp/4p3/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq d3 0 2'
+}
+DAT= d8f6
+
+-----
+[object Object]
+user landed at main page
+	Got date as: 11/18/2021
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 11/18/2021
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 64 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. d4","fen":"rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. d4',
+  fen: 'rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR b KQkq d3 0 1'
+}
+DAT= b8c6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 64 34 20 4e 63 36 20 32 2e 20 64 35 ... 71 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. d4 Nc6 2. d5","fen":"r1bqkbnr/pppppppp/2n5/3P4/8/8/PPP1PPPP/RNBQKBNR b KQkq - 0 2"}
+{
+  message: 'request_move_1',
+  pgn: '1. d4 Nc6 2. d5',
+  fen: 'r1bqkbnr/pppppppp/2n5/3P4/8/8/PPP1PPPP/RNBQKBNR b KQkq - 0 2'
+}
+DAT= c6b4
+
+-----
+[object Object]
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 11/18/2021
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 22 ... 71 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4","fen":"rnbqkbnr/pppp1ppp/4p3/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq d3 0 2"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4',
+  fen: 'rnbqkbnr/pppp1ppp/4p3/8/3PP3/8/PPP2PPP/RNBQKBNR b KQkq d3 0 2'
+}
+DAT= d8f6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 84 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3","fen":"rnb1kbnr/pppp1ppp/4pq2/8/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq - 2 3"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3',
+  fen: 'rnb1kbnr/pppp1ppp/4pq2/8/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq - 2 3'
+}
+DAT= f8b4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 100 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3","fen":"rnb1k1nr/pppp1ppp/4pq2/8/1b1PP3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 4 4"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3',
+  fen: 'rnb1k1nr/pppp1ppp/4pq2/8/1b1PP3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 4 4'
+}
+DAT= b4c3
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 112 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3","fen":"rnb1k1nr/pppp1ppp/4pq2/8/3PP3/2P2N2/P1P2PPP/R1BQKB1R b KQkq - 0 5"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3',
+  fen: 'rnb1k1nr/pppp1ppp/4pq2/8/3PP3/2P2N2/P1P2PPP/R1BQKB1R b KQkq - 0 5'
+}
+DAT= b8c6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 125 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5","fen":"r1b1k1nr/pppp1ppp/2n1pq2/4P3/3P4/2P2N2/P1P2PPP/R1BQKB1R b KQkq - 0 6"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5',
+  fen: 'r1b1k1nr/pppp1ppp/2n1pq2/4P3/3P4/2P2N2/P1P2PPP/R1BQKB1R b KQkq - 0 6'
+}
+DAT= f6f5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 136 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3","fen":"r1b1k1nr/pppp1ppp/2n1p3/4Pq2/3P4/2PB1N2/P1P2PPP/R1BQK2R b KQkq - 2 7"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3',
+  fen: 'r1b1k1nr/pppp1ppp/2n1p3/4Pq2/3P4/2PB1N2/P1P2PPP/R1BQK2R b KQkq - 2 7'
+}
+DAT= f5g4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 147 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O","fen":"r1b1k1nr/pppp1ppp/2n1p3/4P3/3P2q1/2PB1N2/P1P2PPP/R1BQ1RK1 b kq - 4 8"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O',
+  fen: 'r1b1k1nr/pppp1ppp/2n1p3/4P3/3P2q1/2PB1N2/P1P2PPP/R1BQ1RK1 b kq - 4 8'
+}
+DAT= h7h5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 158 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3","fen":"r1b1k1nr/pppp1pp1/2n1p3/4P2p/3P2q1/2PB1N1P/P1P2PP1/R1BQ1RK1 b kq - 0 9"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3',
+  fen: 'r1b1k1nr/pppp1pp1/2n1p3/4P2p/3P2q1/2PB1N1P/P1P2PP1/R1BQ1RK1 b kq - 0 9'
+}
+DAT= g4f3
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 170 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3","fen":"r1b1k1nr/pppp1pp1/2n1p3/4P2p/3P4/2PB1Q1P/P1P2PP1/R1B2RK1 b kq - 0 10"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3',
+  fen: 'r1b1k1nr/pppp1pp1/2n1p3/4P2p/3P4/2PB1Q1P/P1P2PP1/R1B2RK1 b kq - 0 10'
+}
+DAT= d7d5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 179 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6","fen":"r1b1k1nr/ppp2pp1/2nPp3/7p/3P4/2PB1Q1P/P1P2PP1/R1B2RK1 b kq - 0 11"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6',
+  fen: 'r1b1k1nr/ppp2pp1/2nPp3/7p/3P4/2PB1Q1P/P1P2PP1/R1B2RK1 b kq - 0 11'
+}
+DAT= c6a5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 191 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7","fen":"r1b1k1nr/ppP2pp1/4p3/n6p/3P4/2PB1Q1P/P1P2PP1/R1B2RK1 b kq - 0 12"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7',
+  fen: 'r1b1k1nr/ppP2pp1/4p3/n6p/3P4/2PB1Q1P/P1P2PP1/R1B2RK1 b kq - 0 12'
+}
+DAT= g8e7
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 204 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+","fen":"r1b1k2r/ppP1npp1/4p3/nB5p/3P4/2P2Q1P/P1P2PP1/R1B2RK1 b kq - 2 13"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+',
+  fen: 'r1b1k2r/ppP1npp1/4p3/nB5p/3P4/2P2Q1P/P1P2PP1/R1B2RK1 b kq - 2 13'
+}
+DAT= e7c6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 219 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+","fen":"r1b1k2r/ppP2pp1/2B1p3/n6p/3P4/2P2Q1P/P1P2PP1/R1B2RK1 b kq - 0 14"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+',
+  fen: 'r1b1k2r/ppP2pp1/2B1p3/n6p/3P4/2P2Q1P/P1P2PP1/R1B2RK1 b kq - 0 14'
+}
+DAT= a5c6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 231 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+ Nxc6 15. Bf4","fen":"r1b1k2r/ppP2pp1/2n1p3/7p/3P1B2/2P2Q1P/P1P2PP1/R4RK1 b kq - 1 15"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+ Nxc6 15. Bf4',
+  fen: 'r1b1k2r/ppP2pp1/2n1p3/7p/3P1B2/2P2Q1P/P1P2PP1/R4RK1 b kq - 1 15'
+}
+DAT= e8d7
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 241 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+ Nxc6 15. Bf4 Kd7 16. g4","fen":"r1b4r/ppPk1pp1/2n1p3/7p/3P1BP1/2P2Q1P/P1P2P2/R4RK1 b - g3 0 16"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+ Nxc6 15. Bf4 Kd7 16. g4',
+  fen: 'r1b4r/ppPk1pp1/2n1p3/7p/3P1BP1/2P2Q1P/P1P2P2/R4RK1 b - g3 0 16'
+}
+DAT= c6a5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 251 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+ Nxc6 15. Bf4 Kd7 16. g4 Na5 17. gxh5","fen":"r1b4r/ppPk1pp1/4p3/n6P/3P1B2/2P2Q1P/P1P2P2/R4RK1 b - - 0 17"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+ Nxc6 15. Bf4 Kd7 16. g4 Na5 17. gxh5',
+  fen: 'r1b4r/ppPk1pp1/4p3/n6P/3P1B2/2P2Q1P/P1P2P2/R4RK1 b - - 0 17'
+}
+DAT= a5c4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 262 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+ Nxc6 15. Bf4 Kd7 16. g4 Na5 17. gxh5 Nc4 18. h6","fen":"r1b4r/ppPk1pp1/4p2P/8/2nP1B2/2P2Q1P/P1P2P2/R4RK1 b - - 0 18"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+ Nxc6 15. Bf4 Kd7 16. g4 Na5 17. gxh5 Nc4 18. h6',
+  fen: 'r1b4r/ppPk1pp1/4p2P/8/2nP1B2/2P2Q1P/P1P2P2/R4RK1 b - - 0 18'
+}
+DAT= g7h6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 273 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+ Nxc6 15. Bf4 Kd7 16. g4 Na5 17. gxh5 Nc4 18. h6 gxh6 19. Qh5","fen":"r1b4r/ppPk1p2/4p2p/7Q/2nP1B2/2P4P/P1P2P2/R4RK1 b - - 1 19"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+ Nxc6 15. Bf4 Kd7 16. g4 Na5 17. gxh5 Nc4 18. h6 gxh6 19. Qh5',
+  fen: 'r1b4r/ppPk1p2/4p2p/7Q/2nP1B2/2P4P/P1P2P2/R4RK1 b - - 1 19'
+}
+DAT= h8g8
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 286 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+ Nxc6 15. Bf4 Kd7 16. g4 Na5 17. gxh5 Nc4 18. h6 gxh6 19. Qh5 Rg8+ 20. Bg3","fen":"r1b3r1/ppPk1p2/4p2p/7Q/2nP4/2P3BP/P1P2P2/R4RK1 b - - 3 20"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+ Nxc6 15. Bf4 Kd7 16. g4 Na5 17. gxh5 Nc4 18. h6 gxh6 19. Qh5 Rg8+ 20. Bg3',
+  fen: 'r1b3r1/ppPk1p2/4p2p/7Q/2nP4/2P3BP/P1P2P2/R4RK1 b - - 3 20'
+}
+DAT= c4d6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 64 34 20 ... 298 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+ Nxc6 15. Bf4 Kd7 16. g4 Na5 17. gxh5 Nc4 18. h6 gxh6 19. Qh5 Rg8+ 20. Bg3 Nd6 21. Kh2","fen":"r1b3r1/ppPk1p2/3np2p/7Q/3P4/2P3BP/P1P2P1K/R4R2 b - - 5 21"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. d4 Qf6 3. Nf3 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+ Nxc6 15. Bf4 Kd7 16. g4 Na5 17. gxh5 Nc4 18. h6 gxh6 19. Qh5 Rg8+ 20. Bg3 Nd6 21. Kh2',
+  fen: 'r1b3r1/ppPk1p2/3np2p/7Q/3P4/2P3BP/P1P2P1K/R4R2 b - - 5 21'
+}
+DAT= g8g5
+
+-----
+[object Object]
+stopping client interval
+user landed at main page
+	Got date as: 11/19/2021
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:211:20)
+    --------------------
+    at Protocol._enqueue (/site/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/site/node_modules/mysql/lib/Connection.js:198:25)
+    at /site/public/index.js:24:29
+    at new Promise (<anonymous>)
+    at Database.query (/site/public/index.js:23:16)
+    at /site/public/index.js:83:34
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
+    at next (/site/node_modules/express/lib/router/route.js:137:13)
+    at complete (/site/node_modules/passport/lib/middleware/authenticate.js:262:13)
+    at /site/node_modules/passport/lib/middleware/authenticate.js:269:15 {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+Listening on port 8080
+user landed at main page
+	Got date as: 11/19/2021
+results:  [
+  RowDataPacket { id: '111144268931321206696' },
+  RowDataPacket { id: '116264767626572588517' }
+]
+111144268931321206696  ---  116264767626572588517
+116264767626572588517  ---  116264767626572588517
+user landed at main page
+	Got date as: 11/19/2021
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 73 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3","fen":"rnbqkbnr/pppp1ppp/4p3/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3',
+  fen: 'rnbqkbnr/pppp1ppp/4p3/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2'
+}
+DAT= d8f6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 85 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4","fen":"rnb1kbnr/pppp1ppp/4pq2/8/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq d3 0 3"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4',
+  fen: 'rnb1kbnr/pppp1ppp/4pq2/8/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq d3 0 3'
+}
+DAT= f8b4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 98 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3","fen":"rnb1k1nr/pppp1ppp/4pq2/8/1b1PP3/2P2N2/PP3PPP/RNBQKB1R b KQkq - 0 4"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3',
+  fen: 'rnb1k1nr/pppp1ppp/4pq2/8/1b1PP3/2P2N2/PP3PPP/RNBQKB1R b KQkq - 0 4'
+}
+DAT= b4d6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 108 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5","fen":"rnb1k1nr/pppp1ppp/3bpq2/4P3/3P4/2P2N2/PP3PPP/RNBQKB1R b KQkq - 0 5"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5',
+  fen: 'rnb1k1nr/pppp1ppp/3bpq2/4P3/3P4/2P2N2/PP3PPP/RNBQKB1R b KQkq - 0 5'
+}
+DAT= d6e5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 118 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5","fen":"rnb1k1nr/pppp1ppp/4pq2/4P3/8/2P2N2/PP3PPP/RNBQKB1R b KQkq - 0 6"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5',
+  fen: 'rnb1k1nr/pppp1ppp/4pq2/4P3/8/2P2N2/PP3PPP/RNBQKB1R b KQkq - 0 6'
+}
+DAT= f6f5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 129 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3","fen":"rnb1k1nr/pppp1ppp/4p3/4Pq2/8/2PB1N2/PP3PPP/RNBQK2R b KQkq - 2 7"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3',
+  fen: 'rnb1k1nr/pppp1ppp/4p3/4Pq2/8/2PB1N2/PP3PPP/RNBQK2R b KQkq - 2 7'
+}
+DAT= f5g4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 140 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O","fen":"rnb1k1nr/pppp1ppp/4p3/4P3/6q1/2PB1N2/PP3PPP/RNBQ1RK1 b kq - 4 8"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O',
+  fen: 'rnb1k1nr/pppp1ppp/4p3/4P3/6q1/2PB1N2/PP3PPP/RNBQ1RK1 b kq - 4 8'
+}
+DAT= h7h5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 151 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3","fen":"rnb1k1nr/pppp1pp1/4p3/4P2p/6q1/2PB1N1P/PP3PP1/RNBQ1RK1 b kq - 0 9"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3',
+  fen: 'rnb1k1nr/pppp1pp1/4p3/4P2p/6q1/2PB1N1P/PP3PP1/RNBQ1RK1 b kq - 0 9'
+}
+DAT= g4f3
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 163 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3","fen":"rnb1k1nr/pppp1pp1/4p3/4P2p/8/2PB1Q1P/PP3PP1/RNB2RK1 b kq - 0 10"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3',
+  fen: 'rnb1k1nr/pppp1pp1/4p3/4P2p/8/2PB1Q1P/PP3PP1/RNB2RK1 b kq - 0 10'
+}
+DAT= b8c6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 177 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5","fen":"r1b1k1nr/pppp1pp1/2n1p3/4P1Bp/8/2PB1Q1P/PP3PP1/RN3RK1 b kq - 2 11"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5',
+  fen: 'r1b1k1nr/pppp1pp1/2n1p3/4P1Bp/8/2PB1Q1P/PP3PP1/RN3RK1 b kq - 2 11'
+}
+DAT= c6e5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 187 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3","fen":"r1b1k1nr/pppp1pp1/4p3/4n1Bp/8/2PB2QP/PP3PP1/RN3RK1 b kq - 1 12"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3',
+  fen: 'r1b1k1nr/pppp1pp1/4p3/4n1Bp/8/2PB2QP/PP3PP1/RN3RK1 b kq - 1 12'
+}
+DAT= f7f6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 199 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4","fen":"r1b1k1nr/pppp2p1/4pp2/4n2p/5B2/2PB2QP/PP3PP1/RN3RK1 b kq - 1 13"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4',
+  fen: 'r1b1k1nr/pppp2p1/4pp2/4n2p/5B2/2PB2QP/PP3PP1/RN3RK1 b kq - 1 13'
+}
+DAT= h5h4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 210 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7","fen":"r1b1k1nr/pppp2Q1/4pp2/4n3/5B1p/2PB3P/PP3PP1/RN3RK1 b kq - 0 14"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7',
+  fen: 'r1b1k1nr/pppp2Q1/4pp2/4n3/5B1p/2PB3P/PP3PP1/RN3RK1 b kq - 0 14'
+}
+DAT= e5d3
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 219 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8","fen":"r1b1k1nQ/pppp4/4pp2/8/5B1p/2Pn3P/PP3PP1/RN3RK1 b q - 0 15"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8',
+  fen: 'r1b1k1nQ/pppp4/4pp2/8/5B1p/2Pn3P/PP3PP1/RN3RK1 b q - 0 15'
+}
+DAT= d3f4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 233 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+","fen":"r1b1k1Q1/pppp4/4pp2/8/5n1p/2P4P/PP3PP1/RN3RK1 b q - 0 16"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+',
+  fen: 'r1b1k1Q1/pppp4/4pp2/8/5n1p/2P4P/PP3PP1/RN3RK1 b q - 0 16'
+}
+DAT= e8e7
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 245 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2","fen":"r1b3Q1/ppppk3/4pp2/8/5n1p/2P4P/PP1N1PP1/R4RK1 b - - 2 17"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2',
+  fen: 'r1b3Q1/ppppk3/4pp2/8/5n1p/2P4P/PP1N1PP1/R4RK1 b - - 2 17'
+}
+DAT= f4e2
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 255 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2","fen":"r1b3Q1/ppppk3/4pp2/8/7p/2P4P/PP1NnPPK/R4R2 b - - 4 18"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2',
+  fen: 'r1b3Q1/ppppk3/4pp2/8/7p/2P4P/PP1NnPPK/R4R2 b - - 4 18'
+}
+DAT= b7b6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 269 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+","fen":"r1b5/p1ppk1Q1/1p2pp2/8/7p/2P4P/PP1NnPPK/R4R2 b - - 1 19"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+',
+  fen: 'r1b5/p1ppk1Q1/1p2pp2/8/7p/2P4P/PP1NnPPK/R4R2 b - - 1 19'
+}
+DAT= e7e8
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 281 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6","fen":"r1b1k3/p1pp4/1p2pQ2/8/7p/2P4P/PP1NnPPK/R4R2 b - - 0 20"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6',
+  fen: 'r1b1k3/p1pp4/1p2pQ2/8/7p/2P4P/PP1NnPPK/R4R2 b - - 0 20'
+}
+DAT= c8b7
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 292 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1","fen":"r3k3/pbpp4/1p2pQ2/8/7p/2P4P/PP1NnPPK/4RR2 b - - 2 21"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1',
+  fen: 'r3k3/pbpp4/1p2pQ2/8/7p/2P4P/PP1NnPPK/4RR2 b - - 2 21'
+}
+DAT= b7a6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 305 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+","fen":"r3k2Q/p1pp4/bp2p3/8/7p/2P4P/PP1NnPPK/4RR2 b - - 4 22"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+',
+  fen: 'r3k2Q/p1pp4/bp2p3/8/7p/2P4P/PP1NnPPK/4RR2 b - - 4 22'
+}
+DAT= e8f7
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 317 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8","fen":"Q7/p1pp1k2/bp2p3/8/7p/2P4P/PP1NnPPK/4RR2 b - - 0 23"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8',
+  fen: 'Q7/p1pp1k2/bp2p3/8/7p/2P4P/PP1NnPPK/4RR2 b - - 0 23'
+}
+DAT= e2c3
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 330 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3","fen":"Q7/p1pp1k2/bp2p3/8/7p/2P4P/P2N1PPK/4RR2 b - - 0 24"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3',
+  fen: 'Q7/p1pp1k2/bp2p3/8/7p/2P4P/P2N1PPK/4RR2 b - - 0 24'
+}
+DAT= a6f1
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 343 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1","fen":"Q7/p1pp1k2/1p2p3/8/7p/2P4P/P2N1PPK/5R2 b - - 0 25"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1',
+  fen: 'Q7/p1pp1k2/1p2p3/8/7p/2P4P/P2N1PPK/5R2 b - - 0 25'
+}
+DAT= a7a5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 354 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1 a5 26. g3","fen":"Q7/2pp1k2/1p2p3/p7/7p/2P3PP/P2N1P1K/5R2 b - - 0 26"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1 a5 26. g3',
+  fen: 'Q7/2pp1k2/1p2p3/p7/7p/2P3PP/P2N1P1K/5R2 b - - 0 26'
+}
+DAT= h4g3
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 367 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1 a5 26. g3 hxg3+ 27. fxg3+","fen":"Q7/2pp1k2/1p2p3/p7/8/2P3PP/P2N3K/5R2 b - - 0 27"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1 a5 26. g3 hxg3+ 27. fxg3+',
+  fen: 'Q7/2pp1k2/1p2p3/p7/8/2P3PP/P2N3K/5R2 b - - 0 27'
+}
+DAT= f7g7
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 381 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1 a5 26. g3 hxg3+ 27. fxg3+ Kg7 28. Qf8+","fen":"5Q2/2pp2k1/1p2p3/p7/8/2P3PP/P2N3K/5R2 b - - 2 28"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1 a5 26. g3 hxg3+ 27. fxg3+ Kg7 28. Qf8+',
+  fen: '5Q2/2pp2k1/1p2p3/p7/8/2P3PP/P2N3K/5R2 b - - 2 28'
+}
+DAT= g7h7
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 391 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1 a5 26. g3 hxg3+ 27. fxg3+ Kg7 28. Qf8+ Kh7 29. Rf6","fen":"5Q2/2pp3k/1p2pR2/p7/8/2P3PP/P2N3K/8 b - - 4 29"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1 a5 26. g3 hxg3+ 27. fxg3+ Kg7 28. Qf8+ Kh7 29. Rf6',
+  fen: '5Q2/2pp3k/1p2pR2/p7/8/2P3PP/P2N3K/8 b - - 4 29'
+}
+DAT= d7d6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 402 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1 a5 26. g3 hxg3+ 27. fxg3+ Kg7 28. Qf8+ Kh7 29. Rf6 d6 30. Qh6+","fen":"8/2p4k/1p1ppR1Q/p7/8/2P3PP/P2N3K/8 b - - 1 30"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1 a5 26. g3 hxg3+ 27. fxg3+ Kg7 28. Qf8+ Kh7 29. Rf6 d6 30. Qh6+',
+  fen: '8/2p4k/1p1ppR1Q/p7/8/2P3PP/P2N3K/8 b - - 1 30'
+}
+DAT= h7g8
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 416 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1 a5 26. g3 hxg3+ 27. fxg3+ Kg7 28. Qf8+ Kh7 29. Rf6 d6 30. Qh6+ Kg8 31. Qg6+","fen":"6k1/2p5/1p1ppRQ1/p7/8/2P3PP/P2N3K/8 b - - 3 31"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1 a5 26. g3 hxg3+ 27. fxg3+ Kg7 28. Qf8+ Kh7 29. Rf6 d6 30. Qh6+ Kg8 31. Qg6+',
+  fen: '6k1/2p5/1p1ppRQ1/p7/8/2P3PP/P2N3K/8 b - - 3 31'
+}
+DAT= g8h8
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 429 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1 a5 26. g3 hxg3+ 27. fxg3+ Kg7 28. Qf8+ Kh7 29. Rf6 d6 30. Qh6+ Kg8 31. Qg6+ Kh8 32. Rf7","fen":"7k/2p2R2/1p1pp1Q1/p7/8/2P3PP/P2N3K/8 b - - 5 32"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. c3 Bd6 5. e5 Bxe5 6. dxe5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 Nc6 11. Bg5 Nxe5 12. Qg3 f6 13. Bf4 h4 14. Qxg7 Nxd3 15. Qxh8 Nxf4 16. Qxg8+ Ke7 17. Nd2 Ne2+ 18. Kh2 b6 19. Qg7+ Ke8 20. Qxf6 Bb7 21. Rae1 Ba6 22. Qh8+ Kf7 23. Qxa8 Nxc3 24. bxc3 Bxf1 25. Rxf1 a5 26. g3 hxg3+ 27. fxg3+ Kg7 28. Qf8+ Kh7 29. Rf6 d6 30. Qh6+ Kg8 31. Qg6+ Kh8 32. Rf7',
+  fen: '7k/2p2R2/1p1pp1Q1/p7/8/2P3PP/P2N3K/8 b - - 5 32'
+}
+DAT= c7c6
+
+-----
+[object Object]
+user landed at main page
+	Got date as: 11/19/2021
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+user landed at main page
+	Got date as: 11/19/2021
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:211:20)
+    --------------------
+    at Protocol._enqueue (/site/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/site/node_modules/mysql/lib/Connection.js:198:25)
+    at /site/public/index.js:24:29
+    at new Promise (<anonymous>)
+    at Database.query (/site/public/index.js:23:16)
+    at /site/public/index.js:83:34
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
+    at next (/site/node_modules/express/lib/router/route.js:137:13)
+    at complete (/site/node_modules/passport/lib/middleware/authenticate.js:262:13)
+    at /site/node_modules/passport/lib/middleware/authenticate.js:269:15 {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+Listening on port 8080
+started client interval
+user landed at main page
+	Got date as: 11/19/2021
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 73 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3","fen":"rnbqkbnr/pppp1ppp/4p3/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3',
+  fen: 'rnbqkbnr/pppp1ppp/4p3/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2'
+}
+DAT= d8f6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 85 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4","fen":"rnb1kbnr/pppp1ppp/4pq2/8/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq d3 0 3"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4',
+  fen: 'rnb1kbnr/pppp1ppp/4pq2/8/3PP3/5N2/PPP2PPP/RNBQKB1R b KQkq d3 0 3'
+}
+DAT= f8b4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 100 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3","fen":"rnb1k1nr/pppp1ppp/4pq2/8/1b1PP3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 2 4"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3',
+  fen: 'rnb1k1nr/pppp1ppp/4pq2/8/1b1PP3/2N2N2/PPP2PPP/R1BQKB1R b KQkq - 2 4'
+}
+DAT= b4c3
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 112 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3","fen":"rnb1k1nr/pppp1ppp/4pq2/8/3PP3/2P2N2/P1P2PPP/R1BQKB1R b KQkq - 0 5"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3',
+  fen: 'rnb1k1nr/pppp1ppp/4pq2/8/3PP3/2P2N2/P1P2PPP/R1BQKB1R b KQkq - 0 5'
+}
+DAT= b8c6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 125 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5","fen":"r1b1k1nr/pppp1ppp/2n1pq2/4P3/3P4/2P2N2/P1P2PPP/R1BQKB1R b KQkq - 0 6"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5',
+  fen: 'r1b1k1nr/pppp1ppp/2n1pq2/4P3/3P4/2P2N2/P1P2PPP/R1BQKB1R b KQkq - 0 6'
+}
+DAT= f6f5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 136 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3","fen":"r1b1k1nr/pppp1ppp/2n1p3/4Pq2/3P4/2PB1N2/P1P2PPP/R1BQK2R b KQkq - 2 7"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3',
+  fen: 'r1b1k1nr/pppp1ppp/2n1p3/4Pq2/3P4/2PB1N2/P1P2PPP/R1BQK2R b KQkq - 2 7'
+}
+DAT= f5g4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 147 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O","fen":"r1b1k1nr/pppp1ppp/2n1p3/4P3/3P2q1/2PB1N2/P1P2PPP/R1BQ1RK1 b kq - 4 8"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O',
+  fen: 'r1b1k1nr/pppp1ppp/2n1p3/4P3/3P2q1/2PB1N2/P1P2PPP/R1BQ1RK1 b kq - 4 8'
+}
+DAT= h7h5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 158 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3","fen":"r1b1k1nr/pppp1pp1/2n1p3/4P2p/3P2q1/2PB1N1P/P1P2PP1/R1BQ1RK1 b kq - 0 9"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3',
+  fen: 'r1b1k1nr/pppp1pp1/2n1p3/4P2p/3P2q1/2PB1N1P/P1P2PP1/R1BQ1RK1 b kq - 0 9'
+}
+DAT= g4f3
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 170 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3","fen":"r1b1k1nr/pppp1pp1/2n1p3/4P2p/3P4/2PB1Q1P/P1P2PP1/R1B2RK1 b kq - 0 10"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3',
+  fen: 'r1b1k1nr/pppp1pp1/2n1p3/4P2p/3P4/2PB1Q1P/P1P2PP1/R1B2RK1 b kq - 0 10'
+}
+DAT= d7d5
+
+-----
+[object Object]
+TokenError: Bad Request
+    at Strategy.OAuth2Strategy.parseErrorResponse (/site/node_modules/passport-oauth2/lib/strategy.js:373:12)
+    at Strategy.OAuth2Strategy._createOAuthError (/site/node_modules/passport-oauth2/lib/strategy.js:420:16)
+    at /site/node_modules/passport-oauth2/lib/strategy.js:177:45
+    at /site/node_modules/oauth/lib/oauth2.js:191:18
+    at passBackControl (/site/node_modules/oauth/lib/oauth2.js:132:9)
+    at IncomingMessage.<anonymous> (/site/node_modules/oauth/lib/oauth2.js:157:7)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 179 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6","fen":"r1b1k1nr/ppp2pp1/2nPp3/7p/3P4/2PB1Q1P/P1P2PP1/R1B2RK1 b kq - 0 11"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6',
+  fen: 'r1b1k1nr/ppp2pp1/2nPp3/7p/3P4/2PB1Q1P/P1P2PP1/R1B2RK1 b kq - 0 11'
+}
+DAT= c6a5
+
+-----
+[object Object]
+TokenError: Bad Request
+    at Strategy.OAuth2Strategy.parseErrorResponse (/site/node_modules/passport-oauth2/lib/strategy.js:373:12)
+    at Strategy.OAuth2Strategy._createOAuthError (/site/node_modules/passport-oauth2/lib/strategy.js:420:16)
+    at /site/node_modules/passport-oauth2/lib/strategy.js:177:45
+    at /site/node_modules/oauth/lib/oauth2.js:191:18
+    at passBackControl (/site/node_modules/oauth/lib/oauth2.js:132:9)
+    at IncomingMessage.<anonymous> (/site/node_modules/oauth/lib/oauth2.js:157:7)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 191 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7","fen":"r1b1k1nr/ppP2pp1/4p3/n6p/3P4/2PB1Q1P/P1P2PP1/R1B2RK1 b kq - 0 12"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7',
+  fen: 'r1b1k1nr/ppP2pp1/4p3/n6p/3P4/2PB1Q1P/P1P2PP1/R1B2RK1 b kq - 0 12'
+}
+DAT= g8e7
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 204 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+","fen":"r1b1k2r/ppP1npp1/4p3/nB5p/3P4/2P2Q1P/P1P2PP1/R1B2RK1 b kq - 2 13"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+',
+  fen: 'r1b1k2r/ppP1npp1/4p3/nB5p/3P4/2P2Q1P/P1P2PP1/R1B2RK1 b kq - 2 13'
+}
+DAT= e7c6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 219 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+","fen":"r1b1k2r/ppP2pp1/2B1p3/n6p/3P4/2P2Q1P/P1P2PP1/R1B2RK1 b kq - 0 14"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. d4 Bb4+ 4. Nc3 Bxc3+ 5. bxc3 Nc6 6. e5 Qf5 7. Bd3 Qg4 8. O-O h5 9. h3 Qxf3 10. Qxf3 d5 11. exd6 Na5 12. dxc7 Ne7 13. Bb5+ Nec6 14. Bxc6+',
+  fen: 'r1b1k2r/ppP2pp1/2B1p3/n6p/3P4/2P2Q1P/P1P2PP1/R1B2RK1 b kq - 0 14'
+}
+DAT= a5c6
+
+-----
+[object Object]
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+started client interval
+started client interval
+started client interval
+started client interval
+started client interval
+stopping client interval
+stopping client interval
+stopping client interval
+stopping client interval
+stopping client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+user landed at main page
+	Got date as: 11/22/2021
+user landed at main page
+	Got date as: 11/23/2021
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:211:20)
+    --------------------
+    at Protocol._enqueue (/site/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/site/node_modules/mysql/lib/Connection.js:198:25)
+    at /site/public/index.js:24:29
+    at new Promise (<anonymous>)
+    at Database.query (/site/public/index.js:23:16)
+    at /site/public/index.js:83:34
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
+    at next (/site/node_modules/express/lib/router/route.js:137:13)
+    at complete (/site/node_modules/passport/lib/middleware/authenticate.js:262:13)
+    at /site/node_modules/passport/lib/middleware/authenticate.js:269:15 {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+Listening on port 8080
+user landed at main page
+	Got date as: 11/23/2021
+results:  [
+  RowDataPacket { id: '111144268931321206696' },
+  RowDataPacket { id: '116264767626572588517' }
+]
+111144268931321206696  ---  111144268931321206696
+user landed at main page
+	Got date as: 11/23/2021
+started client interval
+user landed at main page
+	Got date as: 11/23/2021
+stopping client interval
+started client interval
+user landed at main page
+	Got date as: 11/23/2021
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+results:  [
+  RowDataPacket { id: '111144268931321206696' },
+  RowDataPacket { id: '116264767626572588517' }
+]
+111144268931321206696  ---  111144268931321206696
+user landed at main page
+	Got date as: 11/23/2021
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 73 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3","fen":"rnbqkbnr/pppp1ppp/4p3/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3',
+  fen: 'rnbqkbnr/pppp1ppp/4p3/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2'
+}
+DAT= d8f6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 85 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3","fen":"rnb1kbnr/pppp1ppp/4pq2/8/4P3/5NP1/PPPP1P1P/RNBQKB1R b KQkq - 0 3"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3',
+  fen: 'rnb1kbnr/pppp1ppp/4pq2/8/4P3/5NP1/PPPP1P1P/RNBQKB1R b KQkq - 0 3'
+}
+DAT= f8c5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 97 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2","fen":"rnb1k1nr/pppp1ppp/4pq2/2b5/4P3/5NP1/PPPP1PBP/RNBQK2R b KQkq - 2 4"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2',
+  fen: 'rnb1k1nr/pppp1ppp/4pq2/2b5/4P3/5NP1/PPPP1PBP/RNBQK2R b KQkq - 2 4'
+}
+DAT= b8c6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 109 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O","fen":"r1b1k1nr/pppp1ppp/2n1pq2/2b5/4P3/5NP1/PPPP1PBP/RNBQ1RK1 b kq - 4 5"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O',
+  fen: 'r1b1k1nr/pppp1ppp/2n1pq2/2b5/4P3/5NP1/PPPP1PBP/RNBQ1RK1 b kq - 4 5'
+}
+DAT= h7h5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 120 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4","fen":"r1b1k1nr/pppp1pp1/2n1pq2/2b4p/3PP3/5NP1/PPP2PBP/RNBQ1RK1 b kq d3 0 6"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4',
+  fen: 'r1b1k1nr/pppp1pp1/2n1pq2/2b4p/3PP3/5NP1/PPP2PBP/RNBQ1RK1 b kq d3 0 6'
+}
+DAT= c5b4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 130 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5","fen":"r1b1k1nr/pppp1pp1/2n1pq2/4P2p/1b1P4/5NP1/PPP2PBP/RNBQ1RK1 b kq - 0 7"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5',
+  fen: 'r1b1k1nr/pppp1pp1/2n1pq2/4P2p/1b1P4/5NP1/PPP2PBP/RNBQ1RK1 b kq - 0 7'
+}
+DAT= f6f5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 141 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3","fen":"r1b1k1nr/pppp1pp1/2n1p3/4Pq1p/1b1P4/2P2NP1/PP3PBP/RNBQ1RK1 b kq - 0 8"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3',
+  fen: 'r1b1k1nr/pppp1pp1/2n1p3/4Pq1p/1b1P4/2P2NP1/PP3PBP/RNBQ1RK1 b kq - 0 8'
+}
+DAT= b4f8
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 153 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2","fen":"r1b1kbnr/pppp1pp1/2n1p3/4Pq1p/3P4/2P2NP1/PP1N1PBP/R1BQ1RK1 b kq - 2 9"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2',
+  fen: 'r1b1kbnr/pppp1pp1/2n1p3/4Pq1p/3P4/2P2NP1/PP1N1PBP/R1BQ1RK1 b kq - 2 9'
+}
+DAT= b7b5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 166 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2","fen":"r1b1kbnr/p1pp1pp1/2n1p3/1p2Pq1p/3P4/2P2NP1/PP1NQPBP/R1B2RK1 b kq - 1 10"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2',
+  fen: 'r1b1kbnr/p1pp1pp1/2n1p3/1p2Pq1p/3P4/2P2NP1/PP1NQPBP/R1B2RK1 b kq - 1 10'
+}
+DAT= b5b4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 177 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4","fen":"r1b1kbnr/p1pp1pp1/2n1p3/4Pq1p/1p1PN3/2P2NP1/PP2QPBP/R1B2RK1 b kq - 1 11"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4',
+  fen: 'r1b1kbnr/p1pp1pp1/2n1p3/4Pq1p/1p1PN3/2P2NP1/PP2QPBP/R1B2RK1 b kq - 1 11'
+}
+DAT= b4c3
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 188 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3","fen":"r1b1kbnr/p1pp1pp1/2n1p3/4Pq1p/3PN3/2P2NP1/P3QPBP/R1B2RK1 b kq - 0 12"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3',
+  fen: 'r1b1kbnr/p1pp1pp1/2n1p3/4Pq1p/3PN3/2P2NP1/P3QPBP/R1B2RK1 b kq - 0 12'
+}
+DAT= c8b7
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 198 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4","fen":"r3kbnr/pbpp1pp1/2n1p3/4Pq1p/3PN2N/2P3P1/P3QPBP/R1B2RK1 b kq - 2 13"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4',
+  fen: 'r3kbnr/pbpp1pp1/2n1p3/4Pq1p/3PN2N/2P3P1/P3QPBP/R1B2RK1 b kq - 2 13'
+}
+DAT= f5h7
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 208 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5","fen":"r3kbnr/pbpp1ppq/2n1p3/4P1Bp/3PN2N/2P3P1/P3QPBP/R4RK1 b kq - 4 14"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5',
+  fen: 'r3kbnr/pbpp1ppq/2n1p3/4P1Bp/3PN2N/2P3P1/P3QPBP/R4RK1 b kq - 4 14'
+}
+DAT= a7a5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 221 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4","fen":"r3kbnr/1bpp1ppq/2n1p3/p3P1Bp/3PNP1N/2P3P1/P3Q1BP/R4RK1 b kq f3 0 15"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4',
+  fen: 'r3kbnr/1bpp1ppq/2n1p3/p3P1Bp/3PNP1N/2P3P1/P3Q1BP/R4RK1 b kq f3 0 15'
+}
+DAT= a5a4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 229 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5","fen":"r3kbnr/1bpp1ppq/2n1p3/4PPBp/p2PN2N/2P3P1/P3Q1BP/R4RK1 b kq - 0 16"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5',
+  fen: 'r3kbnr/1bpp1ppq/2n1p3/4PPBp/p2PN2N/2P3P1/P3Q1BP/R4RK1 b kq - 0 16'
+}
+DAT= e6f5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 240 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5","fen":"r3kbnr/1bpp1ppq/2n5/4PRBp/p2PN2N/2P3P1/P3Q1BP/R5K1 b kq - 0 17"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5',
+  fen: 'r3kbnr/1bpp1ppq/2n5/4PRBp/p2PN2N/2P3P1/P3Q1BP/R5K1 b kq - 0 17'
+}
+DAT= a4a3
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 252 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5","fen":"r3kbnr/1bpp1ppq/2n5/2N1PRBp/3P3N/p1P3P1/P3Q1BP/R5K1 b kq - 1 18"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5',
+  fen: 'r3kbnr/1bpp1ppq/2n5/2N1PRBp/3P3N/p1P3P1/P3Q1BP/R5K1 b kq - 1 18'
+}
+DAT= f8c5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 264 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5","fen":"r3k1nr/1bpp1ppq/2n5/2P1PRBp/7N/p1P3P1/P3Q1BP/R5K1 b kq - 0 19"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5',
+  fen: 'r3k1nr/1bpp1ppq/2n5/2P1PRBp/7N/p1P3P1/P3Q1BP/R5K1 b kq - 0 19'
+}
+DAT= d7d5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 276 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5 d5 20. exd6+","fen":"r3k1nr/1bp2ppq/2nP4/2P2RBp/7N/p1P3P1/P3Q1BP/R5K1 b kq - 0 20"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5 d5 20. exd6+',
+  fen: 'r3k1nr/1bp2ppq/2nP4/2P2RBp/7N/p1P3P1/P3Q1BP/R5K1 b kq - 0 20'
+}
+DAT= e8f8
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 286 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5 d5 20. exd6+ Kf8 21. dxc7","fen":"r4knr/1bP2ppq/2n5/2P2RBp/7N/p1P3P1/P3Q1BP/R5K1 b - - 0 21"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5 d5 20. exd6+ Kf8 21. dxc7',
+  fen: 'r4knr/1bP2ppq/2n5/2P2RBp/7N/p1P3P1/P3Q1BP/R5K1 b - - 0 21'
+}
+DAT= a8c8
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 298 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5 d5 20. exd6+ Kf8 21. dxc7 Rc8 22. Qb5","fen":"2r2knr/1bP2ppq/2n5/1QP2RBp/7N/p1P3P1/P5BP/R5K1 b - - 2 22"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5 d5 20. exd6+ Kf8 21. dxc7 Rc8 22. Qb5',
+  fen: '2r2knr/1bP2ppq/2n5/1QP2RBp/7N/p1P3P1/P5BP/R5K1 b - - 2 22'
+}
+DAT= c8c7
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 309 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5 d5 20. exd6+ Kf8 21. dxc7 Rc8 22. Qb5 Rxc7 23. Bxc6","fen":"5knr/1br2ppq/2B5/1QP2RBp/7N/p1P3P1/P6P/R5K1 b - - 0 23"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5 d5 20. exd6+ Kf8 21. dxc7 Rc8 22. Qb5 Rxc7 23. Bxc6',
+  fen: '5knr/1br2ppq/2B5/1QP2RBp/7N/p1P3P1/P6P/R5K1 b - - 0 23'
+}
+DAT= c7c6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 321 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5 d5 20. exd6+ Kf8 21. dxc7 Rc8 22. Qb5 Rxc7 23. Bxc6 Rxc6 24. Qxb7","fen":"5knr/1Q3ppq/2r5/2P2RBp/7N/p1P3P1/P6P/R5K1 b - - 0 24"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5 d5 20. exd6+ Kf8 21. dxc7 Rc8 22. Qb5 Rxc7 23. Bxc6 Rxc6 24. Qxb7',
+  fen: '5knr/1Q3ppq/2r5/2P2RBp/7N/p1P3P1/P6P/R5K1 b - - 0 24'
+}
+DAT= h7f5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 334 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5 d5 20. exd6+ Kf8 21. dxc7 Rc8 22. Qb5 Rxc7 23. Bxc6 Rxc6 24. Qxb7 Qxf5 25. Nxf5","fen":"5knr/1Q3pp1/2r5/2P2NBp/8/p1P3P1/P6P/R5K1 b - - 0 25"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5 d5 20. exd6+ Kf8 21. dxc7 Rc8 22. Qb5 Rxc7 23. Bxc6 Rxc6 24. Qxb7 Qxf5 25. Nxf5',
+  fen: '5knr/1Q3pp1/2r5/2P2NBp/8/p1P3P1/P6P/R5K1 b - - 0 25'
+}
+DAT= c6c5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 346 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5 d5 20. exd6+ Kf8 21. dxc7 Rc8 22. Qb5 Rxc7 23. Bxc6 Rxc6 24. Qxb7 Qxf5 25. Nxf5 Rxc5 26. Qb8+","fen":"1Q3knr/5pp1/8/2r2NBp/8/p1P3P1/P6P/R5K1 b - - 1 26"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. Bg2 Nc6 5. O-O h5 6. d4 Bb4 7. e5 Qf5 8. c3 Bf8 9. Nbd2 b5 10. Qe2 b4 11. Ne4 bxc3 12. bxc3 Bb7 13. Nh4 Qh7 14. Bg5 a5 15. f4 a4 16. f5 exf5 17. Rxf5 a3 18. Nc5 Bxc5 19. dxc5 d5 20. exd6+ Kf8 21. dxc7 Rc8 22. Qb5 Rxc7 23. Bxc6 Rxc6 24. Qxb7 Qxf5 25. Nxf5 Rxc5 26. Qb8+',
+  fen: '1Q3knr/5pp1/8/2r2NBp/8/p1P3P1/P6P/R5K1 b - - 1 26'
+}
+DAT= c5c8
+
+-----
+[object Object]
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+user landed at main page
+	Got date as: 11/24/2021
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:211:20)
+    --------------------
+    at Protocol._enqueue (/site/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/site/node_modules/mysql/lib/Connection.js:198:25)
+    at /site/public/index.js:24:29
+    at new Promise (<anonymous>)
+    at Database.query (/site/public/index.js:23:16)
+    at /site/public/index.js:83:34
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
+    at next (/site/node_modules/express/lib/router/route.js:137:13)
+    at complete (/site/node_modules/passport/lib/middleware/authenticate.js:262:13)
+    at /site/node_modules/passport/lib/middleware/authenticate.js:269:15 {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+Listening on port 8080
+user landed at main page
+	Got date as: 11/24/2021
+results:  [
+  RowDataPacket { id: '111144268931321206696' },
+  RowDataPacket { id: '116264767626572588517' }
+]
+111144268931321206696  ---  116264767626572588517
+116264767626572588517  ---  116264767626572588517
+user landed at main page
+	Got date as: 11/24/2021
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 73 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3","fen":"rnbqkbnr/pppp1ppp/4p3/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3',
+  fen: 'rnbqkbnr/pppp1ppp/4p3/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2'
+}
+DAT= d8f6
+
+-----
+[object Object]
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 86 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Bc4","fen":"rnb1kbnr/pppp1ppp/4pq2/8/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Bc4',
+  fen: 'rnb1kbnr/pppp1ppp/4pq2/8/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3'
+}
+DAT= h7h5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 97 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Bc4 h5 4. d3","fen":"rnb1kbnr/pppp1pp1/4pq2/7p/2B1P3/3P1N2/PPP2PPP/RNBQK2R b KQkq - 0 4"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Bc4 h5 4. d3',
+  fen: 'rnb1kbnr/pppp1pp1/4pq2/7p/2B1P3/3P1N2/PPP2PPP/RNBQK2R b KQkq - 0 4'
+}
+DAT= f8b4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 111 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Bc4 h5 4. d3 Bb4+ 5. Nc3","fen":"rnb1k1nr/pppp1pp1/4pq2/7p/1bB1P3/2NP1N2/PPP2PPP/R1BQK2R b KQkq - 2 5"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Bc4 h5 4. d3 Bb4+ 5. Nc3',
+  fen: 'rnb1k1nr/pppp1pp1/4pq2/7p/1bB1P3/2NP1N2/PPP2PPP/R1BQK2R b KQkq - 2 5'
+}
+DAT= b4c3
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 124 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Bc4 h5 4. d3 Bb4+ 5. Nc3 Bxc3+ 6. bxc3","fen":"rnb1k1nr/pppp1pp1/4pq2/7p/2B1P3/2PP1N2/P1P2PPP/R1BQK2R b KQkq - 0 6"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Bc4 h5 4. d3 Bb4+ 5. Nc3 Bxc3+ 6. bxc3',
+  fen: 'rnb1k1nr/pppp1pp1/4pq2/7p/2B1P3/2PP1N2/P1P2PPP/R1BQK2R b KQkq - 0 6'
+}
+DAT= f6c3
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 136 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Bc4 h5 4. d3 Bb4+ 5. Nc3 Bxc3+ 6. bxc3 Qxc3+ 7. Bd2","fen":"rnb1k1nr/pppp1pp1/4p3/7p/2B1P3/2qP1N2/P1PB1PPP/R2QK2R b KQkq - 1 7"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Bc4 h5 4. d3 Bb4+ 5. Nc3 Bxc3+ 6. bxc3 Qxc3+ 7. Bd2',
+  fen: 'rnb1k1nr/pppp1pp1/4p3/7p/2B1P3/2qP1N2/P1PB1PPP/R2QK2R b KQkq - 1 7'
+}
+DAT= c3b2
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 145 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Bc4 h5 4. d3 Bb4+ 5. Nc3 Bxc3+ 6. bxc3 Qxc3+ 7. Bd2 Qb2 8. O-O","fen":"rnb1k1nr/pppp1pp1/4p3/7p/2B1P3/3P1N2/PqPB1PPP/R2Q1RK1 b kq - 3 8"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Bc4 h5 4. d3 Bb4+ 5. Nc3 Bxc3+ 6. bxc3 Qxc3+ 7. Bd2 Qb2 8. O-O',
+  fen: 'rnb1k1nr/pppp1pp1/4p3/7p/2B1P3/3P1N2/PqPB1PPP/R2Q1RK1 b kq - 3 8'
+}
+DAT= g8e7
+
+-----
+[object Object]
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+user landed at main page
+	Got date as: 12/1/2021
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:211:20)
+    --------------------
+    at Protocol._enqueue (/site/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/site/node_modules/mysql/lib/Connection.js:198:25)
+    at /site/public/index.js:24:29
+    at new Promise (<anonymous>)
+    at Database.query (/site/public/index.js:23:16)
+    at /site/public/index.js:83:34
+    at Layer.handle [as handle_request] (/site/node_modules/express/lib/router/layer.js:95:5)
+    at next (/site/node_modules/express/lib/router/route.js:137:13)
+    at complete (/site/node_modules/passport/lib/middleware/authenticate.js:262:13)
+    at /site/node_modules/passport/lib/middleware/authenticate.js:269:15 {
+  errno: -104,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  fatal: true
+}
+Listening on port 8080
+user landed at main page
+	Got date as: 12/1/2021
+results:  [
+  RowDataPacket { id: '111144268931321206696' },
+  RowDataPacket { id: '116264767626572588517' }
+]
+111144268931321206696  ---  116264767626572588517
+116264767626572588517  ---  116264767626572588517
+user landed at main page
+	Got date as: 12/1/2021
+started client interval
+user landed at main page
+	Got date as: 12/1/2021
+results:  [
+  RowDataPacket { id: '111144268931321206696' },
+  RowDataPacket { id: '116264767626572588517' }
+]
+111144268931321206696  ---  117221126572007818423
+116264767626572588517  ---  117221126572007818423
+/site/public/index.js:96
+        userData = {personal:{}, chess:{}};
+                 ^
+
+ReferenceError: userData is not defined
+    at /site/public/index.js:96:18
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 Listening on port 8080
 user landed at main page
-	Got date as: 10/29/2021
-/site/public/index.js:105
-    ws.send(JSON.stringify({mess: "OPEN", current_game: userData.chess.current_game}))
-                                                                       ^
-
-TypeError: Cannot read property 'current_game' of undefined
-    at WebSocketServer.connection (/site/public/index.js:105:72)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-Listening on port 8080
+	Got date as: 12/1/2021
+TokenError: Bad Request
+    at Strategy.OAuth2Strategy.parseErrorResponse (/site/node_modules/passport-oauth2/lib/strategy.js:373:12)
+    at Strategy.OAuth2Strategy._createOAuthError (/site/node_modules/passport-oauth2/lib/strategy.js:420:16)
+    at /site/node_modules/passport-oauth2/lib/strategy.js:177:45
+    at /site/node_modules/oauth/lib/oauth2.js:191:18
+    at passBackControl (/site/node_modules/oauth/lib/oauth2.js:132:9)
+    at IncomingMessage.<anonymous> (/site/node_modules/oauth/lib/oauth2.js:157:7)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+TokenError: Bad Request
+    at Strategy.OAuth2Strategy.parseErrorResponse (/site/node_modules/passport-oauth2/lib/strategy.js:373:12)
+    at Strategy.OAuth2Strategy._createOAuthError (/site/node_modules/passport-oauth2/lib/strategy.js:420:16)
+    at /site/node_modules/passport-oauth2/lib/strategy.js:177:45
+    at /site/node_modules/oauth/lib/oauth2.js:191:18
+    at passBackControl (/site/node_modules/oauth/lib/oauth2.js:132:9)
+    at IncomingMessage.<anonymous> (/site/node_modules/oauth/lib/oauth2.js:157:7)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+started client interval
+TokenError: Bad Request
+    at Strategy.OAuth2Strategy.parseErrorResponse (/site/node_modules/passport-oauth2/lib/strategy.js:373:12)
+    at Strategy.OAuth2Strategy._createOAuthError (/site/node_modules/passport-oauth2/lib/strategy.js:420:16)
+    at /site/node_modules/passport-oauth2/lib/strategy.js:177:45
+    at /site/node_modules/oauth/lib/oauth2.js:191:18
+    at passBackControl (/site/node_modules/oauth/lib/oauth2.js:132:9)
+    at IncomingMessage.<anonymous> (/site/node_modules/oauth/lib/oauth2.js:157:7)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+TokenError: Bad Request
+    at Strategy.OAuth2Strategy.parseErrorResponse (/site/node_modules/passport-oauth2/lib/strategy.js:373:12)
+    at Strategy.OAuth2Strategy._createOAuthError (/site/node_modules/passport-oauth2/lib/strategy.js:420:16)
+    at /site/node_modules/passport-oauth2/lib/strategy.js:177:45
+    at /site/node_modules/oauth/lib/oauth2.js:191:18
+    at passBackControl (/site/node_modules/oauth/lib/oauth2.js:132:9)
+    at IncomingMessage.<anonymous> (/site/node_modules/oauth/lib/oauth2.js:157:7)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+TokenError: Bad Request
+    at Strategy.OAuth2Strategy.parseErrorResponse (/site/node_modules/passport-oauth2/lib/strategy.js:373:12)
+    at Strategy.OAuth2Strategy._createOAuthError (/site/node_modules/passport-oauth2/lib/strategy.js:420:16)
+    at /site/node_modules/passport-oauth2/lib/strategy.js:177:45
+    at /site/node_modules/oauth/lib/oauth2.js:191:18
+    at passBackControl (/site/node_modules/oauth/lib/oauth2.js:132:9)
+    at IncomingMessage.<anonymous> (/site/node_modules/oauth/lib/oauth2.js:157:7)
+    at IncomingMessage.emit (node:events:377:35)
+    at endReadableNT (node:internal/streams/readable:1312:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
 user landed at main page
-	Got date as: 10/29/2021
-/site/public/index.js:105
-    ws.send(JSON.stringify({mess: "OPEN", current_game: userData.chess.current_game}))
-                                                                       ^
+	Got date as: 12/1/2021
+results:  [
+  RowDataPacket { id: '111144268931321206696' },
+  RowDataPacket { id: '116264767626572588517' }
+]
+111144268931321206696  ---  117221126572007818423
+116264767626572588517  ---  117221126572007818423
+/site/public/index.js:96
+        userData = {personal:{}, chess:{}};
+                 ^
 
-TypeError: Cannot read property 'current_game' of undefined
-    at WebSocketServer.connection (/site/public/index.js:105:72)
+ReferenceError: userData is not defined
+    at /site/public/index.js:96:18
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 Listening on port 8080
-/site/routes/play.js:38
-            res.render('index.hbs', JSON.parse(userData[0].data));//, JSON.parse(userData[0].data)) 
-                                                           ^
-
-TypeError: Cannot read property 'data' of undefined
-    at /site/routes/play.js:38:60
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-Listening on port 8080
-/site/routes/play.js:38
-            res.render('index.hbs', JSON.parse(userData[0].data));//, JSON.parse(userData[0].data)) 
-                                                           ^
-
-TypeError: Cannot read property 'data' of undefined
-    at /site/routes/play.js:38:60
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-Listening on port 8080
+started client interval
 user landed at main page
-	Got date as: 11/3/2021
+	Got date as: 12/1/2021
+Listening on port 8080
+started client interval
 user landed at main page
-	Got date as: 11/3/2021
+	Got date as: 12/1/2021
+stopping client interval
+started client interval
+results:  [
+  RowDataPacket { id: '111144268931321206696' },
+  RowDataPacket { id: '116264767626572588517' }
+]
+111144268931321206696  ---  117221126572007818423
+116264767626572588517  ---  117221126572007818423
+INSERT INTO chess_players (id, name, data) VALUES ('117221126572007818423', 'Dermot Molony', '{"personal":{"id":"117221126572007818423","name":"Dermot Molony","email":"dermotmolony3@gmail.com"},"chess":{"games_won":0,"games_lost":0,"current_game":"","game_history":[]}}')
 user landed at main page
-	Got date as: 11/3/2021
-/site/public/index.js:105
-    ws.send(JSON.stringify({mess: "OPEN", current_game: userData.chess.current_game}))
-                                                                       ^
+	Got date as: 12/1/2021
+started client interval
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
 
-TypeError: Cannot read property 'current_game' of undefined
-    at WebSocketServer.connection (/site/public/index.js:105:72)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-Listening on port 8080
-/site/routes/play.js:38
-            res.render('index.hbs', JSON.parse(userData[0].data));//, JSON.parse(userData[0].data)) 
-                                                           ^
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 73 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3","fen":"rnbqkbnr/pppp1ppp/4p3/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3',
+  fen: 'rnbqkbnr/pppp1ppp/4p3/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2'
+}
+DAT= d8f6
 
-TypeError: Cannot read property 'data' of undefined
-    at /site/routes/play.js:38:60
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-Listening on port 8080
-Listening on port 8080
-/site/routes/play.js:38
-            res.render('index.hbs', JSON.parse(userData[0].data));//, JSON.parse(userData[0].data)) 
-                                                           ^
+-----
+[object Object]
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 87 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3","fen":"rnb1kbnr/pppp1ppp/4pq2/8/4P3/2N2N2/PPPP1PPP/R1BQKB1R b KQkq - 3 3"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3',
+  fen: 'rnb1kbnr/pppp1ppp/4pq2/8/4P3/2N2N2/PPPP1PPP/R1BQKB1R b KQkq - 3 3'
+}
+DAT= f8d6
 
-TypeError: Cannot read property 'data' of undefined
-    at /site/routes/play.js:38:60
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-Listening on port 8080
-/site/routes/play.js:38
-            res.render('index.hbs', JSON.parse(userData[0].data));//, JSON.parse(userData[0].data)) 
-                                                           ^
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 100 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4","fen":"rnb1k1nr/pppp1ppp/3bpq2/8/2B1P3/2N2N2/PPPP1PPP/R1BQK2R b KQkq - 5 4"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4',
+  fen: 'rnb1k1nr/pppp1ppp/3bpq2/8/2B1P3/2N2N2/PPPP1PPP/R1BQK2R b KQkq - 5 4'
+}
+DAT= g8e7
 
-TypeError: Cannot read property 'data' of undefined
-    at /site/routes/play.js:38:60
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-Listening on port 8080
-/site/routes/play.js:38
-            res.render('index.hbs', JSON.parse(userData[0].data));//, JSON.parse(userData[0].data)) 
-                                                           ^
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 109 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O","fen":"rnb1k2r/ppppnppp/3bpq2/8/2B1P3/2N2N2/PPPP1PPP/R1BQ1RK1 b kq - 7 5"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O',
+  fen: 'rnb1k2r/ppppnppp/3bpq2/8/2B1P3/2N2N2/PPPP1PPP/R1BQ1RK1 b kq - 7 5'
+}
+DAT= b8c6
 
-TypeError: Cannot read property 'data' of undefined
-    at /site/routes/play.js:38:60
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-Listening on port 8080
-Listening on port 8080
-/site/routes/play.js:38
-            res.render('index.hbs', JSON.parse(userData[0].data));//, JSON.parse(userData[0].data)) 
-                                                           ^
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 121 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3","fen":"r1b1k2r/ppppnppp/2nbpq2/8/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 b kq - 0 6"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3',
+  fen: 'r1b1k2r/ppppnppp/2nbpq2/8/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 b kq - 0 6'
+}
+DAT= e8g8
 
-TypeError: Cannot read property 'data' of undefined
-    at /site/routes/play.js:38:60
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-Listening on port 8080
-/site/routes/play.js:38
-            res.render('index.hbs', JSON.parse(userData[0].data));//, JSON.parse(userData[0].data)) 
-                                                           ^
+-----
+[object Object]
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 132 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5","fen":"r1b2rk1/ppppnppp/2nbpq2/6B1/2B1P3/2NP1N2/PPP2PPP/R2Q1RK1 b - - 2 7"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5',
+  fen: 'r1b2rk1/ppppnppp/2nbpq2/6B1/2B1P3/2NP1N2/PPP2PPP/R2Q1RK1 b - - 2 7'
+}
+DAT= d6h2
 
-TypeError: Cannot read property 'data' of undefined
-    at /site/routes/play.js:38:60
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-Listening on port 8080
-user landed at main page
-	Got date as: 11/3/2021
-/site/public/index.js:105
-    ws.send(JSON.stringify({mess: "OPEN", current_game: userData.chess.current_game}))
-                                                                       ^
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 145 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2","fen":"r1b2rk1/ppppnppp/2n1pq2/6B1/2B1P3/2NP1N2/PPP2PPK/R2Q1R2 b - - 0 8"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2',
+  fen: 'r1b2rk1/ppppnppp/2n1pq2/6B1/2B1P3/2NP1N2/PPP2PPK/R2Q1R2 b - - 0 8'
+}
+DAT= f6g6
 
-TypeError: Cannot read property 'current_game' of undefined
-    at WebSocketServer.connection (/site/public/index.js:105:72)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-Listening on port 8080
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 158 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1","fen":"r1b2rk1/ppppnppp/2n1p1q1/6B1/2B1P3/2NP1N2/PPP2PP1/R2Q1RK1 b - - 2 9"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1',
+  fen: 'r1b2rk1/ppppnppp/2n1p1q1/6B1/2B1P3/2NP1N2/PPP2PP1/R2Q1RK1 b - - 2 9'
+}
+DAT= f7f6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 169 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3","fen":"r1b2rk1/ppppn1pp/2n1ppq1/6B1/2B1P3/2NP1NP1/PPP2P2/R2Q1RK1 b - - 0 10"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3',
+  fen: 'r1b2rk1/ppppn1pp/2n1ppq1/6B1/2B1P3/2NP1NP1/PPP2P2/R2Q1RK1 b - - 0 10'
+}
+DAT= f6g5
+
+-----
+[object Object]
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 183 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5","fen":"r1b2rk1/ppppn1pp/2n1p1q1/1N4p1/2B1P3/3P1NP1/PPP2P2/R2Q1RK1 b - - 1 11"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5',
+  fen: 'r1b2rk1/ppppn1pp/2n1p1q1/1N4p1/2B1P3/3P1NP1/PPP2P2/R2Q1RK1 b - - 1 11'
+}
+DAT= g5g4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 193 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4","fen":"r1b2rk1/ppppn1pp/2n1p1q1/1N6/2B1P1pN/3P2P1/PPP2P2/R2Q1RK1 b - - 1 12"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4',
+  fen: 'r1b2rk1/ppppn1pp/2n1p1q1/1N6/2B1P1pN/3P2P1/PPP2P2/R2Q1RK1 b - - 1 12'
+}
+DAT= g6g5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 206 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2","fen":"r1b2rk1/ppppn1pp/2n1p3/1N4q1/2B1P1p1/3P2P1/PPP2PN1/R2Q1RK1 b - - 3 13"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2',
+  fen: 'r1b2rk1/ppppn1pp/2n1p3/1N4q1/2B1P1p1/3P2P1/PPP2PN1/R2Q1RK1 b - - 3 13'
+}
+DAT= h7h6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 218 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3","fen":"r1b2rk1/ppppn1p1/2n1p2p/1N4q1/2B1P1p1/3PN1P1/PPP2P2/R2Q1RK1 b - - 1 14"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3',
+  fen: 'r1b2rk1/ppppn1p1/2n1p2p/1N4q1/2B1P1p1/3PN1P1/PPP2P2/R2Q1RK1 b - - 1 14'
+}
+DAT= d7d5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 231 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3","fen":"r1b2rk1/ppp1n1p1/2n1p2p/1N1p2q1/4P1p1/1B1PN1P1/PPP2P2/R2Q1RK1 b - - 1 15"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3',
+  fen: 'r1b2rk1/ppp1n1p1/2n1p2p/1N1p2q1/4P1p1/1B1PN1P1/PPP2P2/R2Q1RK1 b - - 1 15'
+}
+DAT= d5e4
+
+-----
+[object Object]
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 242 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4","fen":"r1b2rk1/ppp1n1p1/2n1p2p/1N4q1/4P1p1/1B2N1P1/PPP2P2/R2Q1RK1 b - - 0 16"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4',
+  fen: 'r1b2rk1/ppp1n1p1/2n1p2p/1N4q1/4P1p1/1B2N1P1/PPP2P2/R2Q1RK1 b - - 0 16'
+}
+DAT= g5b5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 252 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4","fen":"r1b2rk1/ppp1n1p1/2n1p2p/1q6/4P1N1/1B4P1/PPP2P2/R2Q1RK1 b - - 0 17"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4',
+  fen: 'r1b2rk1/ppp1n1p1/2n1p2p/1q6/4P1N1/1B4P1/PPP2P2/R2Q1RK1 b - - 0 17'
+}
+DAT= g8h8
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 263 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2","fen":"r1b2r1k/ppp1n1p1/2n1p2p/1q6/4P1N1/1B4P1/PPPQ1P2/R4RK1 b - - 2 18"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2',
+  fen: 'r1b2r1k/ppp1n1p1/2n1p2p/1q6/4P1N1/1B4P1/PPPQ1P2/R4RK1 b - - 2 18'
+}
+DAT= h6h5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 274 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3","fen":"r1b2r1k/ppp1n1p1/2n1p3/1q5p/4P3/1B2N1P1/PPPQ1P2/R4RK1 b - - 1 19"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3',
+  fen: 'r1b2r1k/ppp1n1p1/2n1p3/1q5p/4P3/1B2N1P1/PPPQ1P2/R4RK1 b - - 1 19'
+}
+DAT= e6e5
+
+-----
+[object Object]
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 287 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4","fen":"r1b2r1k/ppp1n1p1/2n5/1q2p2p/2P1P3/1B2N1P1/PP1Q1P2/R4RK1 b - c3 0 20"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4',
+  fen: 'r1b2r1k/ppp1n1p1/2n5/1q2p2p/2P1P3/1B2N1P1/PP1Q1P2/R4RK1 b - c3 0 20'
+}
+DAT= b5b6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 296 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4 Qb6 21. Nd5","fen":"r1b2r1k/ppp1n1p1/1qn5/3Np2p/2P1P3/1B4P1/PP1Q1P2/R4RK1 b - - 2 21"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4 Qb6 21. Nd5',
+  fen: 'r1b2r1k/ppp1n1p1/1qn5/3Np2p/2P1P3/1B4P1/PP1Q1P2/R4RK1 b - - 2 21'
+}
+DAT= e7d5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 306 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4 Qb6 21. Nd5 Nxd5 22. Qxd5","fen":"r1b2r1k/ppp3p1/1qn5/3Qp2p/2P1P3/1B4P1/PP3P2/R4RK1 b - - 0 22"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4 Qb6 21. Nd5 Nxd5 22. Qxd5',
+  fen: 'r1b2r1k/ppp3p1/1qn5/3Qp2p/2P1P3/1B4P1/PP3P2/R4RK1 b - - 0 22'
+}
+DAT= c6b4
+
+-----
+[object Object]
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 318 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4 Qb6 21. Nd5 Nxd5 22. Qxd5 Nb4 23. Qxe5","fen":"r1b2r1k/ppp3p1/1q6/4Q2p/1nP1P3/1B4P1/PP3P2/R4RK1 b - - 0 23"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4 Qb6 21. Nd5 Nxd5 22. Qxd5 Nb4 23. Qxe5',
+  fen: 'r1b2r1k/ppp3p1/1q6/4Q2p/1nP1P3/1B4P1/PP3P2/R4RK1 b - - 0 23'
+}
+DAT= c8g4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 329 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4 Qb6 21. Nd5 Nxd5 22. Qxd5 Nb4 23. Qxe5 Bg4 24. a3","fen":"r4r1k/ppp3p1/1q6/4Q2p/1nP1P1b1/PB4P1/1P3P2/R4RK1 b - - 0 24"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4 Qb6 21. Nd5 Nxd5 22. Qxd5 Nb4 23. Qxe5 Bg4 24. a3',
+  fen: 'r4r1k/ppp3p1/1q6/4Q2p/1nP1P1b1/PB4P1/1P3P2/R4RK1 b - - 0 24'
+}
+DAT= b4d3
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 342 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4 Qb6 21. Nd5 Nxd5 22. Qxd5 Nb4 23. Qxe5 Bg4 24. a3 Nd3 25. Bc2","fen":"r4r1k/ppp3p1/1q6/4Q2p/2P1P1b1/P2n2P1/1PB2P2/R4RK1 b - - 2 25"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4 Qb6 21. Nd5 Nxd5 22. Qxd5 Nb4 23. Qxe5 Bg4 24. a3 Nd3 25. Bc2',
+  fen: 'r4r1k/ppp3p1/1q6/4Q2p/2P1P1b1/P2n2P1/1PB2P2/R4RK1 b - - 2 25'
+}
+DAT= d3e5
+
+-----
+[object Object]
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 355 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4 Qb6 21. Nd5 Nxd5 22. Qxd5 Nb4 23. Qxe5 Bg4 24. a3 Nd3 25. Bc2 Nxe5 26. Rfe1","fen":"r4r1k/ppp3p1/1q6/4n2p/2P1P1b1/P5P1/1PB2P2/R3R1K1 b - - 1 26"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4 Qb6 21. Nd5 Nxd5 22. Qxd5 Nb4 23. Qxe5 Bg4 24. a3 Nd3 25. Bc2 Nxe5 26. Rfe1',
+  fen: 'r4r1k/ppp3p1/1q6/4n2p/2P1P1b1/P5P1/1PB2P2/R3R1K1 b - - 1 26'
+}
+DAT= b6f2
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 366 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4 Qb6 21. Nd5 Nxd5 22. Qxd5 Nb4 23. Qxe5 Bg4 24. a3 Nd3 25. Bc2 Nxe5 26. Rfe1 Qxf2+ 27. Kh1","fen":"r4r1k/ppp3p1/8/4n2p/2P1P1b1/P5P1/1PB2q2/R3R2K b - - 1 27"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. Nc3 Bd6 4. Bc4 Ne7 5. O-O Nbc6 6. d3 O-O 7. Bg5 Bxh2+ 8. Kxh2 Qg6 9. Kg1 f6 10. g3 fxg5 11. Nb5 g4 12. Nh4 Qg5 13. Ng2 h6 14. Ne3 d5 15. Bb3 dxe4 16. dxe4 Qxb5 17. Nxg4 Kh8 18. Qd2 h5 19. Ne3 e5 20. c4 Qb6 21. Nd5 Nxd5 22. Qxd5 Nb4 23. Qxe5 Bg4 24. a3 Nd3 25. Bc2 Nxe5 26. Rfe1 Qxf2+ 27. Kh1',
+  fen: 'r4r1k/ppp3p1/8/4n2p/2P1P1b1/P5P1/1PB2q2/R3R2K b - - 1 27'
+}
+DAT= g4f3
+
+-----
+[object Object]
+stopping client interval
+stopping client interval
+started client interval
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 22 2c 22 66 65 6e 22 3a 22 72 ... 60 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4","fen":"rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4',
+  fen: 'rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1'
+}
+DAT= e7e6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 73 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3","fen":"rnbqkbnr/pppp1ppp/4p3/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3',
+  fen: 'rnbqkbnr/pppp1ppp/4p3/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2'
+}
+DAT= d8f6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 85 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3","fen":"rnb1kbnr/pppp1ppp/4pq2/8/4P3/5NP1/PPPP1P1P/RNBQKB1R b KQkq - 0 3"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3',
+  fen: 'rnb1kbnr/pppp1ppp/4pq2/8/4P3/5NP1/PPPP1P1P/RNBQKB1R b KQkq - 0 3'
+}
+DAT= f8c5
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 98 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4","fen":"rnb1k1nr/pppp1ppp/4pq2/2b5/3PP3/5NP1/PPP2P1P/RNBQKB1R b KQkq d3 0 4"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4',
+  fen: 'rnb1k1nr/pppp1ppp/4pq2/2b5/3PP3/5NP1/PPP2P1P/RNBQKB1R b KQkq d3 0 4'
+}
+DAT= c5b4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 111 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4 Bb4+ 5. Nc3","fen":"rnb1k1nr/pppp1ppp/4pq2/8/1b1PP3/2N2NP1/PPP2P1P/R1BQKB1R b KQkq - 2 5"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4 Bb4+ 5. Nc3',
+  fen: 'rnb1k1nr/pppp1ppp/4pq2/8/1b1PP3/2N2NP1/PPP2P1P/R1BQKB1R b KQkq - 2 5'
+}
+DAT= b4c3
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 123 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4 Bb4+ 5. Nc3 Bxc3+ 6. bxc3","fen":"rnb1k1nr/pppp1ppp/4pq2/8/3PP3/2P2NP1/P1P2P1P/R1BQKB1R b KQkq - 0 6"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4 Bb4+ 5. Nc3 Bxc3+ 6. bxc3',
+  fen: 'rnb1k1nr/pppp1ppp/4pq2/8/3PP3/2P2NP1/P1P2P1P/R1BQKB1R b KQkq - 0 6'
+}
+DAT= b8c6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 137 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4 Bb4+ 5. Nc3 Bxc3+ 6. bxc3 Nc6 7. Bg5","fen":"r1b1k1nr/pppp1ppp/2n1pq2/6B1/3PP3/2P2NP1/P1P2P1P/R2QKB1R b KQkq - 2 7"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4 Bb4+ 5. Nc3 Bxc3+ 6. bxc3 Nc6 7. Bg5',
+  fen: 'r1b1k1nr/pppp1ppp/2n1pq2/6B1/3PP3/2P2NP1/P1P2P1P/R2QKB1R b KQkq - 2 7'
+}
+DAT= f6g6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 148 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4 Bb4+ 5. Nc3 Bxc3+ 6. bxc3 Nc6 7. Bg5 Qg6 8. Bg2","fen":"r1b1k1nr/pppp1ppp/2n1p1q1/6B1/3PP3/2P2NP1/P1P2PBP/R2QK2R b KQkq - 4 8"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4 Bb4+ 5. Nc3 Bxc3+ 6. bxc3 Nc6 7. Bg5 Qg6 8. Bg2',
+  fen: 'r1b1k1nr/pppp1ppp/2n1p1q1/6B1/3PP3/2P2NP1/P1P2PBP/R2QK2R b KQkq - 4 8'
+}
+DAT= g6e4
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 159 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4 Bb4+ 5. Nc3 Bxc3+ 6. bxc3 Nc6 7. Bg5 Qg6 8. Bg2 Qxe4+ 9. Qe2","fen":"r1b1k1nr/pppp1ppp/2n1p3/6B1/3Pq3/2P2NP1/P1P1QPBP/R3K2R b KQkq - 1 9"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4 Bb4+ 5. Nc3 Bxc3+ 6. bxc3 Nc6 7. Bg5 Qg6 8. Bg2 Qxe4+ 9. Qe2',
+  fen: 'r1b1k1nr/pppp1ppp/2n1p3/6B1/3Pq3/2P2NP1/P1P1QPBP/R3K2R b KQkq - 1 9'
+}
+DAT= e4e2
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 170 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4 Bb4+ 5. Nc3 Bxc3+ 6. bxc3 Nc6 7. Bg5 Qg6 8. Bg2 Qxe4+ 9. Qe2 Qxe2+ 10. Kxe2","fen":"r1b1k1nr/pppp1ppp/2n1p3/6B1/3P4/2P2NP1/P1P1KPBP/R6R b kq - 0 10"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4 Bb4+ 5. Nc3 Bxc3+ 6. bxc3 Nc6 7. Bg5 Qg6 8. Bg2 Qxe4+ 9. Qe2 Qxe2+ 10. Kxe2',
+  fen: 'r1b1k1nr/pppp1ppp/2n1p3/6B1/3P4/2P2NP1/P1P1KPBP/R6R b kq - 0 10'
+}
+DAT= f7f6
+
+-----
+[object Object]
+<Buffer 7b 22 6d 65 73 73 61 67 65 22 3a 22 72 65 71 75 65 73 74 5f 6d 6f 76 65 5f 31 22 2c 22 70 67 6e 22 3a 22 31 2e 20 65 34 20 65 36 20 32 2e 20 4e 66 33 ... 179 more bytes>
+BRUHHHH---  {"message":"request_move_1","pgn":"1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4 Bb4+ 5. Nc3 Bxc3+ 6. bxc3 Nc6 7. Bg5 Qg6 8. Bg2 Qxe4+ 9. Qe2 Qxe2+ 10. Kxe2 f6 11. Bd2","fen":"r1b1k1nr/pppp2pp/2n1pp2/8/3P4/2P2NP1/P1PBKPBP/R6R b kq - 1 11"}
+{
+  message: 'request_move_1',
+  pgn: '1. e4 e6 2. Nf3 Qf6 3. g3 Bc5 4. d4 Bb4+ 5. Nc3 Bxc3+ 6. bxc3 Nc6 7. Bg5 Qg6 8. Bg2 Qxe4+ 9. Qe2 Qxe2+ 10. Kxe2 f6 11. Bd2',
+  fen: 'r1b1k1nr/pppp2pp/2n1pp2/8/3P4/2P2NP1/P1PBKPBP/R6R b kq - 1 11'
+}
+DAT= g7g5
+
+-----
+[object Object]
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
+started client interval
+stopping client interval
