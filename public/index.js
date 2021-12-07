@@ -80,36 +80,42 @@ app.get("/login", passport.authenticate("google", {scope: ["profile", "email"]})
 //warnings are due to async keyword.
 app.get('/login_helper', passport.authenticate("google"), async (req,res)=>{
     userProfile = req.user
-    let results = await database.query("SELECT id FROM chess_players")
-    let newUser = true;
-    console.log("results: ", results);
-    for (let x=0; x<results.length; x++){
-        console.log(results[x].id, " --- ", req.user.id);
-        if (results[x].id === req.user.id){
-            newUser = false;
-            break;
+    try{
+        let results = await database.query("SELECT id FROM chess_players")
+        let newUser = true;
+        console.log("results: ", results);
+        for (let x=0; x<results.length; x++){
+            console.log(results[x].id, " --- ", req.user.id);
+            if (results[x].id === req.user.id){
+                newUser = false;
+                break;
+            }
         }
-    }
     
-    //insert new user into chess_players ONLY IF they aren't in chess_players
-    if (newUser){
-        let userData = {personal:{}, chess:{}};
-        userData.personal.id = req.user.id;
-        userData.personal.name = req.user.displayName;
-        userData.personal.email = req.user.emails[0].value;
-        userData.chess.games_won = 0;
-        userData.chess.games_lost = 0;
-        userData.chess.current_game = "";
-        userData.chess.game_history = [];
-        var sql = "INSERT INTO chess_players (id, name, data) VALUES (\'"+req.user.id+"\', \'"+req.user.displayName+"\', \'"+JSON.stringify(userData)+"\')";
-        console.log(sql);
-        await database.query(sql)
+    
+        //insert new user into chess_players ONLY IF they aren't in chess_players
+        if (newUser){
+            let userData = {personal:{}, chess:{}};
+            userData.personal.id = req.user.id;
+            userData.personal.name = req.user.displayName;
+            userData.personal.email = req.user.emails[0].value;
+            userData.chess.games_won = 0;
+            userData.chess.games_lost = 0;
+            userData.chess.current_game = "";
+            userData.chess.game_history = [];
+            var sql = "INSERT INTO chess_players (id, name, data) VALUES (\'"+req.user.id+"\', \'"+req.user.displayName+"\', \'"+JSON.stringify(userData)+"\')";
+            console.log(sql);
+            await database.query(sql)
+        }
+        res.redirect('/');
     }
-    res.redirect('/');
+    catch(err){
+     console.log(err);
+     res.redirect("/login")
+    }
 });
 
 app.get('/', async function (req, res) {
-    passport.authenticate("google")
     console.log('user landed at main page');
 
     let obj = {}
@@ -119,7 +125,7 @@ app.get('/', async function (req, res) {
     let date = dater.getDate();
     let year = dater.getFullYear();
     console.log("\tGot date as: " + month + "/" + date + "/" + year);
-
+    passport.authenticate("google")
     if (req.user){
         let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
         res.render('index.hbs', JSON.parse(userData[0].data));//, JSON.parse(userData[0].data)) 
@@ -164,6 +170,7 @@ wss.on('connection', function (ws) {
                     response.on('end', function(){
                         ret = {move:dat}
                         console.log("\n-----\n"+ret);
+                        let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
                         ws.send(JSON.stringify(ret));
                     })
                 })

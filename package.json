@@ -4,6 +4,7 @@
     "cm-chessboard": "^3.15.1",
     "cookie-session": "^1.4.0",
     "express": "^4.17.1",
+    "express-ws": "^5.0.2",
     "hbs": "^4.1.2",
     "html": "^1.0.0",
     "http": "*",
