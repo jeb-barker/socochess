@@ -37,6 +37,9 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                     }
                     console.log("requested_move: ", chess.history());
                 }
+                else{
+                    ws.send(JSON.stringify({"message":"game_over", "code":-1}));
+                }
             } 
             else 
             {
@@ -50,18 +53,46 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
     var board = "";
     function onmeese(message){
         if(JSON.parse(message.data).pgn === "OPEN"){
+            ws.send(JSON.stringify({"message":"opening", "id":localStorage.getItem("user_id")}));
+            if(JSON.parse(message.data).resume){
+                chess.load_pgn(JSON.parse(message.data).resume_pgn)   
+            }
+            if(board === ""){
+                board = new Chessboard(document.getElementById("board"), {
+                    position: chess.fen(),
+                    sprite: {url: "/src/images/chessboard-sprite-staunty.svg"},
+                    style: {moveMarker: MARKER_TYPE.square, hoverMarker: undefined, aspectRation:0.5},
+                    responsive: true,
+                    orientation: COLOR.white
+                });
+            }
+            if(JSON.parse(message.data).resume){
+                if(chess.turn() === 'b'){
+                    if(isOpen(ws)){
+                        ws.send(JSON.stringify({"message":"request_move_1", "pgn":chess.pgn(), "fen":chess.fen()}));
+                    }
+                    console.log("requested_move: ", chess.history());
+                }
+                else{
+                    board.enableMoveInput(inputHandler, COLOR.white);
+                    updateMoveList(chess.history());
+                } 
+            }
+            else{
+                board.enableMoveInput(inputHandler, COLOR.white);
+                updateMoveList(chess.history());
+            } 
+            //ws.send(JSON.stringify({"message":"game_over", "code":-1}));
         }
-        if(board === ""){
-            board = new Chessboard(document.getElementById("board"), {
-                position: chess.fen(),
-                sprite: {url: "/src/images/chessboard-sprite-staunty.svg"},
-                style: {moveMarker: MARKER_TYPE.square, hoverMarker: undefined, aspectRation:0.5},
-                responsive: true,
-                orientation: COLOR.white
-            });
-        }
-        board.enableMoveInput(inputHandler, COLOR.white);
-        updateMoveList(chess.history());
+        // else if(board === ""){
+        //     board = new Chessboard(document.getElementById("board"), {
+        //         position: chess.fen(),
+        //         sprite: {url: "/src/images/chessboard-sprite-staunty.svg"},
+        //         style: {moveMarker: MARKER_TYPE.square, hoverMarker: undefined, aspectRation:0.5},
+        //         responsive: true,
+        //         orientation: COLOR.white
+        //     });
+        // }
         
         if(JSON.parse(message.data).move){
             var mo = JSON.parse(message.data).move;

@@ -115,6 +115,9 @@ app.get('/login_helper', passport.authenticate("google"), async (req,res)=>{
     }
 });
 
+const server = createServer(app);
+const wss = new ws.WebSocket.Server({ server });
+
 app.get('/', async function (req, res) {
     console.log('user landed at main page');
 
@@ -124,10 +127,113 @@ app.get('/', async function (req, res) {
     let month = dater.getMonth() + 1;
     let date = dater.getDate();
     let year = dater.getFullYear();
+    
     console.log("\tGot date as: " + month + "/" + date + "/" + year);
     passport.authenticate("google")
     if (req.user){
+        res.locals.user_id = req.user;
+        console.log("in the func: ", res.locals.user_id)
         let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+        
+        wss.on('connection', async function (ws) {
+            let user_id = "";
+            let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+            userData = JSON.parse(userData[0].data) 
+            if(userData.chess.current_game === ""){
+                ws.send(JSON.stringify({pgn: "OPEN"}))
+            }
+            else{
+                ws.send(JSON.stringify({pgn: "OPEN", resume: true, resume_pgn: userData.chess.current_game}))
+            }
+            ws.on('error', (error)=>{
+                console.log('error:', error.message);
+            })
+            ws.on('message', async function (messages) {
+                //console.log(messages);
+                //console.log("BRUHHHH--- ",String.fromCharCode.apply(null, new Uint16Array(messages)));
+                let mes = String.fromCharCode.apply(null, new Uint16Array(messages))
+                let m = JSON.parse(mes);
+                console.log(m)
+                let ret = {};
+                let dat = '';
+                if(m.message){
+                    if(m.message === "request_move_1"){
+                        let options = {headers:{'User-Agent': 'request'}};
+                        https.get(JEB_CHESS_URL + "ai1?pgn=" + m.pgn + "&t=5", options, function(response){
+                            response.on('data', function(chunk){
+                                dat+=chunk;
+                                console.log("DAT= " + dat)
+                            })
+                            response.on('end', async function(){
+                                ret = {move:dat}
+                                console.log("\n-----\n"+ret);
+                                let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+                                userData = JSON.parse(userData[0].data) 
+                                userData.chess.current_game = m.pgn //change to current_pgn later
+                                await database.query("UPDATE chess_players SET data=\'"+JSON.stringify(userData)+"\' WHERE id=\'"+req.user+"\'")
+                                ws.send(JSON.stringify(ret));
+                            })
+                        })
+                    }
+                    else if(m.message === "request_move_2"){
+                        let options = {headers:{'User-Agent': 'request'}};
+                        https.get(JEB_CHESS_URL + "ai2?pgn=" + m.pgn + "&t=5", options, function(response){
+                            response.on('data', function(chunk){
+                                dat+=chunk;
+                                console.log("DAT= " + dat)
+                            })
+                            response.on('end', function(){
+                                ret = {move:dat}
+                                console.log("\n-----\n"+ret);
+                                ws.send(JSON.stringify(ret));
+                            })
+                        })
+                    }
+                    else if(m.message === "opening"){
+                        user_id = m.id
+                        console.log("uID: ", user_id)
+                    }
+                    else if(m.message === "game_over"){
+                        let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+                        userData = JSON.parse(userData[0].data)
+                        let status = ""
+                        if (m.code == "1"){
+                            userData.chess.games_won += 1
+                            status = "win"
+                        }
+                        if (m.code == "-1"){
+                            userData.chess.games_lost += 1
+                            status = "loss"
+                        }
+                        if (m.code == "0"){
+                            status = "draw"
+                        }
+                        userData.chess.game_history.push(userData.chess.current_game + " --- " + status)
+                        userData.chess.current_game = ""
+                        await database.query("UPDATE chess_players SET data=\'"+JSON.stringify(userData)+"\' WHERE id=\'"+req.user+"\'")
+                        
+                        res.redirect('/')
+                    }
+                }
+            })
+        //     const id = setInterval(function () {
+        //     //ws.send(JSON.stringify(process.memoryUsage()), function () {
+        //       //
+        //       //
+        //     //});
+        //   }, 1000);
+          console.log('started client interval');
+        
+          ws.on('close', function () {
+            console.log('stopping client interval');
+            //clearInterval(id);
+          });
+          
+          ws.on('error', (error)=>{
+              console.log('error:', error.message);
+          })
+        });
+        
         res.render('index.hbs', JSON.parse(userData[0].data));//, JSON.parse(userData[0].data)) 
     }
     else{
@@ -141,75 +247,6 @@ app.get('/', async function (req, res) {
 
 app.get('*', function (req, res) {
     res.status(404).send('Someone did an oopsie! you tried to go to ' + req.protocol + '://' + req.get('host') + req.originalUrl);
-});
-
-const server = createServer(app);
-const wss = new ws.WebSocket.Server({ server });
-
-wss.on('connection', function (ws) {
-    ws.send(JSON.stringify({pgn: "OPEN"}))
-    ws.on('error', (error)=>{
-        console.log('error:', error.message);
-    })
-    ws.on('message', function (messages) {
-        console.log(messages);
-        console.log("BRUHHHH--- ",String.fromCharCode.apply(null, new Uint16Array(messages)));
-        let mes = String.fromCharCode.apply(null, new Uint16Array(messages))
-        let m = JSON.parse(mes);
-        console.log(m)
-        let ret = {};
-        let dat = '';
-        if(m.message){
-            if(m.message === "request_move_1"){
-                let options = {headers:{'User-Agent': 'request'}};
-                https.get(JEB_CHESS_URL + "ai1?pgn=" + m.pgn + "&t=5", options, function(response){
-                    response.on('data', function(chunk){
-                        dat+=chunk;
-                        console.log("DAT= " + dat)
-                    })
-                    response.on('end', function(){
-                        ret = {move:dat}
-                        console.log("\n-----\n"+ret);
-                        let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
-                        ws.send(JSON.stringify(ret));
-                    })
-                })
-            }
-            else if(m.message === "request_move_2"){
-                let options = {headers:{'User-Agent': 'request'}};
-                https.get(JEB_CHESS_URL + "ai2?pgn=" + m.pgn + "&t=5", options, function(response){
-                    response.on('data', function(chunk){
-                        dat+=chunk;
-                        console.log("DAT= " + dat)
-                    })
-                    response.on('end', function(){
-                        ret = {move:dat}
-                        console.log("\n-----\n"+ret);
-                        ws.send(JSON.stringify(ret));
-                    })
-                })
-            }
-            else if(m.message === "request_pgn"){
-                //send pgn.
-            }
-        }
-    })
-//     const id = setInterval(function () {
-//     //ws.send(JSON.stringify(process.memoryUsage()), function () {
-//       //
-//       //
-//     //});
-//   }, 1000);
-  console.log('started client interval');
-
-  ws.on('close', function () {
-    console.log('stopping client interval');
-    //clearInterval(id);
-  });
-  
-  ws.on('error', (error)=>{
-      console.log('error:', error.message);
-  })
 });
 
 server.listen(process.env.PORT || 8080, process.env.HOST || "0.0.0.0", function () {
