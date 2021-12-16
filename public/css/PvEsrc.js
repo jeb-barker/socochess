@@ -2,7 +2,7 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
     var d;
     
     // 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    
-    var ws = new WebSocket(`wss://${location.host}/play/`);
+    var ws = new WebSocket(`wss://${location.host}/`);
     function isOpen(ws2) { return ws2.readyState === ws2.OPEN }
     
     function inputHandler(event) 
@@ -38,6 +38,10 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                     console.log("requested_move: ", chess.history());
                 }
                 else{
+                    ws.send(JSON.stringify({"message":"game_over", "code":-1}));
+                }
+                
+                if(chess.game_over()){
                     ws.send(JSON.stringify({"message":"game_over", "code":-1}));
                 }
             } 
@@ -109,7 +113,7 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
         
         console.log(isOpen(ws))
         if(!isOpen(ws)){
-            ws = new WebSocket(`wss://${location.host}/play/`);
+            ws = new WebSocket(`wss://${location.host}/`);
             ws.onmessage = onmeese;
             //ws.send(JSON.stringify({"message":"request_move_1", "pgn":chess.pgn(), "fen":chess.fen()}));
         }
