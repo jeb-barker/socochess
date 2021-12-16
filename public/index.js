@@ -8,7 +8,7 @@ const path = require('path');
 const { createServer } = require('http');
 var https = require('https');
 
-const ws = require('ws');
+
 
 const app = express();
 app.use(express.static("../public"));
@@ -57,6 +57,7 @@ var userProfile = "";
 app.use(cookieSession({name: "google-cookie", keys: ['googleauthKey', 'secretionauthKey', 'superduperextrasecretcookiegoogleKey'], maxAge: 36000000}));
 app.use(passport.initialize());
 app.use(passport.session());
+const expressWs = require('express-ws')(app);
 
 passport.serializeUser((user, done) => {
     done(null, user.id);
@@ -115,6 +116,12 @@ app.get('/login_helper', passport.authenticate("google"), async (req,res)=>{
     }
 });
 
+<<<<<<< HEAD
+=======
+//const server = createServer(app);
+//const wss = new ws.WebSocket.Server({ server });
+
+>>>>>>> main
 app.get('/', async function (req, res) {
     console.log('user landed at main page');
 
@@ -128,6 +135,10 @@ app.get('/', async function (req, res) {
     passport.authenticate("google")
     if (req.user){
         let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+<<<<<<< HEAD
+=======
+        
+>>>>>>> main
         res.render('index.hbs', JSON.parse(userData[0].data));//, JSON.parse(userData[0].data)) 
     }
     else{
@@ -137,12 +148,113 @@ app.get('/', async function (req, res) {
     }
 });
 
+app.ws('/', async function (ws, req) {
+    let user_id = "";
+    let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+    userData = JSON.parse(userData[0].data) 
+    if(userData.chess.current_game === ""){
+        ws.send(JSON.stringify({pgn: "OPEN"}))
+    }
+    else{
+        ws.send(JSON.stringify({pgn: "OPEN", resume: true, resume_pgn: userData.chess.current_game}))
+    }
+    ws.on('error', (error)=>{
+        console.log('websocket error:', error.message);
+    })
+    ws.on('message', async function (messages) {
+        //console.log(messages);
+        // console.log("BRUHHHH--- ",String.fromCharCode.apply(null, new Uint16Array(messages)));
+        // let mes = String.fromCharCode.apply(null, new Uint16Array(messages))
+        let m = JSON.parse(messages);
+        console.log('message in onmessage: ', m)
+        let ret = {};
+        let dat = '';
+        if(m.message){
+            if(m.message === "request_move_1"){
+                let options = {headers:{'User-Agent': 'request'}};
+                let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+                userData = JSON.parse(userData[0].data) 
+                userData.chess.current_game = m.pgn
+                await database.query("UPDATE chess_players SET data=\'"+JSON.stringify(userData)+"\' WHERE id=\'"+req.user+"\'")
+                console.log(req.user, " requested move from AI1. \n", userData)
+                https.get(JEB_CHESS_URL + "ai1?pgn=" + m.pgn + "&t=5", options, function(response){
+                    response.on('data', function(chunk){
+                        dat+=chunk;
+                        console.log("DAT= " + dat)
+                    })
+                    response.on('end', function(){
+                        ret = {move:dat}
+                        console.log("\n-----\n"+ret);
+                        //replace here?
+                        ws.send(JSON.stringify(ret));
+                    })
+                })
+            }
+            else if(m.message === "request_move_2"){
+                let options = {headers:{'User-Agent': 'request'}};
+                https.get(JEB_CHESS_URL + "ai2?pgn=" + m.pgn + "&t=5", options, function(response){
+                    response.on('data', function(chunk){
+                        dat+=chunk;
+                        console.log("DAT= " + dat)
+                    })
+                    response.on('end', function(){
+                        ret = {move:dat}
+                        console.log("\n-----\n"+ret);
+                        ws.send(JSON.stringify(ret));
+                    })
+                })
+            }
+            else if(m.message === "opening"){
+                user_id = m.id
+                console.log("uID: ", user_id)
+            }
+            else if(m.message === "game_over"){
+                let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+                userData = JSON.parse(userData[0].data)
+                let status = ""
+                if (m.code == "1"){
+                    userData.chess.games_won += 1
+                    status = "win"
+                }
+                if (m.code == "-1"){
+                    userData.chess.games_lost += 1
+                    status = "loss"
+                }
+                if (m.code == "0"){
+                    status = "draw"
+                }
+                userData.chess.game_history.push(userData.chess.current_game + " --- " + status)
+                userData.chess.current_game = ""
+                await database.query("UPDATE chess_players SET data=\'"+JSON.stringify(userData)+"\' WHERE id=\'"+req.user+"\'")
+                res.redirect('/')
+            }
+        }
+    })
+//     const id = setInterval(function () {
+//     //ws.send(JSON.stringify(process.memoryUsage()), function () {
+//       //
+//       //
+//     //});
+//   }, 1000);
+  console.log('started client interval');
+
+  ws.on('close', function () {
+    console.log('stopping client interval');
+    //clearInterval(id);
+  });
+  
+  ws.on('error', (error)=>{
+      console.log('error:', error.message);
+  })
+});
+
 //routes.do_setup(app);
 
 app.get('*', function (req, res) {
     res.status(404).send('Someone did an oopsie! you tried to go to ' + req.protocol + '://' + req.get('host') + req.originalUrl);
 });
 
+<<<<<<< HEAD
 const server = createServer(app);
 const wss = new ws.WebSocket.Server({ server });
 
@@ -212,5 +324,8 @@ wss.on('connection', function (ws) {
 });
 
 server.listen(process.env.PORT || 8080, process.env.HOST || "0.0.0.0", function () {
+=======
+app.listen(process.env.PORT || 8080, process.env.HOST || "0.0.0.0", function () {
+>>>>>>> main
   console.log('Listening on port 8080');
 });
