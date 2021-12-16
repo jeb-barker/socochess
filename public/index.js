@@ -159,6 +159,12 @@ app.get('/', async function (req, res) {
                 if(m.message){
                     if(m.message === "request_move_1"){
                         let options = {headers:{'User-Agent': 'request'}};
+                        
+                        let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+                        userData = JSON.parse(userData[0].data) 
+                        userData.chess.current_game = m.pgn
+                        await database.query("UPDATE chess_players SET data=\'"+JSON.stringify(userData)+"\' WHERE id=\'"+req.user+"\'")
+                        
                         https.get(JEB_CHESS_URL + "ai1?pgn=" + m.pgn + "&t=5", options, function(response){
                             response.on('data', function(chunk){
                                 dat+=chunk;
@@ -167,10 +173,7 @@ app.get('/', async function (req, res) {
                             response.on('end', async function(){
                                 ret = {move:dat}
                                 console.log("\n-----\n"+ret);
-                                let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
-                                userData = JSON.parse(userData[0].data) 
-                                userData.chess.current_game = m.pgn //change to current_pgn later
-                                await database.query("UPDATE chess_players SET data=\'"+JSON.stringify(userData)+"\' WHERE id=\'"+req.user+"\'")
+                                //replace here? This is where the error is... investigate.
                                 ws.send(JSON.stringify(ret));
                             })
                         })
@@ -211,7 +214,6 @@ app.get('/', async function (req, res) {
                         userData.chess.game_history.push(userData.chess.current_game + " --- " + status)
                         userData.chess.current_game = ""
                         await database.query("UPDATE chess_players SET data=\'"+JSON.stringify(userData)+"\' WHERE id=\'"+req.user+"\'")
-                        
                         res.redirect('/')
                     }
                 }
