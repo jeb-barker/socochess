@@ -223,7 +223,7 @@ app.ws('/', async function (ws, req) {
                 userData.chess.game_history.push(userData.chess.current_game + " --- " + status)
                 userData.chess.current_game = ""
                 await database.query("UPDATE chess_players SET data=\'"+JSON.stringify(userData)+"\' WHERE id=\'"+req.user+"\'")
-                res.redirect('/')
+                //res.redirect('/')
             }
         }
     })
