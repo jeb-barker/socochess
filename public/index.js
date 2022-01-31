@@ -8,6 +8,7 @@ const path = require('path');
 const { createServer } = require('http');
 var https = require('https');
 
+var crypto = require("crypto");
 
 
 const app = express();
@@ -145,7 +146,66 @@ app.get('/', async function (req, res) {
     }
 });
 
-app.ws('/', async function (ws, req) {
+app.get('/play/menu', async function (req, res) {
+    console.log('user landed at menu page');
+
+    let obj = {}
+
+    let dater = new Date();
+    let month = dater.getMonth() + 1;
+    let date = dater.getDate();
+    let year = dater.getFullYear();
+    
+    console.log("\tGot date as: " + month + "/" + date + "/" + year);
+    passport.authenticate("google")
+    if (req.user){
+        res.locals.user_id = req.user;
+        console.log("in the func: ", res.locals.user_id)
+        let userData = await database.query("SELECT name FROM chess_players")
+        let dat = {nameList: []}
+        for(let i = 0; i < userData.length; i+=1){
+            dat.nameList[i] = userData[i].name;
+        }
+        //userData is a list of RowDataPackets
+        console.log("name: ",dat)
+        res.render('menu.hbs', (dat));//, JSON.parse(userData[0].data)) 
+    }
+    else{
+        //res.redirect('/login')
+        //let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+        res.redirect('/login');//, JSON.parse(userData[0].data))
+    }
+});
+
+app.get('/play/ai', async function (req, res) {
+    console.log('user landed at main page');
+
+    let obj = {}
+
+    let dater = new Date();
+    let month = dater.getMonth() + 1;
+    let date = dater.getDate();
+    let year = dater.getFullYear();
+    
+    console.log("\tGot date as: " + month + "/" + date + "/" + year);
+    passport.authenticate("google")
+    if (req.user){
+        res.locals.user_id = req.user;
+        console.log("in the func: ", res.locals.user_id)
+        let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+        
+        res.render('ai.hbs', JSON.parse(userData[0].data));//, JSON.parse(userData[0].data)) 
+    }
+    else{
+        //res.redirect('/login')
+        //let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+        res.redirect('/login');//, JSON.parse(userData[0].data))
+    }
+});
+
+
+
+app.ws('/play/ai', async function (ws, req) {
     let user_id = "";
     let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
     userData = JSON.parse(userData[0].data) 
@@ -243,6 +303,27 @@ app.ws('/', async function (ws, req) {
   ws.on('error', (error)=>{
       console.log('error:', error.message);
   })
+});
+
+app.get('/play/createLink', async function (req, res) {
+    console.log('user landed at main page');
+
+    let obj = {}
+    
+    let id = crypto.randomBytes(20).toString('hex');
+    
+    passport.authenticate("google")
+    if (req.user){
+        var sql = "INSERT INTO chess_players (id, name, data) VALUES (\'"+req.user.id+"\', \'"+req.user.displayName+"\', \'"+JSON.stringify(userData)+"\')";
+            
+        await database.query("INSERT INTO chess_games (game_id, name, userID) VALUES ")
+        res.redirect('/play/versus/'+id); 
+    }
+    else{
+        //res.redirect('/login')
+        //let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+        res.redirect('/login');//, JSON.parse(userData[0].data))
+    }
 });
 
 //routes.do_setup(app);

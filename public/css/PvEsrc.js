@@ -2,7 +2,7 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
     var d;
     
     // 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    
-    var ws = new WebSocket(`wss://${location.host}/`);
+    var ws = new WebSocket(`wss://${location.host}/play/ai`);
     function isOpen(ws2) { return ws2.readyState === ws2.OPEN }
     
     function inputHandler(event) 
@@ -38,11 +38,11 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                     console.log("requested_move: ", chess.history());
                 }
                 else{
-                    ws.send(JSON.stringify({"message":"game_over", "code":-1}));
+                    ws.send(JSON.stringify({"message":"game_over", "code":1}));
                 }
                 
                 if(chess.game_over()){
-                    ws.send(JSON.stringify({"message":"game_over", "code":-1}));
+                    ws.send(JSON.stringify({"message":"game_over", "code":1}));
                 }
             } 
             else 
@@ -105,6 +105,10 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
             board.enableMoveInput(inputHandler, COLOR.white);
             board.setPosition(chess.fen());
             updateMoveList(chess.history());
+            if(chess.game_over()){
+                ws.send(JSON.stringify({"message":"game_over", "code":-1}));
+                board.disableMoveInput();
+            }
         }
     }
     ws.onmessage = onmeese;
@@ -113,12 +117,21 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
         
         console.log(isOpen(ws))
         if(!isOpen(ws)){
-            ws = new WebSocket(`wss://${location.host}/`);
+            ws = new WebSocket(`wss://${location.host}/play/ai`);
             ws.onmessage = onmeese;
             //ws.send(JSON.stringify({"message":"request_move_1", "pgn":chess.pgn(), "fen":chess.fen()}));
         }
     }, 1000)
         
+    function forfeit(){
+        if(!isOpen(ws)){
+            ws = new WebSocket(`wss://${location.host}/play/ai`);
+            ws.onmessage = onmeese;
+            //ws.send(JSON.stringify({"message":"request_move_1", "pgn":chess.pgn(), "fen":chess.fen()}));
+        }
+        ws.send(JSON.stringify({"message":"game_over", "code":-1}));
+    }
+    
     function updateMoveList(history) {
         // get the reference for the body
         var body = document.getElementById("moveList");

@@ -1,7 +1,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>SocoChess</title>
+        <title>SocoChess AI</title>
         <meta name="viewport" content="width=5px, user-scalable=yes, initial-scale=0.5"/>
         <link rel="stylesheet" href="/src/styles/cm-chessboard.css"/>
         <link rel="stylesheet" href="/src/chesscss.css"/>
@@ -16,12 +16,19 @@
             <li class="navbar nav-inn" style="float:right;"><a href="/profile" class="nav-inn-links">Profile</a></li>
         </ul>
         <h1 id="title">
-            Hi {{personal.name}}! Welcome to Social Online Chess!
+            Hi {{personal.name}}! Play against the AI!
         </h1>
         <br>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <div class="table-wrap">
+            <div class="board inner border-type-frame" id="board"></div>
+            <div class="inner" id="moveList">
+                <table id="table"></table>
+            </div>
+        </div>
+        <button onclick="forfeit()"class="logout" style="clear:left">Forfeit Game</button>
         <!--suppress JSUnresolvedFunction -->
-        {{!--<script src="/css/PvEsrc.js" type="module"></script>--}}
+        <script src="/css/PvEsrc.js" type="module"></script>
     </body>
 </html>
