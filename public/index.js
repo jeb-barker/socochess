@@ -161,10 +161,10 @@ app.get('/play/menu', async function (req, res) {
     if (req.user){
         res.locals.user_id = req.user;
         console.log("in the func: ", res.locals.user_id)
-        let userData = await database.query("SELECT name FROM chess_players")
+        let userData = await database.query("SELECT data FROM chess_players")
         let dat = {nameList: []}
         for(let i = 0; i < userData.length; i+=1){
-            dat.nameList[i] = userData[i].name;
+            dat.nameList[i] = JSON.parse(userData[i].data);
         }
         //userData is a list of RowDataPackets
         console.log("name: ",dat)
@@ -314,9 +314,11 @@ app.get('/play/createLink', async function (req, res) {
     
     passport.authenticate("google")
     if (req.user){
-        var sql = "INSERT INTO chess_players (id, name, data) VALUES (\'"+req.user.id+"\', \'"+req.user.displayName+"\', \'"+JSON.stringify(userData)+"\')";
-            
-        await database.query("INSERT INTO chess_games (game_id, name, userID) VALUES ")
+        //var sql = "INSERT INTO chess_players (id, name, data) VALUES (\'"+req.user.id+"\', \'"+req.user.displayName+"\', \'"+JSON.stringify(userData)+"\')";
+        let userIDs = {};
+        userIDs.white = req.query.opp;
+        userIDs.black = req.user;
+        await database.query("INSERT INTO chess_games (game_id, userIDs) VALUES (\'"+id+"\', \'"+JSON.stringify(userIDs)+"\')");
         res.redirect('/play/versus/'+id); 
     }
     else{
@@ -324,6 +326,107 @@ app.get('/play/createLink', async function (req, res) {
         //let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
         res.redirect('/login');//, JSON.parse(userData[0].data))
     }
+});
+
+app.get('/play/versus/:secret([a-fA-F0-9]+$)/', async function (req, res) {
+    console.log('user landed at main page');
+
+    let obj = {}
+    
+    
+    passport.authenticate("google")
+    if (req.user){
+        res.render('pvp.hbs')
+    }
+    else{
+        //res.redirect('/login')
+        //let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+        res.redirect('/login');//, JSON.parse(userData[0].data))
+    }
+});
+//fix this please!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+var pvpWss = expressWs.getWss('/play/versus/:secret([a-fA-F0-9]+$)/');
+
+app.ws('/play/versus/:secret([a-fA-F0-9]+$)/', async function (ws, req) {
+    console.log("Inside the pvp wss")
+    let user_id = "";
+    let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+    let game_data = await database.query("SELECT userIDs FROM chess_games WHERE game_id=\'"+ req.params.secret +"\'")
+    userData = JSON.parse(userData[0].data);
+    game_data = JSON.parse(userData[0].userIDs);
+    let userColor = "white";
+    if(req.user == game_data.black){
+        userColor = "black";
+    }
+    if(userData.chess.current_game === ""){
+        ws.send(JSON.stringify({pgn: "OPEN", color: userColor, special: req.params.secret}))
+    }
+    else{
+        ws.send(JSON.stringify({pgn: "OPEN", resume: true, resume_pgn: userData.chess.current_game, color: userColor, special: req.params.secret}))
+    }
+    ws.on('error', (error)=>{
+        console.log('websocket error:', error.message);
+    })
+    ws.on('message', async function (messages) {
+        //console.log(messages);
+        // console.log("BRUHHHH--- ",String.fromCharCode.apply(null, new Uint16Array(messages)));
+        // let mes = String.fromCharCode.apply(null, new Uint16Array(messages))
+        let m = JSON.parse(messages);
+        console.log('message in onmessage: ', m)
+        let ret = {};
+        let dat = '';
+        if(m.message){
+            if(m.message === "request_move"){
+                let options = {headers:{'User-Agent': 'request'}};
+                let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+                userData = JSON.parse(userData[0].data) 
+                userData.chess.current_game = m.pgn
+                await database.query("UPDATE chess_players SET data=\'"+JSON.stringify(userData)+"\' WHERE id=\'"+req.user+"\'")
+                
+                pvpWss.clients.forEach(function (client) {
+                    client.send(JSON.stringify({broadcast: req.params.secret, uData: userData}));
+                });
+                
+            }
+            else if(m.message === "game_over"){
+                let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+                userData = JSON.parse(userData[0].data)
+                let status = ""
+                if (m.code == "1"){
+                    userData.chess.games_won += 1
+                    status = "win"
+                }
+                if (m.code == "-1"){
+                    userData.chess.games_lost += 1
+                    status = "loss"
+                }
+                if (m.code == "0"){
+                    status = "draw"
+                }
+                userData.chess.game_history.push(userData.chess.current_game + " --- " + status)
+                userData.chess.current_game = ""
+                await database.query("UPDATE chess_players SET data=\'"+JSON.stringify(userData)+"\' WHERE id=\'"+req.user+"\'")
+                //res.redirect('/')
+            }
+        }
+    })
+//     const id = setInterval(function () {
+//     //ws.send(JSON.stringify(process.memoryUsage()), function () {
+//       //
+//       //
+//     //});
+//   }, 1000);
+  console.log('started client interval');
+
+  ws.on('close', function () {
+    console.log('stopping client interval');
+    //clearInterval(id);
+  });
+  
+  ws.on('error', (error)=>{
+      console.log('error:', error.message);
+  })
 });
 
 //routes.do_setup(app);
