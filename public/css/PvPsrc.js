@@ -3,6 +3,7 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
     
     // 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    
     var ws = new WebSocket(`wss://${location.host}${location.pathname}/`);
+    console.log(`wss://${location.host}${location.pathname}/`)
     function isOpen(ws2) { return ws2.readyState === ws2.OPEN }
     
     function inputHandler(event) 
@@ -64,13 +65,22 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                 chess.load_pgn(JSON.parse(message.data).resume_pgn)   
             }
             secret = JSON.parse(message.data).special
-            if(board === ""){
+            if(board === "" && JSON.parse(message.data).color == "black"){
                 board = new Chessboard(document.getElementById("board"), {
                     position: chess.fen(),
                     sprite: {url: "/src/images/chessboard-sprite-staunty.svg"},
                     style: {moveMarker: MARKER_TYPE.square, hoverMarker: undefined, aspectRation:0.5},
                     responsive: true,
                     orientation: COLOR.black
+                });
+            }
+            else if(board === "" && JSON.parse(message.data).color == "white"){
+                board = new Chessboard(document.getElementById("board"), {
+                    position: chess.fen(),
+                    sprite: {url: "/src/images/chessboard-sprite-staunty.svg"},
+                    style: {moveMarker: MARKER_TYPE.square, hoverMarker: undefined, aspectRation:0.5},
+                    responsive: true,
+                    orientation: COLOR.white
                 });
             }
             if(JSON.parse(message.data).resume){
@@ -116,10 +126,10 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
             chess.load_pgn(mo);
             console.log(mo);
             if(JSON.parse(message.data).color === "white"){
-                board.enableMoveInput(inputHandler, COLOR.white);
+                board.enableMoveInput(inputHandler, COLOR.black);
             }
             else{
-                board.enableMoveInput(inputHandler, COLOR.black);
+                board.enableMoveInput(inputHandler, COLOR.white);
             }
             board.setPosition(chess.fen());
             updateMoveList(chess.history());

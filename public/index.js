@@ -328,8 +328,8 @@ app.get('/play/createLink', async function (req, res) {
     }
 });
 
-app.get('/play/versus/:secret([a-fA-F0-9]+$)/', async function (req, res) {
-    console.log('user landed at main page');
+app.get('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (req, res) {
+    console.log('user landed at versus');
 
     let obj = {}
     
@@ -346,15 +346,18 @@ app.get('/play/versus/:secret([a-fA-F0-9]+$)/', async function (req, res) {
 });
 //fix this please!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-var pvpWss = expressWs.getWss('/play/versus/:secret([a-fA-F0-9]+$)/');
+var pvpWss = expressWs.getWss('/play/versus/:secret([a-fA-F0-9]+\/)/');
 
-app.ws('/play/versus/:secret([a-fA-F0-9]+$)/', async function (ws, req) {
-    console.log("Inside the pvp wss")
+app.ws('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (ws, req) {
+    req.params.secret = req.params.secret.substring(0,40)
+    console.log("Inside the pvp wss\n_______________________\n"+req.params.secret+"\n")
     let user_id = "";
+    
     let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
     let game_data = await database.query("SELECT userIDs FROM chess_games WHERE game_id=\'"+ req.params.secret +"\'")
     userData = JSON.parse(userData[0].data);
-    game_data = JSON.parse(userData[0].userIDs);
+    console.log(game_data)
+    game_data = JSON.parse(game_data[0].userIDs);
     let userColor = "white";
     if(req.user == game_data.black){
         userColor = "black";
@@ -385,7 +388,7 @@ app.ws('/play/versus/:secret([a-fA-F0-9]+$)/', async function (ws, req) {
                 await database.query("UPDATE chess_players SET data=\'"+JSON.stringify(userData)+"\' WHERE id=\'"+req.user+"\'")
                 
                 pvpWss.clients.forEach(function (client) {
-                    client.send(JSON.stringify({broadcast: req.params.secret, uData: userData}));
+                    client.send(JSON.stringify({broadcast: req.params.secret, uData: userData, color: userColor}));
                 });
                 
             }
