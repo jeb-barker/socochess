@@ -57,15 +57,16 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
     chess = new Chess();
     var board = "";
     var secret;
+    var uColor;
     function onmeese(message){
         if(JSON.parse(message.data).pgn === "OPEN"){
             ws.send(JSON.stringify({"message":"opening", "id":localStorage.getItem("user_id")}));
-            
+            uColor = JSON.parse(message.data).color;
             if(JSON.parse(message.data).resume){
                 chess.load_pgn(JSON.parse(message.data).resume_pgn)   
             }
             secret = JSON.parse(message.data).special
-            if(board === "" && JSON.parse(message.data).color == "black"){
+            if(board === "" && uColor == "black"){
                 board = new Chessboard(document.getElementById("board"), {
                     position: chess.fen(),
                     sprite: {url: "/src/images/chessboard-sprite-staunty.svg"},
@@ -74,7 +75,7 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                     orientation: COLOR.black
                 });
             }
-            else if(board === "" && JSON.parse(message.data).color == "white"){
+            else if(board === "" && uColor == "white"){
                 board = new Chessboard(document.getElementById("board"), {
                     position: chess.fen(),
                     sprite: {url: "/src/images/chessboard-sprite-staunty.svg"},
@@ -125,10 +126,10 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
             var mo = JSON.parse(message.data).uData.chess.current_game;
             chess.load_pgn(mo);
             console.log(mo);
-            if(JSON.parse(message.data).color === "white"){
+            if(JSON.parse(message.data).color === "white" && uColor == "black"){
                 board.enableMoveInput(inputHandler, COLOR.black);
             }
-            else{
+            else if(JSON.parse(message.data).color === "black" && uColor == "white"){
                 board.enableMoveInput(inputHandler, COLOR.white);
             }
             board.setPosition(chess.fen());

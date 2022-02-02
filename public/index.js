@@ -315,11 +315,18 @@ app.get('/play/createLink', async function (req, res) {
     passport.authenticate("google")
     if (req.user){
         //var sql = "INSERT INTO chess_players (id, name, data) VALUES (\'"+req.user.id+"\', \'"+req.user.displayName+"\', \'"+JSON.stringify(userData)+"\')";
+        let game_data = await database.query("SELECT userIDs, game_id FROM chess_games")
+        for(let i = 0; i < game_data.length; i+=1){
+            let uid = JSON.parse(game_data[i].userIDs);
+            if((uid.white == req.user && uid.black == req.query.opp) || (uid.white == req.query.opp && uid.black == req.user)){
+                res.redirect('/play/versus/'+game_data[i].game_id+'/')
+            }
+        }
         let userIDs = {};
         userIDs.white = req.query.opp;
         userIDs.black = req.user;
-        await database.query("INSERT INTO chess_games (game_id, userIDs) VALUES (\'"+id+"\', \'"+JSON.stringify(userIDs)+"\')");
-        res.redirect('/play/versus/'+id); 
+        await database.query("INSERT INTO chess_games (game_id, userIDs, pgn) VALUES (\'"+id+"\', \'"+JSON.stringify(userIDs)+"\', \'\')");
+        res.redirect('/play/versus/'+id+'/'); 
     }
     else{
         //res.redirect('/login')
@@ -354,19 +361,20 @@ app.ws('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (ws, req) {
     let user_id = "";
     
     let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
-    let game_data = await database.query("SELECT userIDs FROM chess_games WHERE game_id=\'"+ req.params.secret +"\'")
+    let game_data = await database.query("SELECT userIDs, pgn FROM chess_games WHERE game_id=\'"+ req.params.secret +"\'")
     userData = JSON.parse(userData[0].data);
     console.log(game_data)
-    game_data = JSON.parse(game_data[0].userIDs);
+    let game_data_pgn = game_data[0].pgn;
+    let game_data_userIDs = JSON.parse(game_data[0].userIDs);
     let userColor = "white";
-    if(req.user == game_data.black){
+    if(req.user == game_data_userIDs.black){
         userColor = "black";
     }
-    if(userData.chess.current_game === ""){
+    if(game_data_pgn == ''){
         ws.send(JSON.stringify({pgn: "OPEN", color: userColor, special: req.params.secret}))
     }
     else{
-        ws.send(JSON.stringify({pgn: "OPEN", resume: true, resume_pgn: userData.chess.current_game, color: userColor, special: req.params.secret}))
+        ws.send(JSON.stringify({pgn: "OPEN", resume: true, resume_pgn: game_data_pgn, color: userColor, special: req.params.secret}))
     }
     ws.on('error', (error)=>{
         console.log('websocket error:', error.message);
@@ -382,11 +390,12 @@ app.ws('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (ws, req) {
         if(m.message){
             if(m.message === "request_move"){
                 let options = {headers:{'User-Agent': 'request'}};
-                let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
-                userData = JSON.parse(userData[0].data) 
-                userData.chess.current_game = m.pgn
-                await database.query("UPDATE chess_players SET data=\'"+JSON.stringify(userData)+"\' WHERE id=\'"+req.user+"\'")
-                
+                let game_data = await database.query("SELECT userIDs, pgn FROM chess_games WHERE game_id=\'"+ req.params.secret +"\'")
+                console.log(m.pgn)
+                let game_data_userIDs = JSON.parse(game_data[0].userIDs); 
+                let game_data_pgn = m.pgn
+                await database.query("UPDATE chess_games SET pgn=\'"+game_data_pgn+"\' WHERE game_id=\'"+req.params.secret+"\'")
+                userData.chess.current_game = game_data_pgn
                 pvpWss.clients.forEach(function (client) {
                     client.send(JSON.stringify({broadcast: req.params.secret, uData: userData, color: userColor}));
                 });
@@ -408,8 +417,10 @@ app.ws('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (ws, req) {
                     status = "draw"
                 }
                 userData.chess.game_history.push(userData.chess.current_game + " --- " + status)
-                userData.chess.current_game = ""
+                //userData.chess.current_game = ""
                 await database.query("UPDATE chess_players SET data=\'"+JSON.stringify(userData)+"\' WHERE id=\'"+req.user+"\'")
+                await database.query("UPDATE chess_games SET userIDs=\'"+JSON.stringify({white:-1,black:-1})+"\' WHERE id=\'"+req.params.secret+"\'")
+                
                 //res.redirect('/')
             }
         }
