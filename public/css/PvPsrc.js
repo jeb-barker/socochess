@@ -1,9 +1,16 @@
 import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socochess.sites.tjhsst.edu/src/cm-chessboard/Chessboard.js";
     var d;
     
+    navigator.mediaDevices.getUserMedia({video: true})
+    .then(function(localStream) {
+      document.getElementById("local-video").srcObject = localStream;
+      //localStream.getTracks().forEach(track => myPeerConnection.addTrack(track, localStream));
+    })
+    .catch();
+    
     // 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    
     var ws = new WebSocket(`wss://${location.host}${location.pathname}/`);
-    console.log(`wss://${location.host}${location.pathname}/`)
+    console.log(`wss://${location.host}${location.pathname}/`);
     function isOpen(ws2) { return ws2.readyState === ws2.OPEN }
     
     function inputHandler(event) 
@@ -57,14 +64,15 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
     chess = new Chess();
     var board = "";
     var secret;
+    var c = "white";
     function onmeese(message){
         if(JSON.parse(message.data).pgn === "OPEN"){
             ws.send(JSON.stringify({"message":"opening", "id":localStorage.getItem("user_id")}));
             
             if(JSON.parse(message.data).resume){
-                chess.load_pgn(JSON.parse(message.data).resume_pgn)   
+                chess.load_pgn(JSON.parse(message.data).resume_pgn) ;  
             }
-            secret = JSON.parse(message.data).special
+            secret = JSON.parse(message.data).special;
             if(board === "" && JSON.parse(message.data).color == "black"){
                 board = new Chessboard(document.getElementById("board"), {
                     position: chess.fen(),
@@ -73,6 +81,7 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                     responsive: true,
                     orientation: COLOR.black
                 });
+                c = "black";
             }
             else if(board === "" && JSON.parse(message.data).color == "white"){
                 board = new Chessboard(document.getElementById("board"), {
@@ -82,9 +91,10 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                     responsive: true,
                     orientation: COLOR.white
                 });
+                c = "white";
             }
             if(JSON.parse(message.data).resume){
-                if(chess.turn() === 'b'){
+                if((chess.turn() === 'b' && JSON.parse(message.data).color == "white") || (chess.turn() === 'w' && JSON.parse(message.data).color == "black")){
                     if(isOpen(ws)){
                         ws.send(JSON.stringify({"message":"request_move", "pgn":chess.pgn(), "fen":chess.fen()}));
                     }
@@ -125,10 +135,10 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
             var mo = JSON.parse(message.data).uData.chess.current_game;
             chess.load_pgn(mo);
             console.log(mo);
-            if(JSON.parse(message.data).color === "white"){
+            if(JSON.parse(message.data).color === "white" && c == "black"){
                 board.enableMoveInput(inputHandler, COLOR.black);
             }
-            else{
+            else if(JSON.parse(message.data).color === "black" && c == "white"){
                 board.enableMoveInput(inputHandler, COLOR.white);
             }
             board.setPosition(chess.fen());
@@ -143,13 +153,13 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
     
     var a = setInterval(()=>{
         
-        console.log(isOpen(ws))
+        console.log(isOpen(ws));
         if(!isOpen(ws)){
             ws = new WebSocket(`wss://${location.host}${location.pathname}/`);
             ws.onmessage = onmeese;
             //ws.send(JSON.stringify({"message":"request_move_1", "pgn":chess.pgn(), "fen":chess.fen()}));
         }
-    }, 10000)
+    }, 10000);
         
     function forfeit(){
         if(!isOpen(ws)){
@@ -209,4 +219,5 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
         // sets the border attribute of tbl to 2;
         tbl.setAttribute("border", "2");
     }
+    
     
