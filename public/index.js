@@ -315,13 +315,14 @@ app.get('/play/createLink', async function (req, res) {
     
     passport.authenticate("google")
     if (req.user){
+        let dup = false
         //var sql = "INSERT INTO chess_players (id, name, data) VALUES (\'"+req.user.id+"\', \'"+req.user.displayName+"\', \'"+JSON.stringify(userData)+"\')";
         let game_data = await database.query("SELECT userIDs, game_id FROM chess_games")
         for(let i = 0; i < game_data.length; i+=1){
             let uid = JSON.parse(game_data[i].userIDs);
             if((uid.white == req.user && uid.black == req.query.opp) || (uid.white == req.query.opp && uid.black == req.user)){
                 id = game_data[i].game_id;
-                var dup = true
+                dup = true
                 break;
             }
         }
@@ -348,9 +349,11 @@ app.get('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (req, res) {
     
     passport.authenticate("google")
     if (req.user){
-        let game_data = await database.query("SELECT userIDs, pgn FROM chess_games WHERE game_id=\'"+ req.params.secret +"\'")
+        let daSecret = req.params.secret.substring(0,40)
+        let game_data = await database.query("SELECT userIDs FROM chess_games WHERE game_id=\'"+ daSecret +"\'")
         let game_data_userIDs = JSON.parse(game_data[0].userIDs);
-        gameSocketMap[req.params.secret] = {
+        console.log(daSecret, " aaaaaaa")
+        gameSocketMap[daSecret] = {
             players: {
                 white: game_data_userIDs.white, 
                 black: game_data_userIDs.black
@@ -370,12 +373,12 @@ app.get('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (req, res) {
 var pvpWss = expressWs.getWss('/play/versus/:secret([a-fA-F0-9]+\/)/');
 
 app.ws('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (ws, req) {
-    req.params.secret = req.params.secret.substring(0,40)
+    let daSecret = req.params.secret.substring(0,40)
     console.log("Inside the pvp wss\n_______________________\n"+req.params.secret+"\n")
     let user_id = "";
     
     let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
-    let game_data = await database.query("SELECT userIDs, pgn FROM chess_games WHERE game_id=\'"+ req.params.secret +"\'")
+    let game_data = await database.query("SELECT userIDs, pgn FROM chess_games WHERE game_id=\'"+ daSecret +"\'")
     userData = JSON.parse(userData[0].data);
     console.log(game_data)
     let game_data_pgn = game_data[0].pgn;
@@ -388,17 +391,19 @@ app.ws('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (ws, req) {
     //update gameSocketMap based on color. (put ws into the map)
     if(req.user == game_data_userIDs.black){
         userColor = "black";
-        gameSocketMap[req.params.secret].sockets.black = ws;
+        console.log(JSON.stringify(gameSocketMap))
+        gameSocketMap[daSecret].sockets.black = ws;
     }
     else{
-        gameSocketMap[req.params.secret].sockets.white = ws;
+        console.log(JSON.stringify(gameSocketMap))
+        gameSocketMap[daSecret].sockets.white = ws;
     }
     
     if(game_data_pgn == ''){
-        ws.send(JSON.stringify({pgn: "OPEN", color: userColor, special: req.params.secret}))
+        ws.send(JSON.stringify({pgn: "OPEN", color: userColor, special: daSecret}))
     }
     else{
-        ws.send(JSON.stringify({pgn: "OPEN", resume: true, resume_pgn: game_data_pgn, color: userColor, special: req.params.secret}))
+        ws.send(JSON.stringify({pgn: "OPEN", resume: true, resume_pgn: game_data_pgn, color: userColor, special: daSecret}))
     }
     ws.on('error', (error)=>{
         console.log('websocket error:', error.message);
@@ -414,15 +419,19 @@ app.ws('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (ws, req) {
         if(m.message){
             if(m.message === "request_move"){
                 let options = {headers:{'User-Agent': 'request'}};
-                let game_data = await database.query("SELECT userIDs, pgn FROM chess_games WHERE game_id=\'"+ req.params.secret +"\'")
+                let game_data = await database.query("SELECT userIDs, pgn FROM chess_games WHERE game_id=\'"+ daSecret +"\'")
                 console.log(m.pgn)
                 let game_data_userIDs = JSON.parse(game_data[0].userIDs); 
                 let game_data_pgn = m.pgn
-                await database.query("UPDATE chess_games SET pgn=\'"+game_data_pgn+"\' WHERE game_id=\'"+req.params.secret+"\'")
-                userData.chess.current_game = game_data_pgn
-                pvpWss.clients.forEach(function (client) {
-                    client.send(JSON.stringify({broadcast: req.params.secret, uData: userData, color: userColor}));
-                });
+                await database.query("UPDATE chess_games SET pgn=\'"+game_data_pgn+"\' WHERE game_id=\'"+daSecret+"\'")
+                // userData.chess.current_game = game_data_pgn
+                console.log("gameSocketMap at: ",gameSocketMap[req.params.secret])
+                if(userColor == "black"){
+                    gameSocketMap[daSecret].sockets.white.send(JSON.stringify({broadcast: daSecret, uData: m.pgn, color: userColor}));
+                }
+                else{
+                    gameSocketMap[daSecret].sockets.black.send(JSON.stringify({broadcast: daSecret, uData: m.pgn, color: userColor}));
+                }
                 
             }
             else if(m.message === "game_over"){
@@ -443,7 +452,7 @@ app.ws('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (ws, req) {
                 userData.chess.game_history.push(userData.chess.current_game + " --- " + status)
                 //userData.chess.current_game = ""
                 await database.query("UPDATE chess_players SET data=\'"+JSON.stringify(userData)+"\' WHERE id=\'"+req.user+"\'")
-                await database.query("UPDATE chess_games SET userIDs=\'"+JSON.stringify({white:-1,black:-1})+"\' WHERE id=\'"+req.params.secret+"\'")
+                await database.query("UPDATE chess_games SET userIDs=\'"+JSON.stringify({white:-1,black:-1})+"\' WHERE id=\'"+daSecret+"\'")
                 
                 //res.redirect('/')
             }

@@ -132,7 +132,7 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
         // }
         
         if(JSON.parse(message.data).broadcast == secret){
-            var mo = JSON.parse(message.data).uData.chess.current_game;
+            var mo = JSON.parse(message.data).uData;
             chess.load_pgn(mo);
             console.log(mo);
             if(JSON.parse(message.data).color === "white" && c == "black"){
