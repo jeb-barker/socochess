@@ -77,7 +77,13 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                 board = new Chessboard(document.getElementById("board"), {
                     position: chess.fen(),
                     sprite: {url: "/src/images/chessboard-sprite-staunty.svg"},
-                    style: {moveMarker: MARKER_TYPE.square, hoverMarker: undefined, aspectRation:0.5},
+                    style: {
+                        moveMarker: MARKER_TYPE.square, 
+                        hoverMarker: undefined, 
+                        aspectRation:0.5,
+                        moveFromMarker: MARKER_TYPE.square,
+                        moveToMarker: MARKER_TYPE.square
+                    },
                     responsive: true,
                     orientation: COLOR.black
                 });
@@ -87,7 +93,13 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                 board = new Chessboard(document.getElementById("board"), {
                     position: chess.fen(),
                     sprite: {url: "/src/images/chessboard-sprite-staunty.svg"},
-                    style: {moveMarker: MARKER_TYPE.square, hoverMarker: undefined, aspectRation:0.5},
+                    style: {
+                        moveMarker: MARKER_TYPE.square, 
+                        hoverMarker: undefined, 
+                        aspectRation:0.5,
+                        moveFromMarker: MARKER_TYPE.square,
+                        moveToMarker: MARKER_TYPE.square
+                    },
                     responsive: true,
                     orientation: COLOR.white
                 });
@@ -159,7 +171,7 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
             ws.onmessage = onmeese;
             //ws.send(JSON.stringify({"message":"request_move_1", "pgn":chess.pgn(), "fen":chess.fen()}));
         }
-    }, 10000);
+    }, 1000);
         
     function forfeit(){
         if(!isOpen(ws)){

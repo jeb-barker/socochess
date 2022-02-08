@@ -353,12 +353,14 @@ app.get('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (req, res) {
         let game_data = await database.query("SELECT userIDs FROM chess_games WHERE game_id=\'"+ daSecret +"\'")
         let game_data_userIDs = JSON.parse(game_data[0].userIDs);
         console.log(daSecret, " aaaaaaa")
-        gameSocketMap[daSecret] = {
-            players: {
-                white: game_data_userIDs.white, 
-                black: game_data_userIDs.black
-            }, 
-            sockets: {}
+        if(!gameSocketMap[daSecret]){
+            gameSocketMap[daSecret] = {
+                players: {
+                    white: game_data_userIDs.white, 
+                    black: game_data_userIDs.black
+                }, 
+                sockets: {}
+            }
         }
         res.render('pvp.hbs', {personal:{name:"No Name right now", other: {name: "No other right now"}}})
     }
@@ -389,15 +391,17 @@ app.ws('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (ws, req) {
         
     }
     //update gameSocketMap based on color. (put ws into the map)
-    if(req.user == game_data_userIDs.black){
-        userColor = "black";
-        console.log(JSON.stringify(gameSocketMap))
-        gameSocketMap[daSecret].sockets.black = ws;
-    }
-    else{
-        console.log(JSON.stringify(gameSocketMap))
-        gameSocketMap[daSecret].sockets.white = ws;
-    }
+    // if(req.user == game_data_userIDs.black){
+    //     userColor = "black";
+    //     console.log(JSON.stringify(gameSocketMap))
+    //     gameSocketMap[daSecret].sockets.black = ws;
+    //     console.log(JSON.stringify(gameSocketMap))
+    // }
+    // else{
+    //     console.log(JSON.stringify(gameSocketMap))
+    //     gameSocketMap[daSecret].sockets.white = ws;
+    //     console.log(JSON.stringify(gameSocketMap))
+    // }
     
     if(game_data_pgn == ''){
         ws.send(JSON.stringify({pgn: "OPEN", color: userColor, special: daSecret}))
@@ -425,13 +429,17 @@ app.ws('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (ws, req) {
                 let game_data_pgn = m.pgn
                 await database.query("UPDATE chess_games SET pgn=\'"+game_data_pgn+"\' WHERE game_id=\'"+daSecret+"\'")
                 // userData.chess.current_game = game_data_pgn
-                console.log("gameSocketMap at: ",gameSocketMap[req.params.secret])
-                if(userColor == "black"){
-                    gameSocketMap[daSecret].sockets.white.send(JSON.stringify({broadcast: daSecret, uData: m.pgn, color: userColor}));
-                }
-                else{
-                    gameSocketMap[daSecret].sockets.black.send(JSON.stringify({broadcast: daSecret, uData: m.pgn, color: userColor}));
-                }
+                console.log("gameSocketMap at: ",gameSocketMap[daSecret])
+                console.log("gameSocketMap: ", gameSocketMap)
+                // if(userColor == "black"){
+                //     gameSocketMap[daSecret].sockets.white.send(JSON.stringify({broadcast: daSecret, uData: m.pgn, color: userColor}));
+                // }
+                // else{
+                //     gameSocketMap[daSecret].sockets.black.send(JSON.stringify({broadcast: daSecret, uData: m.pgn, color: userColor}));
+                // }
+                pvpWss.clients.forEach(function (client) {
+                    client.send(JSON.stringify({broadcast: daSecret, uData: m.pgn, color: userColor}));
+                });
                 
             }
             else if(m.message === "game_over"){
