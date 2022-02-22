@@ -1,0 +1,28 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Jebchess</title>
+        <meta name="viewport" content="width=5px, user-scalable=yes, initial-scale=0.5"/>
+        <link rel="stylesheet" href="../styles/css?name=chesscss"/>
+    </head>
+    <body>
+        <ul class="navbar">
+            <li class="navbar nav-inn"><a href="/jebchess" class="nav-inn-links">Home</a></li>
+            <li class="navbar nav-inn"><a href="/jebchess/play" class="nav-inn-links">Play Against AI2</a></li>
+            <li class="navbar nav-inn" style="float:right;"><a href="/jebchess/profile" class="nav-inn-links">Profile</a></li>
+        </ul>
+        <h1>{{personal.name}}'s profile</h1>
+        <br>
+        <ul>
+            <li>
+                Overall Record: {{chess.games_won}}-{{chess.games_lost}}-0
+            </li>
+            <li>Game History:</li>
+            <ul>
+                {{#each chess.game_history}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </ul>
+    </body>
+</html>

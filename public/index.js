@@ -460,7 +460,12 @@ app.ws('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (ws, req) {
                 userData.chess.game_history.push(userData.chess.current_game + " --- " + status)
                 //userData.chess.current_game = ""
                 await database.query("UPDATE chess_players SET data=\'"+JSON.stringify(userData)+"\' WHERE id=\'"+req.user+"\'")
-                await database.query("UPDATE chess_games SET userIDs=\'"+JSON.stringify({white:-1,black:-1})+"\' WHERE id=\'"+daSecret+"\'")
+                await database.query("UPDATE chess_games SET userIDs=\'"+JSON.stringify({white:-1,black:-1})+"\' WHERE game_id=\'"+daSecret+"\'")
+                await database.query("UPDATE chess_games SET pgn=\'\' WHERE game_id=\'"+daSecret+"\'")
+                
+                pvpWss.clients.forEach(function (client) {
+                    client.send(JSON.stringify({broadcast: daSecret, reset:true}));
+                });
                 
                 //res.redirect('/')
             }
@@ -483,6 +488,17 @@ app.ws('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (ws, req) {
       console.log('error:', error.message);
   })
 });
+
+app.get('/profile', async function(req, res){
+        passport.authenticate("google")
+        if (req.user){
+            let userData = await database.query("SELECT data FROM chess_players WHERE id=\'"+req.user+"\'")
+            res.render('profile.hbs', JSON.parse(userData[0].data)) 
+        }
+        else{
+            res.redirect('/jebchess/login')
+        }
+    })
 
 //routes.do_setup(app);
 

@@ -1,5 +1,6 @@
 import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socochess.sites.tjhsst.edu/src/cm-chessboard/Chessboard.js";
     var d;
+    var game_over_bool = false
     
     navigator.mediaDevices.getUserMedia({video: true})
     .then(function(localStream) {
@@ -7,6 +8,18 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
       //localStream.getTracks().forEach(track => myPeerConnection.addTrack(track, localStream));
     })
     .catch();
+    
+    function get_piece_positions(game, piece) {
+        return [].concat(...game.board().map((p, index) => {
+            if (p !== null && p.type === piece.type && p.color === piece.color) {
+                return index
+            }
+        }).filter(Number.isInteger).map((piece_index) => {
+            const row = 'abcdefgh'[piece_index % 8]
+            const column = Math.ceil((64 - piece_index) / 8)
+            return row + column
+        }))
+    }
     
     // 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    
     var ws = new WebSocket(`wss://${location.host}${location.pathname}/`);
@@ -26,6 +39,9 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
         } 
         else if (event.type === INPUT_EVENT_TYPE.moveDone) 
         {
+            event.chessboard.removeMarkers(undefined, undefined);
+            board.addMarker(event.squareFrom, MARKER_TYPE.frame)
+            board.addMarker(event.squareTo, MARKER_TYPE.frame)
             var move = {from: event.squareFrom, to: event.squareTo};
             var possibleMoves = chess.moves();
             if (!(possibleMoves.includes(move))){
@@ -41,11 +57,15 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                 if (possibleMoves.length > 0) { //the url below should be ai1 for candidate or ai2 for best
                     if(isOpen(ws)){
                         ws.send(JSON.stringify({"message":"request_move", "pgn":chess.pgn(), "fen":chess.fen()}));
-                        
+                    }
+                    if(chess.in_check()){
+                        let kingpos = get_piece_positions(chess.board(), {type:'k',color:'w'})
+                        board.addMarker(kingpos[0], MARKER_TYPE.square)
                     }
                     console.log("requested_move: ", chess.history());
                 }
                 else{
+                    
                     ws.send(JSON.stringify({"message":"game_over", "code":1}));
                 }
                 
@@ -144,20 +164,34 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
         // }
         
         if(JSON.parse(message.data).broadcast == secret){
-            var mo = JSON.parse(message.data).uData;
-            chess.load_pgn(mo);
-            console.log(mo);
-            if(JSON.parse(message.data).color === "white" && c == "black"){
-                board.enableMoveInput(inputHandler, COLOR.black);
-            }
-            else if(JSON.parse(message.data).color === "black" && c == "white"){
-                board.enableMoveInput(inputHandler, COLOR.white);
-            }
-            board.setPosition(chess.fen());
-            updateMoveList(chess.history());
-            if(chess.game_over()){
-                ws.send(JSON.stringify({"message":"game_over", "code":-1}));
+            if(JSON.parse(message.data).reset){
                 board.disableMoveInput();
+                //window.location.replace("/play/menu");
+            }
+            else{
+                var mo = JSON.parse(message.data).uData;
+                chess.load_pgn(mo);
+                let h = chess.history({ verbose: true });
+                let ffrom = h[h.length-1].from
+                let tto = h[h.length-1].to
+                
+                board.removeMarkers(undefined, undefined);
+                board.addMarker(ffrom, MARKER_TYPE.frame)
+                board.addMarker(tto, MARKER_TYPE.frame)
+                
+                console.log(mo);
+                if(JSON.parse(message.data).color === "white" && c == "black"){
+                    board.enableMoveInput(inputHandler, COLOR.black);
+                }
+                else if(JSON.parse(message.data).color === "black" && c == "white"){
+                    board.enableMoveInput(inputHandler, COLOR.white);
+                }
+                board.setPosition(chess.fen());
+                updateMoveList(chess.history());
+                if(chess.game_over()){
+                    ws.send(JSON.stringify({"message":"game_over", "code":-1}));
+                    board.disableMoveInput();
+                }
             }
         }
     }
@@ -173,7 +207,9 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
         }
     }, 1000);
         
-    function forfeit(){
+    
+    let ffbutton = document.getElementById("ffbutton");
+    ffbutton.onclick = function forfeit(){
         if(!isOpen(ws)){
             ws = new WebSocket(`wss://${location.host}${location.pathname}/`);
             ws.onmessage = onmeese;
