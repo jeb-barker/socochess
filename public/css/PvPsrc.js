@@ -1,5 +1,7 @@
 import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socochess.sites.tjhsst.edu/src/cm-chessboard/Chessboard.js";
-    var d;
+// import {Chess} from '/src/chess.js'
+    
+var d;
     var game_over_bool = false
     
     navigator.mediaDevices.getUserMedia({video: true})
@@ -10,15 +12,10 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
     .catch();
     
     function get_piece_positions(game, piece) {
-        return [].concat(...game.board().map((p, index) => {
-            if (p !== null && p.type === piece.type && p.color === piece.color) {
-                return index
-            }
-        }).filter(Number.isInteger).map((piece_index) => {
-            const row = 'abcdefgh'[piece_index % 8]
-            const column = Math.ceil((64 - piece_index) / 8)
-            return row + column
-        }))
+        let k = game.indexOf(piece.type)
+        
+        let k2 = ((((k%30)/3)-1)|0) + ((k/30 - 1)|0)*8;
+        return chess.SQUARES[k2]
     }
     
     // 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    
@@ -59,8 +56,16 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                         ws.send(JSON.stringify({"message":"request_move", "pgn":chess.pgn(), "fen":chess.fen()}));
                     }
                     if(chess.in_check()){
-                        let kingpos = get_piece_positions(chess.board(), {type:'k',color:'w'})
-                        board.addMarker(kingpos[0], MARKER_TYPE.square)
+                        let bbb = chess.ascii();
+                        let obj = {}
+                        if(uColor == 'white'){
+                            obj.type = 'k'
+                        }
+                        else{
+                            obj.type = 'K'
+                        }
+                        let kingpos = get_piece_positions(bbb, obj);
+                        board.addMarker(kingpos, MARKER_TYPE.frame)
                     }
                     console.log("requested_move: ", chess.history());
                 }
@@ -132,6 +137,18 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                         ws.send(JSON.stringify({"message":"request_move", "pgn":chess.pgn(), "fen":chess.fen()}));
                     }
                     console.log("requested_move: ", chess.history());
+                    if(chess.in_check()){
+                        let bbb = chess.ascii();
+                        let obj = {}
+                        if(uColor == 'white'){
+                            obj.type = 'k'
+                        }
+                        else{
+                            obj.type = 'K'
+                        }
+                        let kingpos = get_piece_positions(bbb, obj);
+                        board.addMarker(kingpos, MARKER_TYPE.frame)
+                    }
                 }
                 else{
                     if(JSON.parse(message.data).color === "white"){
@@ -141,6 +158,18 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                         board.enableMoveInput(inputHandler, COLOR.black);
                     }
                     updateMoveList(chess.history());
+                    if(chess.in_check()){
+                        let bbb = chess.ascii();
+                        let obj = {}
+                        if(uColor == 'white'){
+                            obj.type = 'K'
+                        }
+                        else{
+                            obj.type = 'k'
+                        }
+                        let kingpos = get_piece_positions(bbb, obj);
+                        board.addMarker(kingpos, MARKER_TYPE.frame)
+                    }
                 } 
             }
             else{
@@ -150,6 +179,18 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                 else{
                     board.enableMoveInput(inputHandler, COLOR.black);
                 }
+                if(chess.in_check()){
+                        let bbb = chess.ascii();
+                        let obj = {}
+                        if(uColor == 'white'){
+                            obj.type = 'K'
+                        }
+                        else{
+                            obj.type = 'k'
+                        }
+                        let kingpos = get_piece_positions(bbb, obj);
+                        board.addMarker(kingpos, MARKER_TYPE.frame)
+                    }
                 updateMoveList(chess.history());
             } 
             //ws.send(JSON.stringify({"message":"game_over", "code":-1}));
@@ -183,9 +224,33 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
                 console.log(mo);
                 if(JSON.parse(message.data).color === "white" && c == "black"){
                     board.enableMoveInput(inputHandler, COLOR.black);
+                    if(chess.in_check()){
+                        let bbb = chess.ascii();
+                        let obj = {}
+                        if(uColor == 'white'){
+                            obj.type = 'K'
+                        }
+                        else{
+                            obj.type = 'k'
+                        }
+                        let kingpos = get_piece_positions(bbb, obj);
+                        board.addMarker(kingpos, MARKER_TYPE.frame)
+                    }
                 }
                 else if(JSON.parse(message.data).color === "black" && c == "white"){
                     board.enableMoveInput(inputHandler, COLOR.white);
+                    if(chess.in_check()){
+                        let bbb = chess.ascii();
+                        let obj = {}
+                        if(uColor == 'white'){
+                            obj.type = 'K'
+                        }
+                        else{
+                            obj.type = 'k'
+                        }
+                        let kingpos = get_piece_positions(bbb, obj);
+                        board.addMarker(kingpos, MARKER_TYPE.frame)
+                    }
                 }
                 board.setPosition(chess.fen());
                 updateMoveList(chess.history());
