@@ -1,13 +1,121 @@
 import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socochess.sites.tjhsst.edu/src/cm-chessboard/Chessboard.js";
 // import {Chess} from '/src/chess.js'
-    
+    var ws = new WebSocket(`wss://${location.host}${location.pathname}/`);
+    console.log(`wss://${location.host}${location.pathname}/`);
+    function isOpen(ws2) { return ws2.readyState === ws2.OPEN }
 var d;
     var game_over_bool = false
     
+    // WebRTC methods
+let peers = {}
+let pendingCandidates = {}
+let localStream;
+
+let getLocalStream = () => {
+    navigator.mediaDevices.getUserMedia({audio: true, video: true})
+        .then((stream) => {
+            console.log('Stream found');
+            localStream = stream;
+            // Connect after making sure thzat local stream is availble
+            //not applicable since I connect for chess no matter what
+        })
+        .catch(error => {
+            console.error('Stream not found: ', error);
+        });
+}
+
+let createPeerConnection = () => {
+    const pc = new RTCPeerConnection(PC_CONFIG);
+    pc.onicecandidate = onIceCandidate;
+    pc.onaddstream = onAddStream;
+    pc.addStream(localStream);
+    console.log('PeerConnection created');
+    return pc;
+};
+
+let sendOffer = (sid) => {
+    console.log('Send offer');
+    peers[sid].createOffer().then(
+        (sdp) => setAndSendLocalDescription(sid, sdp),
+        (error) => {
+            console.error('Send offer failed: ', error);
+        }
+    );
+};
+
+let sendAnswer = (sid) => {
+    console.log('Send answer');
+    peers[sid].createAnswer().then(
+        (sdp) => setAndSendLocalDescription(sid, sdp),
+        (error) => {
+            console.error('Send answer failed: ', error);
+        }
+    );
+};
+
+function setAndSendLocalDescription(sid, sessionDescription) {
+    peers[sid].setLocalDescription(sessionDescription);
+    console.log('Local description set');
+    ws.send(JSON.stringify({sid, type: sessionDescription.type, sdp: sessionDescription.sdp}));
+}
+
+let onIceCandidate = (event) => {
+    if (event.candidate) {
+        console.log('ICE candidate');
+        sendData({
+            type: 'candidate',
+            candidate: event.candidate
+        });
+    }
+};
+
+let onAddStream = (event) => {
+    console.log('Add stream');
+    const newRemoteStreamElem = document.getElementById("remote-video");
+    newRemoteStreamElem.autoplay = true;
+    newRemoteStreamElem.srcObject = event.stream;
+};
+
+let addPendingCandidates = (sid) => {
+    if (sid in pendingCandidates) {
+        pendingCandidates[sid].forEach(candidate => {
+            peers[sid].addIceCandidate(new RTCIceCandidate(candidate))
+        });
+    }
+}
+
+let handleSignalingData = (data) => {
+    // let msg = JSON.parse(data);
+    console.log(data)
+    const sid = data.sid;
+    delete data.sid;
+    switch (data.type) {
+        case 'offer':
+            peers[sid] = createPeerConnection();
+            peers[sid].setRemoteDescription(new RTCSessionDescription(data));
+            sendAnswer(sid);
+            addPendingCandidates(sid);
+            break;
+        case 'answer':
+            peers[sid].setRemoteDescription(new RTCSessionDescription(data));
+            break;
+        case 'candidate':
+            if (sid in peers) {
+                peers[sid].addIceCandidate(new RTCIceCandidate(data.candidate));
+            } else {
+                if (!(sid in pendingCandidates)) {
+                    pendingCandidates[sid] = [];
+                }
+                pendingCandidates[sid].push(data.candidate)
+            }
+            break;
+    }
+};
+    getLocalStream();
     navigator.mediaDevices.getUserMedia({video: true})
     .then(function(localStream) {
       document.getElementById("local-video").srcObject = localStream;
-      //localStream.getTracks().forEach(track => myPeerConnection.addTrack(track, localStream));
+      localStream.getTracks().forEach(track => selfPeerConnection.addTrack(track, localStream));
     })
     .catch();
     
@@ -19,9 +127,6 @@ var d;
     }
     
     // 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    
-    var ws = new WebSocket(`wss://${location.host}${location.pathname}/`);
-    console.log(`wss://${location.host}${location.pathname}/`);
-    function isOpen(ws2) { return ws2.readyState === ws2.OPEN }
     
     function inputHandler(event) 
     {
