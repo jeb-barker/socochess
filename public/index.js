@@ -23,7 +23,7 @@ class Database {
     }
     query( sql, args ) {
         return new Promise( ( resolve, reject ) => {
-            this.connection.query( sql, args, ( err, rows ) => {
+             this.connection.query( sql, args, ( err, rows ) => {
                 if ( err )
                     return reject( err );
                 resolve( rows );
@@ -330,7 +330,7 @@ app.get('/play/createLink', async function (req, res) {
         userIDs.white = req.query.opp;
         userIDs.black = req.user;
         if(!dup){
-            await database.query("INSERT INTO chess_games (game_id, userIDs, pgn) VALUES (\'"+id+"\', \'"+JSON.stringify(userIDs)+"\', \'\')");
+            await database.query("INSERT INTO chess_games (game_id, userIDs, pgn, chat_messages) VALUES (\'"+id+"\', \'"+JSON.stringify(userIDs)+"\', \'"+"\', \'{\"messages\":[]}\')");
         }
         res.redirect('/play/versus/'+id+'/'); 
     }
@@ -415,10 +415,14 @@ app.ws('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (ws, req) {
     }
     
     if(game_data_pgn == ''){
-        ws.send(JSON.stringify({pgn: "OPEN", color: userColor, special: daSecret}))
+        let chatMesss = await database.query("SELECT chat_messages FROM chess_games WHERE game_id=\'"+daSecret+"\'") 
+        chatMesss = JSON.parse(chatMesss[0].chat_messages)
+        ws.send(JSON.stringify({pgn: "OPEN", color: userColor, special: daSecret, uid: req.user, chatMess: JSON.stringify(chatMesss)}))
     }
     else{
-        ws.send(JSON.stringify({pgn: "OPEN", resume: true, resume_pgn: game_data_pgn, color: userColor, special: daSecret}))
+        let chatMesss = await database.query("SELECT chat_messages FROM chess_games WHERE game_id=\'"+daSecret+"\'") 
+        chatMesss = JSON.parse(chatMesss[0].chat_messages)
+        ws.send(JSON.stringify({pgn: "OPEN", resume: true, resume_pgn: game_data_pgn, color: userColor, special: daSecret, uid: req.user, chatMess: JSON.stringify(chatMesss)}))
     }
     ws.on('error', (error)=>{
         console.log('websocket error:', error.message);
@@ -493,6 +497,43 @@ app.ws('/play/versus/:secret([a-fA-F0-9]+\/)/', async function (ws, req) {
                 });
                 
                 //res.redirect('/')
+            }
+            else if(m.message === "signaling"){
+                if(userColor == "black"){
+                    if(gameSocketMap[daSecret].sockets.white){
+                        gameSocketMap[daSecret].sockets.white.send(JSON.stringify({signaling:m.sigdata}));
+                    }
+                }
+                else{
+                    if(gameSocketMap[daSecret].sockets.black){
+                        gameSocketMap[daSecret].sockets.black.send(JSON.stringify({signaling:m.sigdata}));
+                    }
+                }
+            }
+            else if(m.message === "chatting"){
+                
+                if(userColor == "black"){
+                    //update message FROM black
+                    let chatmessageJSON = await database.query("SELECT chat_messages FROM chess_games WHERE game_id=\'"+daSecret+"\'")
+                    console.log(chatmessageJSON)
+                    chatmessageJSON = JSON.parse(chatmessageJSON[0].chat_messages)
+                    chatmessageJSON.messages.push({black: m.chat})
+                    await database.query("UPDATE chess_games SET chat_messages=\'"+JSON.stringify(chatmessageJSON)+"\' WHERE game_id=\'"+daSecret+"\'")
+                    if(gameSocketMap[daSecret].sockets.white){
+                        gameSocketMap[daSecret].sockets.white.send(JSON.stringify({chatting:m.chat}));
+                    }
+                }
+                else{
+                    //update message FROM white
+                    let chatmessageJSON = await database.query("SELECT chat_messages FROM chess_games WHERE game_id=\'"+daSecret+"\'")
+                    console.log(chatmessageJSON)
+                    chatmessageJSON = JSON.parse(chatmessageJSON[0].chat_messages)
+                    chatmessageJSON.messages.push({white: m.chat})
+                    await database.query("UPDATE chess_games SET chat_messages=\'"+JSON.stringify(chatmessageJSON)+"\' WHERE game_id=\'"+daSecret+"\'")
+                    if(gameSocketMap[daSecret].sockets.black){
+                        gameSocketMap[daSecret].sockets.black.send(JSON.stringify({chatting:m.chat}));
+                    }
+                }
             }
         }
     })

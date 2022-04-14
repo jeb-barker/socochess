@@ -4,19 +4,29 @@ import {INPUT_EVENT_TYPE, COLOR, Chessboard, MARKER_TYPE} from "https://socoches
     console.log(`wss://${location.host}${location.pathname}/`);
     function isOpen(ws2) { return ws2.readyState === ws2.OPEN }
 var d;
-    var game_over_bool = false
+    var game_over_bool = false;
     
     // WebRTC methods
-let peers = {}
-let pendingCandidates = {}
+let peers = {};
+let pendingCandidates = {};
 let localStream;
+let stunURL = "stun.l.google.com:19302";
+let pcCongfig = {
+    iceServers: [
+    {   
+      urls: [ "stun.l.google.com:19302" ]
+    }
+   ]
+};
 
-let getLocalStream = () => {
+function getLocalStream() {
     navigator.mediaDevices.getUserMedia({audio: true, video: true})
         .then((stream) => {
             console.log('Stream found');
             localStream = stream;
-            // Connect after making sure thzat local stream is availble
+    
+            document.getElementById("local-video").srcObject = localStream;
+            // Connect after making sure that local stream is availble
             //not applicable since I connect for chess no matter what
         })
         .catch(error => {
@@ -24,16 +34,7 @@ let getLocalStream = () => {
         });
 }
 
-let createPeerConnection = () => {
-    const pc = new RTCPeerConnection(PC_CONFIG);
-    pc.onicecandidate = onIceCandidate;
-    pc.onaddstream = onAddStream;
-    pc.addStream(localStream);
-    console.log('PeerConnection created');
-    return pc;
-};
-
-let sendOffer = (sid) => {
+function sendOffer(sid) {
     console.log('Send offer');
     peers[sid].createOffer().then(
         (sdp) => setAndSendLocalDescription(sid, sdp),
@@ -41,9 +42,9 @@ let sendOffer = (sid) => {
             console.error('Send offer failed: ', error);
         }
     );
-};
+}
 
-let sendAnswer = (sid) => {
+function sendAnswer(sid) {
     console.log('Send answer');
     peers[sid].createAnswer().then(
         (sdp) => setAndSendLocalDescription(sid, sdp),
@@ -51,42 +52,51 @@ let sendAnswer = (sid) => {
             console.error('Send answer failed: ', error);
         }
     );
-};
+}
 
 function setAndSendLocalDescription(sid, sessionDescription) {
     peers[sid].setLocalDescription(sessionDescription);
     console.log('Local description set');
-    ws.send(JSON.stringify({sid, type: sessionDescription.type, sdp: sessionDescription.sdp}));
+    ws.send(JSON.stringify({message: "signaling", sigMessage: "video-offer", sigdata: {sid, type: sessionDescription.type, sdp: sessionDescription}}));
 }
 
-let onIceCandidate = (event) => {
+function onIceCandidate(event) {
     if (event.candidate) {
         console.log('ICE candidate');
-        sendData({
+        ws.send({
             type: 'candidate',
             candidate: event.candidate
         });
     }
-};
+}
 
-let onAddStream = (event) => {
+function onAddStream(event) {
     console.log('Add stream');
     const newRemoteStreamElem = document.getElementById("remote-video");
     newRemoteStreamElem.autoplay = true;
     newRemoteStreamElem.srcObject = event.stream;
-};
+}
 
-let addPendingCandidates = (sid) => {
+function addPendingCandidates(sid) {
     if (sid in pendingCandidates) {
         pendingCandidates[sid].forEach(candidate => {
-            peers[sid].addIceCandidate(new RTCIceCandidate(candidate))
+            peers[sid].addIceCandidate(new RTCIceCandidate(candidate));
         });
     }
 }
 
-let handleSignalingData = (data) => {
-    // let msg = JSON.parse(data);
-    console.log(data)
+function createPeerConnection() {
+    const pc = new RTCPeerConnection(pcCongfig);
+    pc.onicecandidate = onIceCandidate;
+    pc.onaddstream = onAddStream;
+    pc.addStream(localStream);
+    console.log('PeerConnection created');
+    return pc;
+}
+
+function handleSignalingData(data) {
+    let msg = data;
+    console.log(data);
     const sid = data.sid;
     delete data.sid;
     switch (data.type) {
@@ -106,28 +116,30 @@ let handleSignalingData = (data) => {
                 if (!(sid in pendingCandidates)) {
                     pendingCandidates[sid] = [];
                 }
-                pendingCandidates[sid].push(data.candidate)
+                pendingCandidates[sid].push(data.candidate);
             }
             break;
     }
-};
-    getLocalStream();
-    navigator.mediaDevices.getUserMedia({video: true})
-    .then(function(localStream) {
-      document.getElementById("local-video").srcObject = localStream;
-      localStream.getTracks().forEach(track => selfPeerConnection.addTrack(track, localStream));
-    })
-    .catch();
+}
+
+    // navigator.mediaDevices.getUserMedia({video: true})
+    // .then(function(localStream) {
+    //   document.getElementById("local-video").srcObject = localStream;
+    //   localStream.getTracks().forEach(track => selfPeerConnection.addTrack(track, localStream));
+    // })
+    // .catch();
+    
     
     function get_piece_positions(game, piece) {
-        let k = game.indexOf(piece.type)
+        let k = game.indexOf(piece.type);
         
         let k2 = ((((k%30)/3)-1)|0) + ((k/30 - 1)|0)*8;
-        return chess.SQUARES[k2]
+        return chess.SQUARES[k2];
     }
     
     // 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    
     
+var chatMessages = "";
     function inputHandler(event) 
     {
         console.log("event", event);
@@ -142,8 +154,8 @@ let handleSignalingData = (data) => {
         else if (event.type === INPUT_EVENT_TYPE.moveDone) 
         {
             event.chessboard.removeMarkers(undefined, undefined);
-            board.addMarker(event.squareFrom, MARKER_TYPE.frame)
-            board.addMarker(event.squareTo, MARKER_TYPE.frame)
+            board.addMarker(event.squareFrom, MARKER_TYPE.frame);
+            board.addMarker(event.squareTo, MARKER_TYPE.frame);
             var move = {from: event.squareFrom, to: event.squareTo};
             var possibleMoves = chess.moves();
             if (!(possibleMoves.includes(move))){
@@ -162,12 +174,12 @@ let handleSignalingData = (data) => {
                     }
                     if(chess.in_check()){
                         let bbb = chess.ascii();
-                        let obj = {}
+                        let obj = {};
                         if(uColor == 'white'){
-                            obj.type = 'k'
+                            obj.type = 'k';
                         }
                         else{
-                            obj.type = 'K'
+                            obj.type = 'K';
                         }
                         let kingpos = get_piece_positions(bbb, obj);
                         board.addMarker(kingpos, MARKER_TYPE.frame)
@@ -196,8 +208,18 @@ let handleSignalingData = (data) => {
     var secret;
     var uColor;
     var c = "white";
+    
     function onmeese(message){
         if(JSON.parse(message.data).pgn === "OPEN"){
+            console.log(message)
+            chatMessages = JSON.parse(JSON.parse(message.data).chatMess).messages
+            //console.log(chatMessages)
+            for(let i = 0; i < chatMessages.length; i += 1){
+                console.log(chatMessages[i])
+            }
+            updateChatBox(chatMessages)
+            //getLocalStream();
+            //sendOffer(JSON.parse(message.data).uid)
             ws.send(JSON.stringify({"message":"opening", "id":localStorage.getItem("user_id")}));
             uColor = JSON.parse(message.data).color;
             if(JSON.parse(message.data).resume){
@@ -275,7 +297,7 @@ let handleSignalingData = (data) => {
                         let kingpos = get_piece_positions(bbb, obj);
                         board.addMarker(kingpos, MARKER_TYPE.frame)
                     }
-                } 
+                }
             }
             else{
                 if(JSON.parse(message.data).color === "white"){
@@ -365,6 +387,19 @@ let handleSignalingData = (data) => {
                 }
             }
         }
+        if(JSON.parse(message.data).signaling){
+            handleSignalingData(JSON.parse(message.data).signaling.sdp)
+        }
+        if(JSON.parse(message.data).chatting){
+            if(uColor == 'white'){
+                chatMessages[chatMessages.length] = {black: JSON.parse(message.data).chatting}
+            }
+            else{
+                chatMessages[chatMessages.length] = {white: JSON.parse(message.data).chatting}
+            }
+            updateChatBox(chatMessages)
+        }
+        
     }
     ws.onmessage = onmeese;
     
@@ -438,5 +473,75 @@ let handleSignalingData = (data) => {
         // sets the border attribute of tbl to 2;
         tbl.setAttribute("border", "2");
     }
+    
+    function updateChatBox(messages) {
+        // get the reference for the body
+        let body = document.getElementById("chatList");
+
+        // creates a <table> element and a <tbody> element
+        let tbl = document.getElementById("chatTable");
+        body.removeChild(body.lastChild);
+        tbl = document.createElement("table");
+        let tblBody = document.createElement("tbody");
+    
+        // creating all cells
+        for (var i = 0; i < messages.length; i+=1) {
+            // creates a table row
+            var row = document.createElement("tr");
+    
+            for (var j = 0; j < 2; j++) {
+                // Create a <td> element and a text node, make the text
+                // node the contents of the <td>, and put the <td> at
+                // the end of the table row
+                let cell = document.createElement("td");
+                let tbltext = "";
+                if (j === 0) {
+                    tbltext = Object.keys(messages[i])[0]
+                }
+                else{
+                    tbltext += messages[i][Object.keys(messages[i])[0]];
+                }
+                var cellText = document.createTextNode(tbltext);
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+            }
+    
+            // add the row to the end of the table body
+            tblBody.appendChild(row);
+        }
+    
+        // put the <tbody> in the <table>
+        tbl.appendChild(tblBody);
+        // appends <table> into <body>
+        body.appendChild(tbl);
+        // sets the border attribute of tbl to 2;
+        tbl.setAttribute("border", "2");
+    }
+    
+    let sendButton = document.getElementById('sendChatButton');
+    function sendButtonOnclick(){
+        let chatInput = document.getElementById('chatInput');
+        let chatMessageString = chatInput.value;
+        if(chatMessageString != ""){
+            ws.send(JSON.stringify({message:"chatting", chat:String(chatMessageString)}))
+            chatInput.value = "";
+        }
+        if(uColor == 'white'){
+            chatMessages[chatMessages.length] = {"white":String(chatMessageString)}
+        }
+        else{
+            chatMessages[chatMessages.length] = {"black":String(chatMessageString)}
+        }
+        updateChatBox(chatMessages)
+        
+    }
+    sendButton.onclick = sendButtonOnclick;
+    let chatInput = document.getElementById('chatInput');
+    chatInput.addEventListener("keyup", function(event){
+        if(event.keyCode === 13){
+            event.preventDefault();
+            sendButton.click()
+        }
+    })
     
     

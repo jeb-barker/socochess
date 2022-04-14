@@ -21,7 +21,15 @@
         <br>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-        <div class="table-wrap">
+        <div class="table">
+            <div class = "chatbox">
+                <div id="chatList">
+                    <table id=chatTable></table>
+                </div>
+                <label for="chatInput">Send a message:</label>
+                <input type="text" id="chatInput" name="chatInput">
+                <button id="sendChatButton">send</button>
+            </div>
             <div class="board inner border-type-frame" id="board"></div>
             <div class="video-chat-container">
              <h2 class="talk-info" id="talking-with-info"> 
