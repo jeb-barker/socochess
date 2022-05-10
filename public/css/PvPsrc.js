@@ -188,11 +188,11 @@ var chatMessages = "";
                 }
                 else{
                     
-                    ws.send(JSON.stringify({"message":"game_over", "code":1}));
+                    ws.send(JSON.stringify({"message":"game_over", "code":-1, "pgn":chess.pgn()}));
                 }
                 
                 if(chess.game_over()){
-                    ws.send(JSON.stringify({"message":"game_over", "code":1}));
+                    ws.send(JSON.stringify({"message":"game_over", "code":-1, "pgn":chess.pgn()}));
                 }
             } 
             else 
@@ -382,7 +382,7 @@ var chatMessages = "";
                 board.setPosition(chess.fen());
                 updateMoveList(chess.history());
                 if(chess.game_over()){
-                    ws.send(JSON.stringify({"message":"game_over", "code":-1}));
+                    ws.send(JSON.stringify({"message":"game_over", "code":-1, "pgn":chess.pgn()}));
                     board.disableMoveInput();
                 }
             }
@@ -421,7 +421,7 @@ var chatMessages = "";
             ws.onmessage = onmeese;
             //ws.send(JSON.stringify({"message":"request_move_1", "pgn":chess.pgn(), "fen":chess.fen()}));
         }
-        ws.send(JSON.stringify({"message":"game_over", "code":-1}));
+        ws.send(JSON.stringify({"message":"game_over", "code":-1, "pgn":chess.pgn()}));
     }
     
     function updateMoveList(history) {
@@ -523,6 +523,7 @@ var chatMessages = "";
         let chatInput = document.getElementById('chatInput');
         let chatMessageString = chatInput.value;
         if(chatMessageString != ""){
+            chatMessageString = chatMessageString.replaceAll("/([\"\'<>*()?])/g", "\\$1");
             ws.send(JSON.stringify({message:"chatting", chat:String(chatMessageString)}))
             chatInput.value = "";
         }
